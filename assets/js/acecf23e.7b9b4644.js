@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdlabflow=self.webpackChunkdlabflow||[]).push([[1903],{1912:l=>{l.exports=JSON.parse('{"blogBasePath":"/dlabflow/blog","blogTitle":"Blog","authorsListPath":"/dlabflow/blog/authors"}')}}]);
