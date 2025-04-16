@@ -9,3 +9,9 @@
   height: 200px;
   width: 200px;
 }
+
+.textLeft {
+  text-align: left;
+  margin: 0; /* 중앙에서 밀리지 않도록 기본 여백 제거 */
+  padding-left: 1rem; /* 필요 시 왼쪽 패딩 조정 */
+}

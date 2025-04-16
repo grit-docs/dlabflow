@@ -89,47 +89,47 @@ const config = {
       },
       footer: {
         style: 'dark',
-        // links: [
-        //   {
-        //     title: 'Docs',
-        //     items: [
-        //       {
-        //         label: 'Tutorial',
-        //         to: '/docs/intro',
-        //       },
-        //     ],
-        //   },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'X',
-          //       href: 'https://x.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'Blog',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/grit-docs/dlabflow',
-          //     },
-          //   ],
-          // },
-        // ],
+        links: [
+          {
+            title: '도움말 센터',
+            items: [
+              {
+                label: '빠르게 시작하기',
+                href: 'https://grit-docs.github.io/dlabflow/docs/intro',
+              },
+            ],
+          },
+          {
+            title: '강원ICT융합연구원',
+            items: [
+              {
+                label: '연구원 소개',
+                href: 'https://grit.gwnu.ac.kr/contents?bmcode=about',
+              },
+              {
+                label: '찾아오시는 길',
+                href: 'https://grit.gwnu.ac.kr/contents?bmcode=location',
+              },
+              {
+                label: '보유 기술 소개',
+                href: 'https://grit.gwnu.ac.kr/contents?bmcode=tech',
+              },
+            ],
+          },
+          {
+            title: '보유 플랫폼',
+            items: [
+              {
+                label: 'DLab-FLow',
+                href: 'https://dlabflow.grit.re.kr/',
+              },
+              {
+                label: 'MEDBIZ',
+                href: 'https://medbiz.or.kr/',
+              },
+            ],
+          },
+        ],
         copyright: `Copyright © ${new Date().getFullYear()} 강원 ICT 융합 연구원 All rights reserved.`,
       },
       prism: {
