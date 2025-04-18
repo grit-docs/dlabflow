@@ -4,44 +4,54 @@ sidebar_position: 1
 
 # 빠르게 시작하기
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**D-Lab-Flow**는 컴퓨터 비전 솔루션을 구축하는 데 필요한 라벨링, 학습, 배포 기능을 모두 제공합니다.
 
-## Getting Started
+이 가이드를 통해 귀하의 사용 사례에 최적화된 컴퓨터 비전 모델을 손쉽게 만들 수 있습니다.
 
-Get started by **creating a new site**.
+이번 빠른 시작 튜토리얼은 약 5분 분량의 영상으로, 비전 모델을 사용해 여러 객체를 식별하는 방법을 단계별로 안내합니다.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+지금 바로 따라 하며, 컴퓨터 비전의 첫걸음을 시작해 보세요.
 
-### What you'll need
+## 빠른 시작 튜토리얼 (5분)
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+<iframe width="100%" height="540" src="https://www.youtube.com/embed/CS2efNY_99g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Generate a new site
+이거 예전꺼라 다시 만들어야함...
 
-Generate a new Docusaurus site using the **classic template**.
+## 데이터 관리
 
-The classic template will automatically be added to your project after you run the command:
+### 데이터 저장소
+![Locale Dropdown](./intro/img/localeDropdown.png)
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+데이터 저장소는....
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### 데이터 업로드
+![Locale Dropdown](./intro/img/localeDropdown.png)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+데이터 업로드는....
 
-## Start your site
+## 학습 데이터 관리
 
-Run the development server:
+### 데이터셋 관리
+![Locale Dropdown](./intro/img/localeDropdown.png)
 
-```bash
-cd my-website
-npm run start
-```
+OOOOOOO는....
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## AI 학습 관리
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### AI 프로젝트
+![Locale Dropdown](./intro/img/localeDropdown.png)
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+OOOOOOO는....
+
+### AI 모델 관리
+![Locale Dropdown](./intro/img/localeDropdown.png)
+
+OOOOOOO는....
+
+## 데이터 수집 장치 관리
+
+### 수집 장치
+![Locale Dropdown](./intro/img/localeDropdown.png)
+
+OOOOOOO는....
