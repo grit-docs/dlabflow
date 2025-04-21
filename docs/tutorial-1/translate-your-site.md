@@ -4,85 +4,56 @@ sidebar_position: 2
 
 # 데이터 업로드
 
-Let's translate `docs/intro.md` to French.
+저장소에 있는 파일 목록을 확인하고 pc에서 파일 업로드와 다운로드, 미리보기 기능을 사용할 수 있습니다.
 
-## Configure i18n
+![데이터 업로드 이미지](./img/browser/browser.PNG)
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
 
-```js title="docusaurus.config.js"
-export default {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
+## 1. 저장소 정보 표시
+저장소 목록을 보여주고 해당 저장소를 클릭시 파일 목록을 화면 우측에 표시합니다.
 
-## Translate a doc
+- CUSTOM(300x300) : 데이터 저장소에서 크롭 기능을 통해 만든 분할된 이미지 파일 목록
+- RAW : 해당 저장소의 전체 파일 목록
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+![브라우저 목록 이미지](./img/resource/resource_browser.PNG)
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+## 2. 업로드 기능
 
-## Start your localized site
+해당 저장소를 클릭시 새로고침과 업로드 버튼이 나타나며 업로드는 파일/폴더를 구분하여 업로드할 수 있습니다.
 
-Start your site on the French locale:
+![업로드 선택 이미지](./img/browser/browser_filefolder.PNG)
 
-```bash
-npm run start -- --locale fr
-```
+업로드 할 파일은 단일 또는 다중선택이 가능합니다.
 
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
+![파일 선택 이미지](./img/browser/browser_selectfile.PNG)
 
-:::caution
+업로드 진행 상황은 우측 상단에서 확인이 가능하며, 완료시 새로고침 버튼을 눌러 업로드된 파일을 확인할 수 있습니다.
 
-In development, you can only use one locale at a time.
+![업로드 진행 이미지](./img/browser/browser_upload.PNG)
 
-:::
+![업로드 완료 이미지](./img/browser/browser_upload_complete.PNG)
 
-## Add a Locale Dropdown
 
-To navigate seamlessly across languages, add a locale dropdown.
+## 3. 다운로드 기능
 
-Modify the `docusaurus.config.js` file:
+체크박스를 눌러 파일을 선택하면 파일의 개수와 다운로드 버튼을 보여줍니다.
 
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
+![다운로드 선택 이미지](./img/browser/browser_download_select.PNG)
 
-The locale dropdown now appears in your navbar:
 
-![Locale Dropdown](./img/localeDropdown.png)
+다운로드 버튼 클릭시 우측 상단에 다운로드 상태가 표시되며 아이콘으로 업로드와 다운로드를 구분하여 나타냅니다.
+- 다운로드 파일은 브라우저의 최근 다운로드 기록이나 내 pc -> 다운로드 에서 확인 확인할 수 있습니다.
 
-## Build your localized site
+![다운로드 완료 이미지](./img/browser/browser_download.PNG)
 
-Build your site for a specific locale:
 
-```bash
-npm run build -- --locale fr
-```
+## 4. 미리보기 기능
 
-Or build your site to include all the locales at once:
+버튼을 클릭하면 모달을 통해 미리보기 기능을 제공합니다.
 
-```bash
-npm run build
-```
+![미리보기 선택 이미지](./img/browser/browser_view_select.PNG)
+
+![미리보기 선택 이미지](./img/browser/browser_view.PNG)
+
