@@ -1,7 +1,7 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+라벨링:
+  label: 라벨링
+  permalink: /라벨링
+  description: 라벨링
 
 hello:
   label: Hello
