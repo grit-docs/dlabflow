@@ -2,7 +2,7 @@ grit:
   name: 강원ICT융합연구원
   title: 강원도 IT산업을 선도하는 중추적 역할!
   url: https://grit.gwnu.ac.kr/
-  image_url: https://grit.gwnu.ac.kr/image/logo.png
+  image_url: /img/grit-logo.png
   page: true
 #  socials:
 #    x: yangshunz
