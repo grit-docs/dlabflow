@@ -57,6 +57,10 @@ const config = {
     ],
   ],
 
+  plugins: [
+    "docusaurus-plugin-zooming",
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -132,7 +136,19 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      zooming: {
+        selector: '.markdown img',
+        delay: 500,
+        background: {
+          light: 'rgba(101,108,133,0.8)',
+          dark: 'rgba(9,10,17,0.8)'
+        },
+        options: {
+          // See the docs of zooming for all available options: https://github.com/francoischalifour/medium-zoom#usage
+        }
+      },
     }),
+
 };
 
 export default config;

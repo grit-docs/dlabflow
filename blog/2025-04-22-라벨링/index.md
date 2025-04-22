@@ -5,6 +5,7 @@ authors: [grit]
 tags: [라벨링]
 ---
 
+<!-- truncate -->
 
 Here are a few tips you might find useful.
 
