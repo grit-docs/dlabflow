@@ -1,23 +1,33 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+grit:
+  name: 강원ICT융합연구원
+  title: 강원도 IT산업을 선도하는 중추적 역할!
+  url: https://grit.gwnu.ac.kr/
+  image_url: /img/grit-logo.png
   page: true
-  socials:
-    x: yangshunz
-    github: yangshun
+#  socials:
+#    x: yangshunz
+#    github: yangshun
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+#yangshun:
+#  name: Yangshun Tay
+#  title: Front End Engineer @ Facebook
+#  url: https://github.com/yangshun
+#  image_url: https://github.com/yangshun.png
+#  page: true
+#  socials:
+#    x: yangshunz
+#    github: yangshun
+#
+#slorber:
+#  name: Sébastien Lorber
+#  title: Docusaurus maintainer
+#  url: https://sebastienlorber.com
+#  image_url: https://github.com/slorber.png
+#  page:
+#    # customize the url of the author page at /blog/authors/<permalink>
+#    permalink: '/all-sebastien-lorber-articles'
+#  socials:
+#    x: sebastienlorber
+#    linkedin: sebastienlorber
+#    github: slorber
+#    newsletter: https://thisweekinreact.com
