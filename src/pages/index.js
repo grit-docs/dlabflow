@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            빠르게 시작하기 - 5min ⏱️
+            빠르게 시작하기 - 4min ⏱️
           </Link>
         </div>
       </div>
