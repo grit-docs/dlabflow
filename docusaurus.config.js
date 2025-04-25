@@ -97,6 +97,26 @@ const config = {
                 label: '빠르게 시작하기',
                 href: 'https://grit-docs.github.io/dlabflow/docs/intro',
               },
+              {
+                label: '데이터 관리',
+                href: 'https://grit-docs.github.io/dlabflow/docs/category/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC',
+              },
+              {
+                label: '학습 데이터 관리',
+                href: 'https://grit-docs.github.io/dlabflow/docs/category/%ED%95%99%EC%8A%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC',
+              },
+              {
+                label: 'AI 학습관리',
+                href: 'https://grit-docs.github.io/dlabflow/docs/category/ai-%ED%95%99%EC%8A%B5-%EA%B4%80%EB%A6%AC',
+              },
+              {
+                label: '데이터 수집 장치 관리',
+                href: 'https://grit-docs.github.io/dlabflow/docs/category/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91-%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC',
+              },
+              {
+                label: '시스템 관리',
+                href: 'https://grit-docs.github.io/dlabflow/docs/category/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B4%80%EB%A6%AC',
+              },
             ],
           },
           {
@@ -114,13 +134,25 @@ const config = {
                 label: '보유 기술 소개',
                 href: 'https://grit.gwnu.ac.kr/contents?bmcode=tech',
               },
+              {
+                label: '기업 지원 소개',
+                href: 'https://grit.gwnu.ac.kr/contents?bmcode=support',
+              },
+              {
+                label: 'SW 시험 소개',
+                href: 'https://grit.gwnu.ac.kr/contents?bmcode=kolas1',
+              },
+              {
+                label: '공지사항',
+                href: 'https://grit.gwnu.ac.kr/board/list?bmcode=notice',
+              },
             ],
           },
           {
             title: '보유 플랫폼',
             items: [
               {
-                label: 'DLab-FLow',
+                label: 'D-Lab FLow',
                 href: 'https://dlabflow.grit.re.kr/',
               },
               {

@@ -14,11 +14,25 @@ sidebar_position: 1
 
 ## 빠른 시작 튜토리얼 (4분)
 ---
+D-Lab Flow를 처음 사용하는 분들도 쉽게 따라할 수 있도록 구성한, AI 모델 개발 단계별 튜토리얼입니다.
 
-<iframe width="100%" height="540" src="https://www.youtube.com/embed/ff7eLBVBEbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+자막이 필요하신 경우, 유튜브 자막 기능을 활성화해 주세요.
 
-이거 예전꺼라 다시 만들어야함...
+ <iframe width="100%" height="540" src="https://www.youtube.com/embed/ff7eLBVBEbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+## D-Lab Flow 튜토리얼: 단계별 절차
+---
+
+- 데이터 저장소 생성: 프로젝트의 최상위 단위인 저장소를 만들고, 이름, 설명, 해시태그를 설정합니다.
+- 이미지 파일 업로드: 학습에 사용할 원본 이미지를 한 번에 업로드합니다.
+- 데이터셋 생성: 업로드한 이미지를 하나의 데이터셋으로 묶어 관리합니다.
+- 라벨링 정보 파일 업로드: 보유 중인 라벨 파일이 있다면 등록합니다.
+- 라벨링 작업: 직접 경계 상자를 그리거나 기존 정보를 보완하여 라벨링합니다.
+- 프로젝트 생성: 데이터셋을 불러와 실험 단위인 프로젝트를 생성합니다.
+- 버전 생성: 학습 설정(파일 정보, 분할 비율, 증강 옵션 등)을 담은 ‘버전’을 등록합니다.
+- 모델 훈련: 학습 파라미터를 설정하고 실제로 모델 훈련을 시작합니다.
+- 모델 평가: 테스트 데이터를 활용해 예측 결과와 성능 지표를 확인합니다.
 
 ### 데이터 저장소 생성
 ---
