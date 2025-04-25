@@ -18,14 +18,14 @@ import EvaluatedResultDownloadCompletionImg from './img/Evaluated_Result_Downloa
 * 데이터를 업로드해 학습이 완료된 모델의 성능을 평가할 수 있습니다.
     * 한번에 최대 10개의 이미지 파일을 업로드하여 모델을 평가할 수 있습니다.
 
-        <div style={{ textAlign: 'center' }}>
-            <img src={EvaluateModelReadyImg} alt="모델 평가 - 준비" style={{ width: '100%' }} />
-        </div>
+      <div style={{ textAlign: 'center' }}>
+          <img src={EvaluateModelReadyImg} alt="모델 평가 - 준비" style={{ width: '100%' }} />
+      </div>
 
-        <br />
+      <br />
 
 ### 이미지 업로드
-* "**이미지 업로드**" 버튼을 눌러 "파일 탐색창"을 엽니다.
+* "**이미지 업로드**" 버튼을 눌러 **파일 탐색창**을 엽니다.
 
   <div style={{ textAlign: 'center' }}>
     <img src={ButtonUploadImageImg} alt="모델 평가 - 이미지 업로드" style={{ width: '50%' }} />
@@ -41,7 +41,7 @@ import EvaluatedResultDownloadCompletionImg from './img/Evaluated_Result_Downloa
 
   <br />
 
-* 파일이 업로드 되고, 업로드한 이미지에 대한 **평가**가 **진행**됩니다. 
+* 파일 업로드와 함께 업로드한 이미지에 대해 **평가**가 **진행**됩니다. 
 
   <div style={{ textAlign: 'center' }}>
     <img src={EvaluateModelInferencingImg} alt="모델 평가 - 추론 진행중" style={{ width: '100%' }} />
@@ -50,7 +50,7 @@ import EvaluatedResultDownloadCompletionImg from './img/Evaluated_Result_Downloa
   <br />
 
 ### 모델 평가 결과
-* 평가가 완료되면 업로드한 이미지에 평가 결과가 추가되어 이미지가 출력됩니다.
+* 평가가 완료되면 업로드한 이미지에 평가 결과 정보가 추가되어 이미지가 출력됩니다.
 
   <div style={{ textAlign: 'center' }}>
     <img src={EvaluateModelCompleteImg} alt="모델 평가 - 추론 완료" style={{ width: '100%' }} />

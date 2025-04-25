@@ -26,7 +26,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
 # 모델 훈련하기
 
 ## 모델 훈련
-* "**모델 준비**" 과정을 완료하면 아래와 같이 "**모델 훈련**" 페이지로 이동합니다.
+* "**버전 생성**" 과정을 완료하면 "**모델 훈련**" 페이지로 이동합니다.
 
   <div style={{ textAlign: 'center' }}>
     <img src={TrainModelPreprocessingImg} alt="모델 훈련 - 전처리중" style={{ width: '100%' }} />
@@ -34,7 +34,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
 
   <br />
 
-* "**모델 준비**" 완료 직후는 데이터 전처리 진행 중이므로 아래와 같이 "**데이터 전처리중...**" 상태를 나타내며, 데이터 전처리가 완료되면 "**인공지능 학습 시작**" 버튼이 활성화 되고, "**학습/시험 데이터 분할**"에 데이터 전처리가 반영된 데이터 수량을 확인할 수 있습니다.
+* "**버전 생성**" 완료 직후는 데이터 전처리 진행 중이므로 아래와 같이 "**데이터 전처리중...**" 상태를 나타내며, 데이터 전처리가 완료되면 "**인공지능 학습 시작**" 버튼이 활성화 되고, "**학습/시험 데이터 분할**"에 데이터 전처리가 반영된 데이터 수량을 확인할 수 있습니다.
 
   <br />
 
@@ -44,7 +44,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
 
   <br />
 
-* "**모델 훈련**"의 "**버전 목록**" 및 "**타이틀바**"에는 새로 생성된 버전의 버전명(**V_0**)이 표시됩니다.
+* "**모델 훈련**"의 **버전 목록** 및 **타이틀바**에는 새로 생성된 버전의 버전명(**V_0**)이 표시됩니다.
 
   <div style={{ textAlign: 'center' }}>
     <img src={ListTrainModelImg} alt="모델 훈련 리스트" style={{ width: '70%' }} />
@@ -200,7 +200,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
         <br />
 
 ### 버전 이름 변경
-* "**타이틀바**" 우측에 "펜"아이콘을 클릭해 버전명을 변경할 수 있습니다. 
+* "**타이틀바**" 우측에 "**펜**"아이콘을 클릭해 버전명을 **변경**할 수 있습니다. 
 
   <div style={{ textAlign: 'center' }}>
     <img src={VersionTitlebarImg} alt="버전 타이틀바" style={{ width: '65%' }} />
@@ -210,7 +210,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
 
 * **버전 이름 변경**
   * **이름 변경** 버튼을 누르면, **버전 이름 변경** 모달창이 출력됩니다.
-  * **버전 이름 변경** 모달창에서 원하는 **버전명**으로 변경 후 **저장** 버튼을 누르면 버전 이름이 변경됩니다.
+  * **버전 이름 변경** 모달창에서 원하는 **버전명**으로 변경 후 **저장** 버튼을 누르면 버전 이름이 **변경**됩니다.
 
     <div style={{ textAlign: 'center' }}>
       <img src={ModalModifyVersionNameImg} alt="버전 이름 변경 모달창" style={{ width: '40%' }} />
@@ -227,7 +227,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
     <br />
 
 ### 버전 삭제
-* "**타이틀바**" 우측에 "휴지통"아이콘을 클릭해 버전을 삭제할 수 있습니다. 
+* "**타이틀바**" 우측에 "**휴지통**"아이콘을 클릭해 버전을 **삭제**할 수 있습니다. 
 
   <div style={{ textAlign: 'center' }}>
     <img src={VersionTitlebarImg} alt="버전 타이틀바" style={{ width: '65%' }} />
@@ -237,7 +237,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
     
 * **버전 삭제**
   * **삭제** 버튼을 누르면, **버전 삭제** 모달창이 출력됩니다.
-  * 모달창에서 "**예**" 버튼을 누르면 현재 선택된 버전이 삭제됩니다. 
+  * 모달창에서 "**예**" 버튼을 누르면 현재 선택된 버전이 **삭제**됩니다. 
 
     <div style={{ textAlign: 'center' }}>
       <img src={ModalDeleteVersionImg} alt="버전 삭제 모달창" style={{ width: '40%' }} />
@@ -245,7 +245,7 @@ import ModalModifyVersionNameImg from './img/Modal-Modify_Version_Name.png';
 
     <br />
       
-**모델 평가** 버튼을 눌러 "모델 평가" 페이지로 이동할 수 있습니다.
+"**모델 평가**" 버튼을 눌러 **모델 평가** 페이지로 이동할 수 있습니다.
 
   <div style={{ textAlign: 'center' }}>
     <img src={ButtonModelEvaluationImg} alt="인공지능 학습 완료 - 모델 평가" style={{ width: '17%' }} />

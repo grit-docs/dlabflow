@@ -2,6 +2,7 @@
 sidebar_position: 3
 ---
 
+import CreateVersionReadyImg from './img/Create_Version_Ready.png';
 import PrepareModelImg from './img/Prepare_Model.png';
 import PrepareModelAdjustRatioImg from './img/Prepare_Model_Adjust_Ratio.png';
 import ModalAdjustRatioImg from './img/Modal-Adjust_Ratio.png';
@@ -10,12 +11,27 @@ import ButtonPrepareModelImg from './img/Button-Prepare_Model.png';
 
 # 새로운 버전 생성하기
 
-## 학습 데이터 구성 설정
-"**모델 준비**"를 클릭해 학습 데이터 구성 설정 페이지로 이동합니다.
-  * **학습 파일 정보**: 선택한 데이터셋의 전체 파일수, 라벨링 수, 클래스 수 정보가 표시됩니다.
+"**모델 훈련**" 페이지에서 "**버전 생성**" 버튼을 눌러 버전 생성 페이지로 이동합니다.
+
+  <div style={{ textAlign: 'center' }}>
+    <img src={CreateVersionReadyImg} alt="버전 생성 준비" style={{ width: '100%' }} />
+  </div>
+
+  <br />
   
+## 버전 생성
+* 데이터셋 분할 비율을 설정하고, 데이터 전처리 옵션을 선택하여 인공지능 학습용 버전을 준비합니다.
+
+    <div style={{ textAlign: 'center' }}>
+      <img src={PrepareModelImg} alt="모델 준비" style={{ width: '100%' }} />
+    </div>
+
+    <br />
+
+  * **학습 파일 정보**: 선택한 데이터셋의 전체 파일수, 라벨링 수, 클래스 수 정보가 표시됩니다.
+
   * **학습/시험 데이터 분할**
-    * 학습데이터, 검증데이터, 테스트데이터로 비율을 분배하여 학습하는 것은 기계 학습에서 일반적으로 사용되는 중요한 방법 중 하나입니다. 이 방법은 전체 데이터셋을 세 가지 서로 다른 세트로 나누어 사용함으로써 모델의 성능을 평가하고 개선하는 데 도움을 줍니다.
+    * 학습 데이터, 검증 데이터, 테스트 데이터로 비율을 분배하여 학습하는 것은 기계 학습에서 일반적으로 사용되는 중요한 방법 중 하나입니다. 이 방법은 전체 데이터셋을 세 가지 서로 다른 세트로 나누어 사용함으로써 모델의 성능을 평가하고 개선하는 데 도움을 줍니다.
       * **학습 데이터(Training Data)**: 모델이 학습하는 데 사용되는 데이터입니다. 학습 데이터는 모델이 가중치를 조정하고 패턴을 파악하는 데 사용됩니다.
 
       * **검증 데이터(Validation Data)**: 학습 중에 모델의 성능을 평가하고 조정하기 위해 사용되는 데이터입니다. 학습 데이터로 학습한 모델을 검증 데이터로 평가하여 하이퍼파라미터를 조정하거나 모델의 일반화 성능을 확인합니다.
@@ -28,15 +44,12 @@ import ButtonPrepareModelImg from './img/Button-Prepare_Model.png';
     * 데이터 증강(Data Augmentation)은 기계 학습에서 사용되는 데이터의 양과 다양성을 늘리는 기술입니다. 이 기술은 주어진 데이터에 변형을 가하거나 변형된 데이터를 생성하여 학습 모델의 성능을 향상시키는 데 사용됩니다. 주로 이미지, 텍스트, 오디오 등의 데이터에서 사용됩니다.
     * 예를 들어, 이미지 데이터의 경우 데이터 증강 기술은 이미지를 회전, 이동, 확대/축소, 반전, 노이즈 추가 등의 방법으로 변형합니다. 이렇게 함으로써 모델은 더 다양한 상황에서 학습되고, 일반화 능력을 향상시킬 수 있습니다. 이는 모델이 특정 상황에 과적합되는 것을 방지하고, 실제 환경에서의 성능을 향상시키는 데 도움이 됩니다.
 
-
-  <div style={{ textAlign: 'center' }}>
-    <img src={PrepareModelImg} alt="모델 준비" style={{ width: '90%' }} />
-  </div>
-
-  <br />
-
 ### 데이터 비율 재설정
 * 데이터 비율 변경이 필요한 경우, "**비율 재설정**" 버튼을 눌러 학습, 검증, 테스트 데이터의 비율을 재설정할 수 있습니다.
+* 기본값은 다음 비율로 설정되어 있습니다.
+  * **학습 데이터: 80%**
+  * **검증 데이터: 10%**
+  * **테스트 데이터: 10%**
 
   <div style={{ textAlign: 'center' }}>
     <img src={PrepareModelAdjustRatioImg} alt="비율 재설정" style={{ width: '52%' }} />
@@ -60,7 +73,7 @@ import ButtonPrepareModelImg from './img/Button-Prepare_Model.png';
   <br />
 
 ### 학습 데이터 증강
-* 학습 데이터 증강은 데이터셋에 포함된 기존 데이터에 다양한 증강 기법을 적용하는 단계입니다. 사용을 원할 경우, 적용하고자 하는 증강 옵션을 체크(다중체크 가능)합니다.
+* 학습 데이터 증강은 데이터셋에 포함된 기존 데이터에 다양한 증강 기법을 적용하는 단계입니다. 사용을 원할 경우, 적용하고자 하는 증강 옵션을 체크(**다중체크 가능**)합니다.
 
 * D-Lab Flow에서는 다음과 같은 증강 기능을 지원합니다.
   * **이미지 좌우 반전**
