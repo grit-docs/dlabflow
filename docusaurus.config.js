@@ -28,7 +28,7 @@ const config = {
       tagName: 'meta',
       attributes: {
         name: 'algolia-site-verification',
-        content: '2EB09999264A8FB5',
+        content: '139F10EE611CB946',
       },
     },
   ],
@@ -179,19 +179,10 @@ const config = {
         },
         // Algolia 검색 설정 추가
         algolia: {
-          appId: '7OD6XA8031',
-          apiKey: '2114189d742b5de265098dbb645dae4b',
-          indexName: 'DLAB_FLOW_INDEX',
-          // 문맥 기반 검색 활성화
+          appId: '3ZSG61BAL0',
+          apiKey: '9dfd1cb74fc410d92dc14ecb0918468c',
+          indexName: 'dlab_flow_index',
           contextualSearch: true,
-          // 다국어 지원을 위한 설정 (한국어 사이트인 경우)
-          searchParameters: {
-            facetFilters: ['language:ko'],
-          },
-          // 전용 검색 페이지 경로 설정 (기본값: 'search')
-          searchPagePath: 'search',
-          // 검색창 placeholder 텍스트 설정
-          placeholder: '검색어를 입력하세요...',
         },
         prism: {
           theme: prismThemes.github,
