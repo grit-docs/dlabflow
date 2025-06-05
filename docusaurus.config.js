@@ -182,7 +182,7 @@ const config = {
           appId: '3ZSG61BAL0',
           apiKey: '9dfd1cb74fc410d92dc14ecb0918468c',
           indexName: 'dlab_flow_index',
-          contextualSearch: true,
+          contextualSearch: false,
         },
         prism: {
           theme: prismThemes.github,
