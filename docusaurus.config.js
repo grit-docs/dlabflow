@@ -22,6 +22,17 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // Algolia 사이트 소유권 확인을 위한 메타 태그 추가
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '2EDB0999264A8BF5',
+      },
+    },
+  ],
+
   i18n: {
     defaultLocale: 'ko',
     locales: ['ko'],
