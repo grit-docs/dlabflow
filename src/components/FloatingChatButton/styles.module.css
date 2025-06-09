@@ -1,0 +1,62 @@
+
+.floatingButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.floatingButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.floatingButton:active {
+    transform: translateY(0);
+}
+
+.buttonText {
+    margin-top: 1px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .floatingButton {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .buttonText {
+        font-size: 7px;
+    }
+}
+
+/* 다크 모드 지원 */
+[data-theme='dark'] .floatingButton {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+[data-theme='dark'] .floatingButton:hover {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
