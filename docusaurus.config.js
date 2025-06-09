@@ -31,6 +31,14 @@ const config = {
         content: '139F10EE611CB946',
       },
     },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'google-site-verification',
+        content: 'FBcr1wZm2BNh7GnWcGHPij6d3Rl9M1dpNtbWHI__4fc',
+      },
+    },
+
   ],
 
   i18n: {
