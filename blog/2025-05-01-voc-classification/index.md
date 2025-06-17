@@ -1,6 +1,6 @@
 ---
 slug: voc-classification
-title: 공개 데이터로 시작하는 D-Lab Flow 실습: 객체 분류 AI 모델 만들기
+title: "공개 데이터로 시작하는 D-Lab Flow 실습: 객체 분류 AI 모델 만들기"
 authors: [grit]
 tags: [튜토리얼]
 ---
@@ -9,9 +9,11 @@ tags: [튜토리얼]
 
 PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 **객체 분류(Classification)** 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.
 
+시작하기 전에 D-Lab Flow 계정을 준비해 주세요.
+
 ## 1. 데이터 준비
 
-1. [PASCAL VOC 2012 데이터셋](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)을 다운로드합니다. 해당 데이터셋은 이미지와 함께 XML 형식의 라벨 정보를 제공하며, **CC BY 4.0** 라이선스로 배포됩니다. (원 저작자: *Mark Everingham et al.*, 링크: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/ )
+1. [PASCAL VOC 2012 데이터셋](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)을 다운로드합니다. 이미지 수천 장과 XML 형식의 라벨 정보를 포함하고 있으며 **CC BY 4.0** 라이선스로 배포됩니다. (원 저작자: *Mark Everingham et al.*, 링크: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/ )
 2. 다운로드한 압축 파일을 풀면 `JPEGImages` 폴더와 `Annotations` 폴더가 보입니다. D-Lab Flow에서는 XML 파일에서 클래스 정보를 자동으로 추출해 라벨링 데이터를 생성할 수 있습니다.
 3. 필요하다면 폴더를 압축(zip)하여 업로드 파일 용량을 줄여둡니다.
 
