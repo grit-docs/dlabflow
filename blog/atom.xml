@@ -2,11 +2,61 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://grit-docs.github.io/dlabflow/blog</id>
     <title>D-Lab Flow 도움말 센터 Blog</title>
-    <updated>2025-04-22T00:00:00.000Z</updated>
+    <updated>2025-05-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://grit-docs.github.io/dlabflow/blog"/>
     <subtitle>D-Lab Flow 도움말 센터 Blog</subtitle>
     <icon>https://grit-docs.github.io/dlabflow/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[공개 데이터로 시작하는 D-Lab Flow 실습: 객체 분류 AI 모델 만들기]]></title>
+        <id>https://grit-docs.github.io/dlabflow/blog/voc-classification</id>
+        <link href="https://grit-docs.github.io/dlabflow/blog/voc-classification"/>
+        <updated>2025-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 분류(Classification) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.]]></summary>
+        <content type="html"><![CDATA[<p>PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 <strong>객체 분류(Classification)</strong> 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</p>
+<p>시작하기 전에 D-Lab Flow 계정을 준비해 주세요.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-데이터-준비">1. 데이터 준비<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%80%EB%B9%84" class="hash-link" aria-label="1. 데이터 준비에 대한 직접 링크" title="1. 데이터 준비에 대한 직접 링크">​</a></h2>
+<ol>
+<li><a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/" target="_blank" rel="noopener noreferrer">PASCAL VOC 2012 데이터셋</a>을 다운로드합니다. 이미지 수천 장과 XML 형식의 라벨 정보를 포함하고 있으며 <strong>CC BY 4.0</strong> 라이선스로 배포됩니다. (원 저작자: <em>Mark Everingham et al.</em>, 링크: <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/" target="_blank" rel="noopener noreferrer">http://host.robots.ox.ac.uk/pascal/VOC/voc2012/</a> )</li>
+<li>다운로드한 압축 파일을 풀면 <code>JPEGImages</code> 폴더와 <code>Annotations</code> 폴더가 보입니다. D-Lab Flow에서는 XML 파일에서 클래스 정보를 자동으로 추출해 라벨링 데이터를 생성할 수 있습니다.</li>
+<li>필요하다면 폴더를 압축(zip)하여 업로드 파일 용량을 줄여둡니다.</li>
+</ol>
+<p><em>Dataset 업로드 화면 스크린샷 자리</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-d-lab-flow에-데이터-업로드-및-클래스-정의">2. D-Lab Flow에 데이터 업로드 및 클래스 정의<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#2-d-lab-flow%EC%97%90-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%85%EB%A1%9C%EB%93%9C-%EB%B0%8F-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%A0%95%EC%9D%98" class="hash-link" aria-label="2. D-Lab Flow에 데이터 업로드 및 클래스 정의에 대한 직접 링크" title="2. D-Lab Flow에 데이터 업로드 및 클래스 정의에 대한 직접 링크">​</a></h2>
+<ol>
+<li><strong>Dataset</strong> 메뉴에서 <code>새 데이터셋 생성</code> 버튼을 클릭합니다.</li>
+<li>앞서 준비한 VOC 2012 데이터를 업로드합니다. 업로드가 완료되면 자동으로 라벨링 정보를 읽어 클래스가 생성됩니다.</li>
+<li>클래스 이름과 수량을 확인하고, 필요한 경우 클래스 색상이나 설명을 수정합니다.</li>
+</ol>
+<p><em>클래스 확인 화면 스크린샷 자리</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-프로젝트-및-버전-생성">3. 프로젝트 및 버전 생성<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#3-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%8F-%EB%B2%84%EC%A0%84-%EC%83%9D%EC%84%B1" class="hash-link" aria-label="3. 프로젝트 및 버전 생성에 대한 직접 링크" title="3. 프로젝트 및 버전 생성에 대한 직접 링크">​</a></h2>
+<ol>
+<li>상단 메뉴에서 <strong>프로젝트</strong> 탭으로 이동해 <code>새 프로젝트</code>를 만듭니다. 유형은 <strong>이미지 분류</strong>로 선택합니다.</li>
+<li>프로젝트 상세 화면에서 <code>새 버전</code>을 생성합니다. 학습에 사용할 데이터셋을 방금 만든 VOC 2012 데이터셋으로 지정합니다.</li>
+<li>버전을 생성하면 학습 파라미터(에폭 수, 배치 크기 등)를 설정할 수 있습니다. 기본값을 사용해도 무방합니다.</li>
+</ol>
+<p><em>프로젝트 생성 화면 스크린샷 자리</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-모델-학습-및-모니터링">4. 모델 학습 및 모니터링<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#4-%EB%AA%A8%EB%8D%B8-%ED%95%99%EC%8A%B5-%EB%B0%8F-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81" class="hash-link" aria-label="4. 모델 학습 및 모니터링에 대한 직접 링크" title="4. 모델 학습 및 모니터링에 대한 직접 링크">​</a></h2>
+<ol>
+<li>버전 화면에서 <code>학습 시작</code> 버튼을 클릭하면 즉시 모델 학습이 진행됩니다.</li>
+<li>학습 상태는 실시간 그래프로 확인할 수 있으며, 별도의 코딩 없이도 학습 과정을 모니터링할 수 있습니다.</li>
+</ol>
+<p><em>학습 진행 화면 스크린샷 자리</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-결과-평가-및-시각화">5. 결과 평가 및 시각화<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#5-%EA%B2%B0%EA%B3%BC-%ED%8F%89%EA%B0%80-%EB%B0%8F-%EC%8B%9C%EA%B0%81%ED%99%94" class="hash-link" aria-label="5. 결과 평가 및 시각화에 대한 직접 링크" title="5. 결과 평가 및 시각화에 대한 직접 링크">​</a></h2>
+<ol>
+<li>학습이 완료되면 <code>평가</code> 탭에서 모델의 정확도와 loss 그래프를 확인합니다.</li>
+<li>테스트 데이터에 대한 <strong>confusion matrix</strong> 등을 통해 클래스별 성능을 살펴봅니다.</li>
+<li>필요하다면 추가 데이터로 재학습하거나 파라미터를 조정해 성능을 개선합니다.</li>
+</ol>
+<p><em>평가 결과 화면 스크린샷 자리</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-마무리-및-다음-단계">6. 마무리 및 다음 단계<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#6-%EB%A7%88%EB%AC%B4%EB%A6%AC-%EB%B0%8F-%EB%8B%A4%EC%9D%8C-%EB%8B%A8%EA%B3%84" class="hash-link" aria-label="6. 마무리 및 다음 단계에 대한 직접 링크" title="6. 마무리 및 다음 단계에 대한 직접 링크">​</a></h2>
+<p>이렇게 PASCAL VOC 2012 공개 데이터셋으로 D-Lab Flow에서 객체 분류 모델을 만들어 보았습니다. 복잡한 코드 없이도 데이터 업로드부터 학습, 평가까지 한 번에 진행할 수 있다는 점이 D-Lab Flow의 큰 장점입니다. 다음 실습으로는 직접 수집한 이미지나 다른 공개 데이터셋을 활용해 모델을 비교해 보시기를 추천합니다.</p>]]></content>
+        <author>
+            <name>강원ICT융합연구원</name>
+            <uri>https://grit.gwnu.ac.kr/</uri>
+        </author>
+        <category label="튜토리얼" term="튜토리얼"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[처음 시작하는 데이터 라벨링, 쉽게 알려드릴게요]]></title>
         <id>https://grit-docs.github.io/dlabflow/blog/라벨링</id>
