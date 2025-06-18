@@ -21,10 +21,10 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.ctaButtons}>
           <Link className="button button--secondary button--lg" to="/docs/intro">
-            Get Started
+            빠르게 시작하기
           </Link>
           <Link className="button button--outline button--lg" to="/docs/intro">
-            Learn More
+            상세 매뉴얼 확인
           </Link>
         </div>
       </div>

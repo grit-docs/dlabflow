@@ -7,3 +7,17 @@
   margin: 0 auto;
   line-height: 1.6;
 }
+
+.list li {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  margin: 0 auto 1rem;
+}

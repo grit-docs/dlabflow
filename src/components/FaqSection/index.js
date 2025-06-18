@@ -14,6 +14,14 @@ const FAQ_LIST = [
   {
     q: '문의할 곳이 있나요?',
     a: '연구원 홈페이지의 연락처를 통해 언제든 문의하실 수 있습니다.'
+  },
+  {
+    q: '라이선스는 어떻게 되나요?',
+    a: '개인과 기업을 위한 다양한 라이선스 정책을 제공합니다.'
+  },
+  {
+    q: '데모를 체험할 수 있나요?',
+    a: '무료 체험 버전으로 주요 기능을 직접 사용해 볼 수 있습니다.'
   }
 ];
 
@@ -31,6 +39,9 @@ export default function FaqSection() {
     <section className={styles.faqSection}>
       <div className="container">
         <Heading as="h2" className="text--center margin-bottom--lg">FAQ</Heading>
+        <div className="text--center">
+          <img src={require('@site/static/img/intro_3.png').default} alt="faq" className={styles.image} />
+        </div>
         {FAQ_LIST.map((entry, idx) => (
           <Item key={idx} {...entry} />
         ))}

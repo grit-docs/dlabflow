@@ -5,8 +5,17 @@
 .item {
   max-width: 700px;
   margin: 0 auto 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
 }
 
 .question {
   margin-bottom: 0.5rem;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  margin: 0 auto 1rem;
 }

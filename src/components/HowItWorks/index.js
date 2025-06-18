@@ -30,6 +30,15 @@ function DeployIcon(props) {
   );
 }
 
+function ImproveIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" width="40" height="40" {...props}>
+      <path d="M4 14l6-6 4 4 6-6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M20 10v7h-7" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
 const steps = [
   {
     title: '데이터 업로드',
@@ -45,6 +54,11 @@ const steps = [
     title: '배포 및 모니터링',
     Icon: DeployIcon,
     description: '완성된 모델을 서비스에 바로 적용할 수 있습니다.'
+  },
+  {
+    title: '지속적인 개선',
+    Icon: ImproveIcon,
+    description: '모델 성능을 모니터링하고 주기적으로 개선합니다.'
   },
 ];
 
