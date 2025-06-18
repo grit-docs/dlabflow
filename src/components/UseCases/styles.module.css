@@ -1,0 +1,9 @@
+.useSection {
+  padding: 4rem 0;
+}
+
+.list {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

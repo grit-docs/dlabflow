@@ -1,0 +1,12 @@
+.faqSection {
+  padding: 4rem 0;
+}
+
+.item {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.question {
+  margin-bottom: 0.5rem;
+}

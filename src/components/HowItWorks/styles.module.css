@@ -1,0 +1,11 @@
+.howSection {
+  padding: 4rem 0;
+}
+
+.step {
+  margin-bottom: 2rem;
+}
+
+.icon {
+  color: var(--ifm-color-primary);
+}
