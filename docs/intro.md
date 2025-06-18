@@ -42,6 +42,8 @@ D-Lab Flow에서는 학습 데이터를 체계적으로 관리하기 위해 데�
 
 데이터 저장소는 학습에 필요한 파일을 업로드하고 관리하는 공간입니다.
 
+더 자세한 데이터 저장소 생성 방법은 [D-Lab Flow 공식 문서](https://grit-docs.github.io/dlabflow/docs/data_management/data_storage#%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%83%9D%EC%84%B1)를 참고하세요.
+
 :::tip tip
 
 <Highlight color="rgb(24, 144, 255)">저장소 생성</Highlight>버튼을 클릭한 후 아래 정보를 입력하여 새로운 저장소를 생성합니다.
@@ -93,7 +95,7 @@ D-Lab Flow에서는 학습 데이터를 체계적으로 관리하기 위해 데�
 
 라벨링 정보 파일은 이미지 안에 어떤 객체가 있고, 그 위치가 어디인지 등을 정의하는 파일입니다.
 
-D-Lab Flow는 현재 `Pascal VOC 포맷(XML)`을 지원합니다.
+D-Lab Flow는 현재 `Pascal VOC 포맷(XML)`을 지원합니다. PASCAL VOC 데이터셋은 [공식 웹사이트](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) 또는 [Kaggle](https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset)에서 다운로드할 수 있습니다.
 
 업로드한 라벨 파일은 이미지와 자동으로 매칭되며, 매칭된 정보는 라벨링 도구에서 바로 확인하고 편집할 수 있습니다.
 
