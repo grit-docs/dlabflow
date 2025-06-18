@@ -4,6 +4,9 @@
 
 .step {
   margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
 }
 
 .icon {

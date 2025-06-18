@@ -15,3 +15,11 @@
   margin: 0; /* 중앙에서 밀리지 않도록 기본 여백 제거 */
   padding-left: 1rem; /* 필요 시 왼쪽 패딩 조정 */
 }
+
+.textLeft li {
+  list-style: none;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
