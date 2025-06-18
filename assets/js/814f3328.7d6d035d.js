@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdlabflow=self.webpackChunkdlabflow||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\uacf5\uac1c \ub370\uc774\ud130\ub85c \uac1d\uccb4 \ud0d0\uc9c0 AI \ubaa8\ub378 \ub9cc\ub4e4\uae30","permalink":"/dlabflow/blog/voc-classification","unlisted":false,"date":"2025-06-18T00:00:00.000Z"}]}')}}]);
