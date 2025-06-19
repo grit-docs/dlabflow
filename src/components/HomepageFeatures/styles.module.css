@@ -1,15 +1,17 @@
 .features {
-  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
 }
-.feature {
-  text-align: center;
-  padding: 1.5rem;
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
 }
-.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: var(--ifm-color-primary);
-  opacity: 0.15;
-  margin: 0 auto 1rem;
+
+.textLeft {
+  text-align: left;
+  margin: 0; /* 중앙에서 밀리지 않도록 기본 여백 제거 */
+  padding-left: 1rem; /* 필요 시 왼쪽 패딩 조정 */
 }
