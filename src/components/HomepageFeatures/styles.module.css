@@ -15,3 +15,10 @@
   margin: 0; /* 중앙에서 밀리지 않도록 기본 여백 제거 */
   padding-left: 1rem; /* 필요 시 왼쪽 패딩 조정 */
 }
+
+.equalWidthButton {
+  min-width: 200px; /* 두 버튼의 최소 너비 설정 */
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+}

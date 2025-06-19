@@ -19,9 +19,14 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className={`button button--secondary button--lg ${styles.equalWidthButton}`}
             to="/docs/intro">
-            빠르게 시작하기 - 4min ⏱️
+            빠르게 둘러보기 (4분)
+          </Link>
+          <Link
+            className={`button button--secondary button--lg ${styles.equalWidthButton}`}
+            to="/docs/data_management/data_storage">
+            기본 사항 배우기
           </Link>
         </div>
       </div>

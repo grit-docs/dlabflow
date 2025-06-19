@@ -14,8 +14,8 @@ export default function FloatingChatButton() {
         >
             {/* 네모 모양 말풍선 아이콘 */}
             <svg
-                width="30"
-                height="24"
+                width="36"
+                height="30"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

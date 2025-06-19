@@ -20,4 +20,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px; /* 모든 화면에서 버튼 사이에 간격 추가 */
+}
+
+.equalWidthButton {
+  min-width: 250px; /* 두 버튼의 최소 너비 설정 */
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+}
+
+/* 모바일 화면에서 버튼을 세로로 정렬 */
+@media screen and (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    gap: 16px; /* 모바일에서의 버튼 사이 간격 */
+  }
+
+  .equalWidthButton {
+    width: 100%; /* 모바일에서는 가로 전체 너비 사용 */
+    max-width: 300px; /* 최대 너비 제한 */
+  }
 }
