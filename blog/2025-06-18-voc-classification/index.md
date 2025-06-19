@@ -6,15 +6,22 @@ tags: [컴퓨터비전, 튜토리얼]
 ---
 
 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px'}}>
-  <span>빠른 시작 튜토리얼 보기</span>
-  <a href="/dlabflow/docs/intro" className="button button--outline button--primary">문서 전체 보기</a>
+  <span>PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 탐지(Object Detection) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</span>
 </div>
 
 <!-- truncate -->
 
-PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 **객체 탐지(Object Detection)** 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.
-
 ## 시작하기 전에
+
+컴퓨터 비전 분야에서 널리 사용되는 PASCAL VOC 2012 공개 데이터셋을 활용하여 **객체 탐지(Object Detection)** AI 모델을 만들어 봅니다. 
+
+D-Lab Flow 플랫폼을 사용하면 복잡한 코드 작성 없이도 데이터 준비부터 모델 학습, 평가까지 전체 과정을 직관적인 인터페이스로 진행할 수 있습니다.
+
+완성된 모델은 이미지 내 다양한 객체(사람, 자동차, 동물 등)를 인식하고 정확한 위치를 찾아내는 기능을 갖추게 됩니다. 
+
+이 과정을 통해 D-Lab Flow의 기본 사용 방법를 이해하고, 실제 프로젝트에 적용할 수 있는 실무 경험을 쌓을 수 있습니다.
+
+
 
 ### D-Lab Flow 계정 발급받기
 
@@ -46,11 +53,11 @@ D-Lab Flow는 현재 **비공개 서비스**로 운영되어, 일반 사용자�
 ### 1.1 PASCAL VOC 2012 데이터셋 다운로드
 
     1. PASCAL VOC 2012 데이터셋을 다운로드합니다.
-    - [공식 웹사이트](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)에서 다운로드 (속도느림)
-    - [Kaggle](https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset)에서도 다운로드 가능 (속도빠름)
-    - 이미지 수천 장과 XML 형식의 라벨 정보를 포함
-    - **CC BY 4.0** 라이선스로 배포 (원 저작자: *Mark Everingham et al.*)
-    - 20개 클래스 (사람, 자동차, 자전거, 비행기, 배, 버스, 고양이, 개 등)의 객체 분류 및 탐지용 데이터
+       - [공식 웹사이트](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)에서 다운로드 (속도느림)
+       - [Kaggle](https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset)에서도 다운로드 가능 (속도빠름)
+       - 이미지 수천 장과 XML 형식의 라벨 정보를 포함
+       - **CC BY 4.0** 라이선스로 배포 (원 저작자: *Mark Everingham et al.*)
+       - 20개 클래스 (사람, 자동차, 자전거, 비행기, 배, 버스, 고양이, 개 등)의 객체 분류 및 탐지용 데이터
 
 2. 다운로드한 압축 파일을 풀면 다음과 같은 구조를 확인할 수 있습니다:
    ```
