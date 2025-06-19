@@ -13,10 +13,13 @@
             <link>https://grit-docs.github.io/dlabflow/blog/voc-classification</link>
             <guid>https://grit-docs.github.io/dlabflow/blog/voc-classification</guid>
             <pubDate>Wed, 18 Jun 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[빠른 시작 튜토리얼 보기]]></description>
-            <content:encoded><![CDATA[<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><span>빠른 시작 튜토리얼 보기</span><a href="https://grit-docs.github.io/dlabflow/docs/intro" class="button button--outline button--primary">문서 전체 보기</a></div>
-<p>PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 <strong>객체 탐지(Object Detection)</strong> 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</p>
+            <description><![CDATA[PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 탐지(Object Detection) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.]]></description>
+            <content:encoded><![CDATA[<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><span>PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 탐지(Object Detection) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</span></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="시작하기-전에">시작하기 전에<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90" class="hash-link" aria-label="시작하기 전에에 대한 직접 링크" title="시작하기 전에에 대한 직접 링크">​</a></h2>
+<p>컴퓨터 비전 분야에서 널리 사용되는 PASCAL VOC 2012 공개 데이터셋을 활용하여 <strong>객체 탐지(Object Detection)</strong> AI 모델을 만들어 봅니다.</p>
+<p>D-Lab Flow 플랫폼을 사용하면 복잡한 코드 작성 없이도 데이터 준비부터 모델 학습, 평가까지 전체 과정을 직관적인 인터페이스로 진행할 수 있습니다.</p>
+<p>완성된 모델은 이미지 내 다양한 객체(사람, 자동차, 동물 등)를 인식하고 정확한 위치를 찾아내는 기능을 갖추게 됩니다.</p>
+<p>이 과정을 통해 D-Lab Flow의 기본 사용 방법를 이해하고, 실제 프로젝트에 적용할 수 있는 실무 경험을 쌓을 수 있습니다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="d-lab-flow-계정-발급받기">D-Lab Flow 계정 발급받기<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#d-lab-flow-%EA%B3%84%EC%A0%95-%EB%B0%9C%EA%B8%89%EB%B0%9B%EA%B8%B0" class="hash-link" aria-label="D-Lab Flow 계정 발급받기에 대한 직접 링크" title="D-Lab Flow 계정 발급받기에 대한 직접 링크">​</a></h3>
 <p>D-Lab Flow는 현재 <strong>비공개 서비스</strong>로 운영되어, 일반 사용자의 자유 가입이 제한되어 있습니다. 계정 발급을 위해서는 다음 절차를 따라주세요:</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>계정 발급 신청</div><div class="admonitionContent_BuS1"><p><strong>강원ICT융합연구원</strong>에 문의하여 D-Lab Flow 계정을 발급받으실 수 있습니다.</p><p>📞 <strong>문의처</strong>: 강원ICT융합연구원<br>
@@ -35,8 +38,8 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-데이터-준비">1. 데이터 준비<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%80%EB%B9%84" class="hash-link" aria-label="1. 데이터 준비에 대한 직접 링크" title="1. 데이터 준비에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-pascal-voc-2012-데이터셋-다운로드">1.1 PASCAL VOC 2012 데이터셋 다운로드<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#11-pascal-voc-2012-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" class="hash-link" aria-label="1.1 PASCAL VOC 2012 데이터셋 다운로드에 대한 직접 링크" title="1.1 PASCAL VOC 2012 데이터셋 다운로드에 대한 직접 링크">​</a></h3>
 <ol>
-<li>PASCAL VOC 2012 데이터셋을 다운로드합니다.</li>
-</ol>
+<li>
+<p>PASCAL VOC 2012 데이터셋을 다운로드합니다.</p>
 <ul>
 <li><a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/" target="_blank" rel="noopener noreferrer">공식 웹사이트</a>에서 다운로드 (속도느림)</li>
 <li><a href="https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset" target="_blank" rel="noopener noreferrer">Kaggle</a>에서도 다운로드 가능 (속도빠름)</li>
@@ -44,8 +47,9 @@
 <li><strong>CC BY 4.0</strong> 라이선스로 배포 (원 저작자: <em>Mark Everingham et al.</em>)</li>
 <li>20개 클래스 (사람, 자동차, 자전거, 비행기, 배, 버스, 고양이, 개 등)의 객체 분류 및 탐지용 데이터</li>
 </ul>
-<ol start="2">
-<li>다운로드한 압축 파일을 풀면 다음과 같은 구조를 확인할 수 있습니다:<!-- -->
+</li>
+<li>
+<p>다운로드한 압축 파일을 풀면 다음과 같은 구조를 확인할 수 있습니다:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">VOC2012_train_val</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ├── JPEGImages/         # 원본 이미지 파일들</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ├── Annotations/        # XML 형식의 라벨 파일들</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ├── ImageSets/          # 학습/검증/테스트 데이터 분할 정보</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ├── SegmentationClass/  # 세그멘테이션 Class 마스크 이미지들</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  └── SegmentationObject/ # 세그멘테이션 Object 마스크 이미지들</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">VOC2012_test_val</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ├── JPEGImages/         # 테스트용 이미지 파일들</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ├── Annotations/        # XML 형식의 라벨 파일들</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  └── ImageSets/          # 테스트 데이터 분할 정보</span><br></span></code></pre></div></div>
 </li>
 </ol>
