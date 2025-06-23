@@ -40,11 +40,11 @@
 <li>
 <p>PASCAL VOC 2012 데이터셋을 다운로드합니다.</p>
 <ul>
-<li><a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/" target="_blank" rel="noopener noreferrer">공식 웹사이트</a>에서 다운로드 (속도느림)</li>
-<li><a href="https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset" target="_blank" rel="noopener noreferrer">Kaggle</a>에서도 다운로드 가능 (속도빠름)</li>
-<li>이미지 수천 장과 XML 형식의 라벨 정보를 포함</li>
+<li><a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/" target="_blank" rel="noopener noreferrer"><strong>공식 웹사이트</strong></a>에서 다운로드 (속도느림)</li>
+<li><a href="https://www.kaggle.com/datasets/gopalbhattrai/pascal-voc-2012-dataset" target="_blank" rel="noopener noreferrer"><strong>Kaggle</strong></a>에서도 다운로드 가능 (속도빠름)</li>
+<li><strong>약 17,000장의 이미지</strong>와 XML 형식의 라벨 정보 포함</li>
 <li><strong>CC BY 4.0</strong> 라이선스로 배포 (원 저작자: <em>Mark Everingham et al.</em>)</li>
-<li>20개 클래스 (사람, 자동차, 자전거, 비행기, 배, 버스, 고양이, 개 등)의 객체 분류 및 탐지용 데이터</li>
+<li><strong>20개 클래스</strong> (사람, 자동차, 자전거, 비행기, 배, 버스, 고양이, 개 등)의 객체 분류 및 탐지용 데이터</li>
 </ul>
 </li>
 <li>
@@ -218,44 +218,45 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="42-학습-버전-생성">4.2 학습 버전 생성<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#42-%ED%95%99%EC%8A%B5-%EB%B2%84%EC%A0%84-%EC%83%9D%EC%84%B1" class="hash-link" aria-label="4.2 학습 버전 생성에 대한 직접 링크" title="4.2 학습 버전 생성에 대한 직접 링크">​</a></h3>
 <p>프로젝트 내에서 구체적인 학습 설정을 담은 버전을 생성합니다.</p>
 <p>학습 버전 생성에 관한 상세 매뉴얼은 <a href="https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/ai_project/generate_version" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
 <ol>
-<li>생성된 프로젝트 상세 화면에서 <code>버전 생성</code> 버튼 클릭</li>
-</ol>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-0cde2565e4030f5046d46a95207fabf0.png" width="1397" height="820" class="img_ev3q"></p>
-<ol start="2">
-<li>학습 파일 정보 확인<!-- -->
+<li>
+<p>생성된 프로젝트 상세 화면에서 <code>버전 생성</code> 버튼 클릭</p>
+</li>
+<li>
+<p>학습 파일 정보 확인</p>
 <ul>
 <li>선택된 데이터셋의 전체 이미지 수, 라벨 수, 클래스 수 등 요약 정보를 확인합니다.</li>
 </ul>
 </li>
-<li>학습/시험 데이터 부할 확인<!-- -->
+<li>
+<p>학습/시험 데이터 부할 확인</p>
 <ul>
 <li>기본값은 학습 80%, 검증 10%, 시험 10% 입니다.</li>
 <li>비율 재설정 버튼을 통해 원하는 비율로 조정할 수 있습니다.</li>
 </ul>
 </li>
-<li>학습 데이터 증강 선택<!-- -->
+<li>
+<p>학습 데이터 증강 선택</p>
 <ul>
 <li>모델의 성능 향상을 위해 이미지에 다양한 증강(좌우 반전, 회전 등)을 적용할 수 있습니다.</li>
 <li>복수 선택 가능하며, 필요 시 체크박스를 활성화합니다.</li>
 </ul>
 </li>
-<li>버전 생성 버튼 클릭<!-- -->
+<li>
+<p>버전 생성 버튼 클릭</p>
 <ul>
 <li>모든 설정을 완료한 후 버전 생성을 클릭하여 새로운 버전을 생성합니다.</li>
 </ul>
 </li>
-</ol>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_13-5cc3ba4488dc96e0d5c1ce0b4dcf2c32.png" width="1393" height="1032" class="img_ev3q"></p>
-<ol start="6">
-<li>데이터 전처리 진행 확인<!-- -->
+<li>
+<p>데이터 전처리 진행 확인</p>
 <ul>
 <li>버전 생성 직후 자동으로 데이터 전처리가 시작되며, 진행 상태을 확인할 수 있습니다.</li>
 <li>전처리가 완료되어야 인공지능 학습을 시작할 수 있습니다.</li>
 </ul>
 </li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_14-c1c2f980596ea77f3489293b8f6d16a0.png" width="1396" height="862" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="43-상세-학습-설정">4.3 상세 학습 설정<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#43-%EC%83%81%EC%84%B8-%ED%95%99%EC%8A%B5-%EC%84%A4%EC%A0%95" class="hash-link" aria-label="4.3 상세 학습 설정에 대한 직접 링크" title="4.3 상세 학습 설정에 대한 직접 링크">​</a></h3>
 <p>버전 생성 페이지에서 다양한 학습 옵션을 설정할 수 있습니다.</p>
 <p>버전 생성에 관한 상세 매뉴얼은 <a href="https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/ai_project/generate_version#%EB%B2%84%EC%A0%84-%EC%83%9D%EC%84%B1" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
@@ -264,7 +265,6 @@
 <li><strong>총 이미지 수</strong>: 17,125장 (실제 업로드된 수량에 따라 변동)</li>
 <li><strong>라벨 개수</strong>: 약 40,000개 (하나의 이미지에 여러 객체가 포함될 수 있음)</li>
 <li><strong>클래스 수</strong>: 20개</li>
-<li><strong>매칭된 파일 수</strong>: XML과 이미지 파일이 정상적으로 매칭된 수량</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="432-데이터-분할-설정-기본값">4.3.2 데이터 분할 설정 (기본값)<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#432-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%ED%95%A0-%EC%84%A4%EC%A0%95-%EA%B8%B0%EB%B3%B8%EA%B0%92" class="hash-link" aria-label="4.3.2 데이터 분할 설정 (기본값)에 대한 직접 링크" title="4.3.2 데이터 분할 설정 (기본값)에 대한 직접 링크">​</a></h4>
 <ul>
@@ -289,7 +289,6 @@
 <ol start="4">
 <li>모든 설정 완료 후 <code>버전 생성</code> 버튼 클릭</li>
 </ol>
-<p><em>학습 설정 화면 스크린샷 자리</em></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-모델-학습-및-실시간-모니터링">5. 모델 학습 및 실시간 모니터링<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#5-%EB%AA%A8%EB%8D%B8-%ED%95%99%EC%8A%B5-%EB%B0%8F-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81" class="hash-link" aria-label="5. 모델 학습 및 실시간 모니터링에 대한 직접 링크" title="5. 모델 학습 및 실시간 모니터링에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="51-학습-파라미터-설정">5.1 학습 파라미터 설정<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#51-%ED%95%99%EC%8A%B5-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EC%84%A4%EC%A0%95" class="hash-link" aria-label="5.1 학습 파라미터 설정에 대한 직접 링크" title="5.1 학습 파라미터 설정에 대한 직접 링크">​</a></h3>
 <p>데이터 전처리가 완료되면 <code>인공지능 학습 시작</code> 버튼이 활성화됩니다.</p>
@@ -298,9 +297,8 @@
 <li>
 <p><strong>모델 선택</strong>:</p>
 <ul>
-<li><strong>ResNet50</strong> (권장): 중간 수준의 복잡도와 안정적인 성능</li>
-<li><strong>EfficientNet-B0</strong>: 효율적인 연산과 우수한 성능의 균형</li>
-<li><strong>MobileNetV2</strong>: 빠른 추론 속도가 필요한 경우</li>
+<li><strong>YOLO</strong> (권장): 객체 감지를 위한 신경망 기반 알고리즘으로, 이미지를 한 번에 처리하여 객체를 식별합니다.</li>
+<li><strong>EfficientDet</strong>: 다양한 크기와 자원 제약에 맞게 조정 가능하며 높은 정확도와 효율적인 계산 성능을 제공합니다.</li>
 </ul>
 </li>
 <li>
@@ -308,58 +306,34 @@
 <ul>
 <li><strong>배치 크기</strong>: 16 (GPU 메모리에 따라 조정 가능)</li>
 <li><strong>훈련 횟수 (Epochs)</strong>: 50회 (초기 실습용, 충분한 학습을 위해서는 100+ 권장)</li>
-<li><strong>학습률</strong>: 0.001 (기본값 사용 권장)</li>
 </ul>
 </li>
 </ol>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>추천 배치 사이즈 (모델/데이터 기준)</div><div class="admonitionContent_BuS1"><table><thead><tr><th>모델</th><th>이미지 크기</th><th>추천 배치 크기</th></tr></thead><tbody><tr><td>YOLOv5s</td><td>416×416</td><td>16~64</td></tr><tr><td>YOLOv5m</td><td>640×640</td><td>16~32</td></tr><tr><td>YOLOv5l</td><td>640×640</td><td>8~16</td></tr><tr><td>YOLOv5x</td><td>640×640</td><td>4~8</td></tr></tbody></table><p>배치 크기가 클수록 학습 속도는 빨라지지만, 메모리 사용량이 증가합니다. GPU 메모리에 맞춰 적절한 값을 선택하세요.</p></div></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>훈련 횟수 설정</div><div class="admonitionContent_BuS1"><table><thead><tr><th>모델 종류</th><th>기본 Epoch 수</th></tr></thead><tbody><tr><td>YOLOv5</td><td>100 Epochs</td></tr><tr><td>YOLOv8</td><td>50~100 Epochs (버전에 따라 다름)</td></tr><tr><td>MobileNet, EfficientDet 등</td><td>일반적으로 50~100 Epochs</td></tr></tbody></table><ul>
+<li>데이터 양이 적다: 더 많은 epoch (100~300)</li>
+<li>데이터가 많다 (수천 장 이상): 50~100이면 충분</li>
+<li>Overfitting 우려 있을 때: Early stopping 또는 50 이내로 제한</li>
+<li>실시간 성능 모델 목적 (모바일, IoT): 30~50도 충분</li>
+</ul></div></div>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>하이퍼파라미터 설정 가이드</div><div class="admonitionContent_BuS1"><ul>
 <li><strong>배치 크기</strong>: 클수록 학습 속도 향상, 하지만 메모리 사용량 증가</li>
 <li><strong>훈련 횟수</strong>: 너무 많으면 과적합, 너무 적으면 성능 저하</li>
 <li>초보자는 기본값 사용 후 점진적으로 조정 권장</li>
-<li>비공개 서비스 기간 중 학습 시간에 제한이 있을 수 있습니다</li>
 </ul></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-학습-시작-및-실시간-모니터링">5.2 학습 시작 및 실시간 모니터링<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#52-%ED%95%99%EC%8A%B5-%EC%8B%9C%EC%9E%91-%EB%B0%8F-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81" class="hash-link" aria-label="5.2 학습 시작 및 실시간 모니터링에 대한 직접 링크" title="5.2 학습 시작 및 실시간 모니터링에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-학습-시작-및-결과-확인">5.2 학습 시작 및 결과 확인<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#52-%ED%95%99%EC%8A%B5-%EC%8B%9C%EC%9E%91-%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%ED%99%95%EC%9D%B8" class="hash-link" aria-label="5.2 학습 시작 및 결과 확인에 대한 직접 링크" title="5.2 학습 시작 및 결과 확인에 대한 직접 링크">​</a></h3>
 <ol>
-<li>
-<p><code>학습 시작</code> 버튼 클릭</p>
-</li>
-<li>
-<p><strong>실시간 모니터링 대시보드</strong>에서 다음 정보를 확인할 수 있습니다:</p>
-<ul>
-<li>
-<p><strong>Loss 그래프</strong>:</p>
-<ul>
-<li>Training Loss (파란색): 학습 데이터에 대한 손실값</li>
-<li>Validation Loss (주황색): 검증 데이터에 대한 손실값</li>
-<li>두 선이 함께 감소하면 정상적인 학습 진행</li>
-</ul>
-</li>
-<li>
-<p><strong>Accuracy 그래프</strong>:</p>
-<ul>
-<li>Training Accuracy: 학습 데이터 정확도</li>
-<li>Validation Accuracy: 검증 데이터 정확도</li>
-<li>지속적으로 상승하는 추세여야 함</li>
-</ul>
-</li>
-<li>
-<p><strong>학습 진행 상태</strong>:</p>
-<ul>
-<li>현재 에폭 수 / 전체 에폭 수</li>
-<li>남은 예상 시간</li>
-<li>현재 배치 처리 속도</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><strong>학습 시작</strong> 버튼 클릭</li>
+<li>학습이 완료된 후, <strong>추가 지표</strong> 탭에서 다음 정보를 확인할 수 있습니다:</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="53-학습-중-주의사항">5.3 학습 중 주의사항<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#53-%ED%95%99%EC%8A%B5-%EC%A4%91-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD" class="hash-link" aria-label="5.3 학습 중 주의사항에 대한 직접 링크" title="5.3 학습 중 주의사항에 대한 직접 링크">​</a></h3>
-<ul>
-<li><strong>과적합 징후 감지</strong>: Validation Loss가 증가하기 시작하면 조기 종료 고려</li>
-<li><strong>학습 안정성</strong>: Loss가 급격히 변동한다면 학습률 조정 필요</li>
-<li><strong>리소스 사용량</strong>: GPU/CPU 사용률과 메모리 사용량 모니터링</li>
-</ul>
-<p><em>학습 진행 모니터링 화면 스크린샷 자리</em></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-검증-데이터-추론-결과">✅ 검증 데이터 추론 결과<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#-%EA%B2%80%EC%A6%9D-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B6%94%EB%A1%A0-%EA%B2%B0%EA%B3%BC" class="hash-link" aria-label="✅ 검증 데이터 추론 결과에 대한 직접 링크" title="✅ 검증 데이터 추론 결과에 대한 직접 링크">​</a></h4>
+<p>검증용 이미지에 대해 모델이 예측한 <strong>바운딩 박스</strong>와 <strong>신뢰도</strong>를 시각적으로 확인할 수 있습니다.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>팁</div><div class="admonitionContent_BuS1"><p>추론 결과를 통해 모델이 실제 데이터를 얼마나 잘 인식하는지 직관적으로 판단할 수 있습니다.</p></div></div>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-로스loss-차트">📉 로스(Loss) 차트<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#-%EB%A1%9C%EC%8A%A4loss-%EC%B0%A8%ED%8A%B8" class="hash-link" aria-label="📉 로스(Loss) 차트에 대한 직접 링크" title="📉 로스(Loss) 차트에 대한 직접 링크">​</a></h4>
+<p><strong>Train Loss</strong>(파란색)와 <strong>Validation Loss</strong>(주황색)의 변화를 에폭 단위로 시각화합니다.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>팁</div><div class="admonitionContent_BuS1"><p>일반적으로 두 값이 감소하는 방향이면 학습이 정상적으로 진행된 것입니다.</p></div></div>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-모델-성능-평가-및-분석">6. 모델 성능 평가 및 분석<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#6-%EB%AA%A8%EB%8D%B8-%EC%84%B1%EB%8A%A5-%ED%8F%89%EA%B0%80-%EB%B0%8F-%EB%B6%84%EC%84%9D" class="hash-link" aria-label="6. 모델 성능 평가 및 분석에 대한 직접 링크" title="6. 모델 성능 평가 및 분석에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="61-기본-성능-지표">6.1 기본 성능 지표<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#61-%EA%B8%B0%EB%B3%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C" class="hash-link" aria-label="6.1 기본 성능 지표에 대한 직접 링크" title="6.1 기본 성능 지표에 대한 직접 링크">​</a></h3>
 <p>학습이 완료되면 <code>모델 평가</code> 메뉴에서 다양한 성능 지표를 확인할 수 있습니다.</p>
@@ -391,13 +365,14 @@
 </ul>
 </li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-모델-배포-및-실제-활용">7. 모델 배포 및 실제 활용<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#7-%EB%AA%A8%EB%8D%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-%EC%8B%A4%EC%A0%9C-%ED%99%9C%EC%9A%A9" class="hash-link" aria-label="7. 모델 배포 및 실제 활용에 대한 직접 링크" title="7. 모델 배포 및 실제 활용에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="71-모델-다운로드">7.1 모델 다운로드<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#71-%EB%AA%A8%EB%8D%B8-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" class="hash-link" aria-label="7.1 모델 다운로드에 대한 직접 링크" title="7.1 모델 다운로드에 대한 직접 링크">​</a></h3>
 <p>학습이 완료된 모델을 실제 애플리케이션에서 사용하기 위해 다운로드 할 수 있습니다.</p>
 <p>모델 다운로드에 관한 상세 매뉴얼은 <a href="http://localhost:3000/dlabflow/docs/manage_ai_learning/manage_ai_model#ai-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
-<p>스크린샷</p>]]></content>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>]]></content>
         <author>
-            <name>강원ICT융합연구원</name>
+            <name>이승익 책임연구원</name>
             <uri>https://grit.gwnu.ac.kr/</uri>
         </author>
         <category label="컴퓨터비전" term="컴퓨터비전"/>
