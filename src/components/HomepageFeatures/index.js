@@ -19,7 +19,7 @@ const FeatureList = [
         description: (
             <>
                 학습에 쓸 이미지를 손쉽게 올려보세요.
-                JPG, PNG, BMP 파일을 지원하며, 폴더째 업로드도 가능해요!
+                JPG, PNG, BMP 파일을 지원하며, 폴더 전체를 업로드하는 것도 가능해요!
             </>
         ),
     },
@@ -164,7 +164,6 @@ export default function HomepageFeatures() {
                     </div>
                 </div>
             </section>
-
 
             <section className={styles.features} style={{marginBottom: '3rem'}}>
                 <div className="container">
