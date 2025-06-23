@@ -28,3 +28,150 @@
   --ifm-color-primary-lightest: #82c4eb;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.hero__subtitle {
+  white-space: pre-line;
+  font-size: 1.1rem; /* 기본 크기보다 작게 조정 */
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* 제목 스타일 개선 - 형광 느낌의 네온 효과 */
+.hero__title {
+  background: linear-gradient(135deg, #00ff88, #00ffcc, #44ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  text-shadow:
+          0 0 10px rgba(0, 255, 136, 0.8),
+          0 0 20px rgba(0, 255, 136, 0.6),
+          0 0 30px rgba(0, 255, 136, 0.4);
+  margin-bottom: 1rem;
+  position: relative;
+  filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.7));
+}
+
+/* 제목에 빛나는 효과 추가 */
+.hero__title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 다크 모드에서 제목 스타일 - 더 밝은 네온 효과 */
+[data-theme='dark'] .hero__title {
+  background: linear-gradient(135deg, #00ff99, #33ffaa, #66ffbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow:
+          0 0 15px rgba(0, 255, 153, 0.9),
+          0 0 25px rgba(0, 255, 153, 0.7),
+          0 0 35px rgba(0, 255, 153, 0.5);
+  filter: drop-shadow(0 0 20px rgba(0, 255, 153, 0.8));
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배경 이미지 위에 반투명 오버레이 */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 텍스트와 버튼이 오버레이 위에 표시되도록 */
+.heroBanner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.equalWidthButton {
+  min-width: 200px;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .equalWidthButton {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .featureImg {
+    max-width: 100%;
+  }
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+/* 새로 추가된 이미지 스타일 */
+.featureImage {
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.featureImg {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.featureImg:hover {
+  transform: scale(1.05);
+}
+
+
+
+

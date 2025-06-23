@@ -10,6 +10,25 @@
   overflow: hidden;
 }
 
+/* 다크 모드에서도 헤더 배경이 어두우므로 오버레이 추가 */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1); /* 어두운 오버레이 */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 헤더 내용물이 오버레이 위에 표시되도록 */
+.heroBanner .container {
+  position: relative;
+  z-index: 2;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -24,10 +43,43 @@
 }
 
 .equalWidthButton {
-  min-width: 250px; /* 두 버튼의 최소 너비 설정 */
+  min-width: 270px; /* 두 버튼의 최소 너비 설정 */
   text-align: center;
   justify-content: center;
   display: inline-flex;
+  /* 새로운 스타일 추가 */
+  background-color: #e0fdf5; /* 옅은 녹색 배경 */
+  border: 2px solid #2d5a2d; /* 진한 녹색 둘레선 */
+  color: #2d5a2d; /* 텍스트 색상도 진한 녹색으로 */
+  border-radius: 8px; /* 둥근 모서리 */
+  padding: 12px 24px; /* 내부 여백 */
+  font-weight: 600; /* 글자 굵기 */
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 다크 모드에서도 동일한 스타일 유지 (배경 이미지가 어두워서) */
+[data-theme='dark'] .equalWidthButton {
+  background-color: #e0fdf5;
+  border: 2px solid #2d5a2d;
+  color: #2d5a2d;
+  /* 다크 모드에서 텍스트 더 잘 보이도록 강조 */
+  text-shadow: 0 0 2px #fff;
+}
+
+/* 호버 효과 추가 */
+.equalWidthButton:hover {
+  background-color: #00cfa0 ; /* 호버 시 조금 더 진한 녹색 */
+  border-color: #1e3a1e; /* 호버 시 더 진한 둘레선 */
+  color: #c9f7e9; /* 호버 시 더 진한 텍스트 */
+  text-decoration: none; /* 밑줄 제거 */
+  transform: translateY(-3px); /* 살짝 위로 올라가는 효과 */
+  box-shadow: 0 4px 12px rgba(45, 90, 45, 0.2); /* 그림자 효과 */
+}
+
+/* 클릭 시 효과 */
+.equalWidthButton:active {
+  transform: translateY(0); /* 클릭 시 원래 위치로 */
+  box-shadow: 0 2px 6px rgba(45, 90, 45, 0.2); /* 그림자 줄이기 */
 }
 
 /* 모바일 화면에서 버튼을 세로로 정렬 */
@@ -37,8 +89,10 @@
     gap: 16px; /* 모바일에서의 버튼 사이 간격 */
   }
 
-  .equalWidthButton {
+  /* 두 버튼 모두 모바일에서 동일한 크기 */
+  .equalWidthButton{
     width: 100%; /* 모바일에서는 가로 전체 너비 사용 */
     max-width: 300px; /* 최대 너비 제한 */
   }
+
 }

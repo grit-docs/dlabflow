@@ -11,7 +11,11 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'D-Lab Flow 도움말 센터',
-  tagline: 'AI 학습, 디랩플로우에서 간편하고 빠르게!',
+  tagline: `데이터 수집부터 라벨링, 모델 학습과 평가까지.
+AI 개발의 모든 과정을 하나의 플랫폼에서 완성해보세요.
+
+D-Lab Flow는 AI 모델 개발에 필요한 핵심 기능을 직관적인 인터페이스로 제공합니다.
+복잡한 개발 환경이나 코드 작성 없이도, 클릭 몇 번으로 고성능 AI 모델을 생성할 수 있습니다.`,
   favicon: 'img/favicon.ico',
   trailingSlash: false,
   url: 'https://grit-docs.github.io',
