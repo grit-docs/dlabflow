@@ -214,7 +214,7 @@
 <li>이 튜토리얼에서는 <strong>객체 탐지</strong>를 사용합니다</li>
 </ul></div></div>
 <p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_10-ad4066edabb6883fa68c61259d3178f4.png" width="1399" height="827" class="img_ev3q"></p>
-<p>4.<strong>데이터셋 연결</strong>: 앞서 생성한 "VOC2012_Classification" 데이터셋 선택</p>
+<p>4.<strong>데이터셋 연결</strong>: 앞서 생성한 "VOC2012_Detection" 데이터셋 선택</p>
 <p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_11-6553614dbae4153fafa3c0458e4ff9f9.png" width="1397" height="743" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="42-학습-버전-생성">4.2 학습 버전 생성<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#42-%ED%95%99%EC%8A%B5-%EB%B2%84%EC%A0%84-%EC%83%9D%EC%84%B1" class="hash-link" aria-label="4.2 학습 버전 생성에 대한 직접 링크" title="4.2 학습 버전 생성에 대한 직접 링크">​</a></h3>
 <p>프로젝트 내에서 구체적인 학습 설정을 담은 버전을 생성합니다.</p>
@@ -305,13 +305,15 @@
 <li>
 <p><strong>주요 하이퍼파라미터</strong>:</p>
 <ul>
-<li><strong>배치 크기</strong>: 16 (GPU 메모리에 따라 조정 가능)</li>
+<li><strong>배치 크기 (Batch Size)</strong>: 16 (GPU 메모리에 따라 조정 가능)</li>
 <li><strong>훈련 횟수 (Epochs)</strong>: 50회 (초기 실습용, 충분한 학습을 위해서는 100+ 권장)</li>
 </ul>
 </li>
 </ol>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>추천 배치 사이즈 (모델/데이터 기준)</div><div class="admonitionContent_BuS1"><table><thead><tr><th>모델</th><th>이미지 크기</th><th>추천 배치 크기</th></tr></thead><tbody><tr><td>YOLOv5s</td><td>416×416</td><td>16~64</td></tr><tr><td>YOLOv5m</td><td>640×640</td><td>16~32</td></tr><tr><td>YOLOv5l</td><td>640×640</td><td>8~16</td></tr><tr><td>YOLOv5x</td><td>640×640</td><td>4~8</td></tr></tbody></table><p>배치 크기가 클수록 학습 속도는 빨라지지만, 메모리 사용량이 증가합니다. GPU 메모리에 맞춰 적절한 값을 선택하세요.</p></div></div>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>훈련 횟수 설정</div><div class="admonitionContent_BuS1"><table><thead><tr><th>모델 종류</th><th>기본 Epoch 수</th></tr></thead><tbody><tr><td>YOLOv5</td><td>100 Epochs</td></tr><tr><td>YOLOv8</td><td>50~100 Epochs (버전에 따라 다름)</td></tr><tr><td>MobileNet, EfficientDet 등</td><td>일반적으로 50~100 Epochs</td></tr></tbody></table><ul>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>추천 배치 사이즈 (모델/데이터 기준)</div><div class="admonitionContent_BuS1"><table><thead><tr><th>모델</th><th>이미지 크기</th><th>추천 배치 크기</th></tr></thead><tbody><tr><td>YOLOv5s</td><td>416×416</td><td>16~64</td></tr><tr><td>YOLOv5m</td><td>640×640</td><td>16~32</td></tr><tr><td>YOLOv5l</td><td>640×640</td><td>8~16</td></tr><tr><td>YOLOv5x</td><td>640×640</td><td>4~8</td></tr></tbody></table><p>배치 크기가 클수록 학습 속도는 빨라지지만, 메모리 사용량도 함께 증가합니다.
+D-Lab Flow의 서버(GPU) 사양에 따라 사용 가능한 메모리가 제한되므로, 과도한 배치 크기 설정 시 학습 오류가 발생할 수 있습니다.
+안정적인 학습을 위해 적절한 값을 설정해 주세요.</p></div></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>훈련 횟수 설정</div><div class="admonitionContent_BuS1"><table><thead><tr><th>모델 종류</th><th>기본 Epoch 수</th></tr></thead><tbody><tr><td>YOLOv5</td><td>100 Epochs</td></tr><tr><td>YOLOv8</td><td>일반적으로 50~100 Epochs</td></tr><tr><td>MobileNet, EfficientDet 등</td><td>일반적으로 50~100 Epochs</td></tr></tbody></table><ul>
 <li>데이터 양이 적다: 더 많은 epoch (100~300)</li>
 <li>데이터가 많다 (수천 장 이상): 50~100이면 충분</li>
 <li>Overfitting 우려 있을 때: Early stopping 또는 50 이내로 제한</li>
@@ -370,7 +372,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-모델-배포-및-실제-활용">7. 모델 배포 및 실제 활용<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#7-%EB%AA%A8%EB%8D%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-%EC%8B%A4%EC%A0%9C-%ED%99%9C%EC%9A%A9" class="hash-link" aria-label="7. 모델 배포 및 실제 활용에 대한 직접 링크" title="7. 모델 배포 및 실제 활용에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="71-모델-다운로드">7.1 모델 다운로드<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#71-%EB%AA%A8%EB%8D%B8-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" class="hash-link" aria-label="7.1 모델 다운로드에 대한 직접 링크" title="7.1 모델 다운로드에 대한 직접 링크">​</a></h3>
 <p>학습이 완료된 모델을 실제 애플리케이션에서 사용하기 위해 다운로드 할 수 있습니다.</p>
-<p>모델 다운로드에 관한 상세 매뉴얼은 <a href="http://localhost:3000/dlabflow/docs/manage_ai_learning/manage_ai_model#ai-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
+<p>모델 다운로드에 관한 상세 매뉴얼은 <a href="https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/manage_ai_model#ai-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
 <p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>]]></content:encoded>
             <category>컴퓨터비전</category>
             <category>튜토리얼</category>
