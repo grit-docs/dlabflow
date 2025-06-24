@@ -14,7 +14,7 @@ import featureImage_1 from '@site/static/img/intro_1.png';
 
 const FeatureList = [
     {
-        title: '📂 쉬운 데이터 업로드',
+        title: '📂 간편한 데이터 업로드',
         image: uploadImage,
         description: (
             <>
@@ -29,17 +29,17 @@ const FeatureList = [
         description: (
             <>
                 이미지에 라벨을 붙여 데이터셋을 만들어보세요.
-                팀원들과 함께 나눠서 작업하면 더 빠르고 효율적으로 끝낼 수 있어요 😊
+                팀원들과 함께 나눠서 작업하면 더 빠르고 효율적으로 끝낼 수 있어요!
             </>
         ),
     },
     {
-        title: '🚀 AI 프로젝트 시작하기',
+        title: '🚀 누구나 쉽게 만드는 AI 프로젝트',
         image: projectImage,
         description: (
             <>
                 준비된 데이터셋으로 바로 프로젝트를 시작해보세요.
-                복잡한 설정은 NO! 몇 번만 클릭하면 바로 시작할 수 있어요.
+                복잡한 설정은 NO! 몇 번만 클릭하면 바로 시작할 수 있어요!
             </>
         ),
     },

@@ -236,7 +236,7 @@ PASCAL VOC 포맷의 XML 라벨 파일들을 D-Lab Flow에 업로드합니다.
 
 ![스크린샷](./img/2025-06-18_10.png)
 
-4.**데이터셋 연결**: 앞서 생성한 "VOC2012_Classification" 데이터셋 선택
+4.**데이터셋 연결**: 앞서 생성한 "VOC2012_Detection" 데이터셋 선택
 
 ![스크린샷](./img/2025-06-18_11.png)
 
@@ -313,7 +313,7 @@ PASCAL VOC 포맷의 XML 라벨 파일들을 D-Lab Flow에 업로드합니다.
    - **EfficientDet**: 다양한 크기와 자원 제약에 맞게 조정 가능하며 높은 정확도와 효율적인 계산 성능을 제공합니다.
 
 2. **주요 하이퍼파라미터**:
-    - **배치 크기**: 16 (GPU 메모리에 따라 조정 가능)
+    - **배치 크기 (Batch Size)**: 16 (GPU 메모리에 따라 조정 가능)
     - **훈련 횟수 (Epochs)**: 50회 (초기 실습용, 충분한 학습을 위해서는 100+ 권장)
 
 :::tip 추천 배치 사이즈 (모델/데이터 기준)
@@ -325,17 +325,19 @@ PASCAL VOC 포맷의 XML 라벨 파일들을 D-Lab Flow에 업로드합니다.
 | YOLOv5l | 640×640 | 8~16 |
 | YOLOv5x | 640×640 | 4~8 |
 
-배치 크기가 클수록 학습 속도는 빨라지지만, 메모리 사용량이 증가합니다. GPU 메모리에 맞춰 적절한 값을 선택하세요.
+배치 크기가 클수록 학습 속도는 빨라지지만, 메모리 사용량도 함께 증가합니다.
+D-Lab Flow의 서버(GPU) 사양에 따라 사용 가능한 메모리가 제한되므로, 과도한 배치 크기 설정 시 학습 오류가 발생할 수 있습니다.
+안정적인 학습을 위해 적절한 값을 설정해 주세요.
 
 :::
 
 :::tip 훈련 횟수 설정
 
-| 모델 종류 | 기본 Epoch 수 |
-|-----------|---------------|
-| YOLOv5 | 100 Epochs |
-| YOLOv8 | 50~100 Epochs (버전에 따라 다름) |
-| MobileNet, EfficientDet 등 | 일반적으로 50~100 Epochs |
+| 모델 종류 | 기본 Epoch 수           |
+|-----------|----------------------|
+| YOLOv5 | 100 Epochs           |
+| YOLOv8 | 일반적으로 50~100 Epochs  |
+| MobileNet, EfficientDet 등 | 일반적으로 50~100 Epochs  |
 
 - 데이터 양이 적다: 더 많은 epoch (100~300)
 - 데이터가 많다 (수천 장 이상): 50~100이면 충분
@@ -411,6 +413,6 @@ PASCAL VOC 포맷의 XML 라벨 파일들을 D-Lab Flow에 업로드합니다.
 
 학습이 완료된 모델을 실제 애플리케이션에서 사용하기 위해 다운로드 할 수 있습니다.
 
-모델 다운로드에 관한 상세 매뉴얼은 [D-Lab Flow 공식 문서](http://localhost:3000/dlabflow/docs/manage_ai_learning/manage_ai_model#ai-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)를 참고하세요.
+모델 다운로드에 관한 상세 매뉴얼은 [D-Lab Flow 공식 문서](https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/manage_ai_model#ai-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)를 참고하세요.
 
 ![스크린샷](./img/2025-06-18_12.gif)
