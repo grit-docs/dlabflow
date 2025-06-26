@@ -1,41 +1,30 @@
-# Website
+# D-Lab Flow 도움말 센터
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+[D-Lab Flow](https://grit-docs.github.io/dlabflow/) 사용자를 위한 종합 도움말 센터입니다.
 
-### Installation
+## 개요
 
-```
-$ yarn
-```
+이 사이트는 D-Lab Flow 플랫폼을 효과적으로 활용할 수 있도록 돕는 문서화 사이트입니다. D-Lab Flow를 사용하는 내부 구성원 및 외부 사용자 모두를 대상으로 하며, 친절하고 명확한 안내를 제공합니다.
 
-### Local Development
+## 주요 내용
 
-```
-$ yarn start
-```
+- **기능별 사용법 안내**: 플랫폼의 각 기능에 대한 상세한 사용 방법
+- **데이터 업로드/처리 절차**: 데이터 관리부터 전처리까지의 전 과정
+- **인터페이스 소개**: 사용자 인터페이스의 각 요소에 대한 설명
+- **자주 묻는 질문(FAQ)**: 사용자들이 자주 묻는 질문과 답변
+- **튜토리얼**: 실제 예제를 통한 단계별 학습 가이드
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## D-Lab Flow란?
 
-### Build
+D-Lab Flow는 데이터 수집부터 라벨링, 모델 학습과 평가까지 AI 개발의 모든 과정을 하나의 플랫폼에서 제공하는 종합 솔루션입니다. 복잡한 개발 환경이나 코드 작성 없이도 직관적인 인터페이스로 고성능 AI 모델을 생성할 수 있습니다.
 
-```
-$ yarn build
-```
+## 문의
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+서비스 이용 관련 문의나 기술 지원이 필요하시면 아래로 연락해 주세요:
 
-### Deployment
+- **이메일**: gritdevops@gmail.com
+- **웹사이트**: [강원ICT융합연구원](https://grit.gwnu.ac.kr)
 
-Using SSH:
+---
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+이 문서 사이트는 [Docusaurus](https://docusaurus.io/)를 사용하여 구축되었습니다.
