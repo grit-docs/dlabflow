@@ -19,7 +19,7 @@
 <p>컴퓨터 비전 분야에서 널리 사용되는 PASCAL VOC 2012 공개 데이터셋을 활용하여 <strong>객체 탐지(Object Detection)</strong> AI 모델을 만들어 봅니다.</p>
 <p>D-Lab Flow 플랫폼을 사용하면 복잡한 코드 작성 없이도 데이터 준비부터 모델 학습, 평가까지 전체 과정을 직관적인 인터페이스로 진행할 수 있습니다.</p>
 <p>완성된 모델은 이미지 내 다양한 객체(사람, 자동차, 동물 등)를 인식하고 정확한 위치를 찾아내는 기능을 갖추게 됩니다.</p>
-<p>이 과정을 통해 D-Lab Flow의 기본 사용 방법를 이해하고, 실제 프로젝트에 적용할 수 있는 실무 경험을 쌓을 수 있습니다.</p>
+<p>이 과정을 통해 D-Lab Flow의 기본 사용 방법을 이해하고, 실제 프로젝트에 적용할 수 있는 실무 경험을 쌓을 수 있습니다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="d-lab-flow-계정-발급받기">D-Lab Flow 계정 발급받기<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#d-lab-flow-%EA%B3%84%EC%A0%95-%EB%B0%9C%EA%B8%89%EB%B0%9B%EA%B8%B0" class="hash-link" aria-label="D-Lab Flow 계정 발급받기에 대한 직접 링크" title="D-Lab Flow 계정 발급받기에 대한 직접 링크">​</a></h3>
 <p>D-Lab Flow는 현재 <strong>비공개 서비스</strong>로 운영되어, 일반 사용자의 자유 가입이 제한되어 있습니다. 계정 발급을 위해서는 다음 절차를 따라주세요:</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>계정 발급 신청</div><div class="admonitionContent_BuS1"><p><strong>강원ICT융합연구원</strong>에 문의하여 D-Lab Flow 계정을 발급받으실 수 있습니다.</p><p>📞 <strong>문의처</strong>: 강원ICT융합연구원<br>
@@ -258,6 +258,9 @@
 </ul>
 </li>
 </ol>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>전처리에 소요되는 시간</div><div class="admonitionContent_BuS1"><ul>
+<li>학습 파일 수가 많거나 증강 옵션을 많이 적용하면 전처리 시간이 크게 늘어날 수 있습니다.</li>
+</ul></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="43-상세-학습-설정">4.3 상세 학습 설정<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#43-%EC%83%81%EC%84%B8-%ED%95%99%EC%8A%B5-%EC%84%A4%EC%A0%95" class="hash-link" aria-label="4.3 상세 학습 설정에 대한 직접 링크" title="4.3 상세 학습 설정에 대한 직접 링크">​</a></h3>
 <p>버전 생성 페이지에서 다양한 학습 옵션을 설정할 수 있습니다.</p>
 <p>버전 생성에 관한 상세 매뉴얼은 <a href="https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/ai_project/generate_version#%EB%B2%84%EC%A0%84-%EC%83%9D%EC%84%B1" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
@@ -326,14 +329,15 @@ D-Lab Flow의 서버(GPU) 사양에 따라 사용 가능한 메모리가 제한�
 </ul></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-학습-시작-및-결과-확인">5.2 학습 시작 및 결과 확인<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#52-%ED%95%99%EC%8A%B5-%EC%8B%9C%EC%9E%91-%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%ED%99%95%EC%9D%B8" class="hash-link" aria-label="5.2 학습 시작 및 결과 확인에 대한 직접 링크" title="5.2 학습 시작 및 결과 확인에 대한 직접 링크">​</a></h3>
 <ol>
-<li>
-<p><strong>학습 시작</strong> 버튼을 클릭하면 아래와 같이 학습이 진행되는 것을 확인할 수 있습니다.
-<img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_13-90ddf74e044cdc5a5346816454aa4f99.gif" width="1920" height="514" class="img_ev3q"></p>
-</li>
-<li>
-<p>학습이 완료된 후, <strong>추가 지표</strong> 탭에서 다음 정보를 확인할 수 있습니다:
-<img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_14-c920d0744944e0619e9e8560731dc2d3.gif" width="1920" height="1164" class="img_ev3q"></p>
-</li>
+<li><strong>학습 시작</strong> 버튼을 클릭하면 아래와 같이 학습이 진행되는 것을 확인할 수 있습니다.
+<img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_13-90ddf74e044cdc5a5346816454aa4f99.gif" width="1920" height="514" class="img_ev3q"></li>
+</ol>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>학습에 소요되는 시간</div><div class="admonitionContent_BuS1"><ul>
+<li>데이터 크기, 모델 복잡도, 하드웨어(GPU) 성능에 따라 학습 시간은 수 분에서 수 시간까지 달라질 수 있습니다.</li>
+</ul></div></div>
+<ol start="2">
+<li>학습이 완료된 후, <strong>추가 지표</strong> 탭에서 다음 정보를 확인할 수 있습니다:
+<img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_14-c920d0744944e0619e9e8560731dc2d3.gif" width="1920" height="1164" class="img_ev3q"></li>
 </ol>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="-검증-데이터-추론-결과">✅ 검증 데이터 추론 결과<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#-%EA%B2%80%EC%A6%9D-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B6%94%EB%A1%A0-%EA%B2%B0%EA%B3%BC" class="hash-link" aria-label="✅ 검증 데이터 추론 결과에 대한 직접 링크" title="✅ 검증 데이터 추론 결과에 대한 직접 링크">​</a></h4>
 <p>검증용 이미지에 대해 모델이 예측한 <strong>바운딩 박스</strong>와 <strong>신뢰도</strong>를 시각적으로 확인할 수 있습니다.</p>
