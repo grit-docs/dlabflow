@@ -290,7 +290,7 @@
 <ol start="4">
 <li>모든 설정 완료 후 <code>버전 생성</code> 버튼 클릭</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-모델-학습-및-실시간-모니터링">5. 모델 학습 및 실시간 모니터링<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#5-%EB%AA%A8%EB%8D%B8-%ED%95%99%EC%8A%B5-%EB%B0%8F-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81" class="hash-link" aria-label="5. 모델 학습 및 실시간 모니터링에 대한 직접 링크" title="5. 모델 학습 및 실시간 모니터링에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-모델-학습-및-추가-지표-확인">5. 모델 학습 및 추가 지표 확인<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#5-%EB%AA%A8%EB%8D%B8-%ED%95%99%EC%8A%B5-%EB%B0%8F-%EC%B6%94%EA%B0%80-%EC%A7%80%ED%91%9C-%ED%99%95%EC%9D%B8" class="hash-link" aria-label="5. 모델 학습 및 추가 지표 확인에 대한 직접 링크" title="5. 모델 학습 및 추가 지표 확인에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="51-학습-파라미터-설정">5.1 학습 파라미터 설정<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#51-%ED%95%99%EC%8A%B5-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EC%84%A4%EC%A0%95" class="hash-link" aria-label="5.1 학습 파라미터 설정에 대한 직접 링크" title="5.1 학습 파라미터 설정에 대한 직접 링크">​</a></h3>
 <p>데이터 전처리가 완료되면 <code>인공지능 학습 시작</code> 버튼이 활성화됩니다.</p>
 <p>학습 파라미터 설정에 관한 상세 매뉴얼은 <a href="https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/ai_project/train_model#%ED%95%98%EC%9D%B4%ED%8D%BC-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EC%84%A4%EC%A0%95" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
@@ -326,17 +326,22 @@ D-Lab Flow의 서버(GPU) 사양에 따라 사용 가능한 메모리가 제한�
 </ul></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-학습-시작-및-결과-확인">5.2 학습 시작 및 결과 확인<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#52-%ED%95%99%EC%8A%B5-%EC%8B%9C%EC%9E%91-%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%ED%99%95%EC%9D%B8" class="hash-link" aria-label="5.2 학습 시작 및 결과 확인에 대한 직접 링크" title="5.2 학습 시작 및 결과 확인에 대한 직접 링크">​</a></h3>
 <ol>
-<li><strong>학습 시작</strong> 버튼 클릭</li>
-<li>학습이 완료된 후, <strong>추가 지표</strong> 탭에서 다음 정보를 확인할 수 있습니다:</li>
+<li>
+<p><strong>학습 시작</strong> 버튼을 클릭하면 아래와 같이 학습이 진행되는 것을 확인할 수 있습니다.
+<img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_13-90ddf74e044cdc5a5346816454aa4f99.gif" width="1920" height="514" class="img_ev3q"></p>
+</li>
+<li>
+<p>학습이 완료된 후, <strong>추가 지표</strong> 탭에서 다음 정보를 확인할 수 있습니다:
+<img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_14-c920d0744944e0619e9e8560731dc2d3.gif" width="1920" height="1164" class="img_ev3q"></p>
+</li>
 </ol>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="-검증-데이터-추론-결과">✅ 검증 데이터 추론 결과<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#-%EA%B2%80%EC%A6%9D-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%B6%94%EB%A1%A0-%EA%B2%B0%EA%B3%BC" class="hash-link" aria-label="✅ 검증 데이터 추론 결과에 대한 직접 링크" title="✅ 검증 데이터 추론 결과에 대한 직접 링크">​</a></h4>
 <p>검증용 이미지에 대해 모델이 예측한 <strong>바운딩 박스</strong>와 <strong>신뢰도</strong>를 시각적으로 확인할 수 있습니다.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>팁</div><div class="admonitionContent_BuS1"><p>추론 결과를 통해 모델이 실제 데이터를 얼마나 잘 인식하는지 직관적으로 판단할 수 있습니다.</p></div></div>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="-로스loss-차트">📉 로스(Loss) 차트<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#-%EB%A1%9C%EC%8A%A4loss-%EC%B0%A8%ED%8A%B8" class="hash-link" aria-label="📉 로스(Loss) 차트에 대한 직접 링크" title="📉 로스(Loss) 차트에 대한 직접 링크">​</a></h4>
 <p><strong>Train Loss</strong>(파란색)와 <strong>Validation Loss</strong>(주황색)의 변화를 에폭 단위로 시각화합니다.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>팁</div><div class="admonitionContent_BuS1"><p>일반적으로 두 값이 감소하는 방향이면 학습이 정상적으로 진행된 것입니다.</p></div></div>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_15-762115213bb013efaeb4764d5a8714b9.png" width="1560" height="936" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-모델-성능-평가-및-분석">6. 모델 성능 평가 및 분석<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#6-%EB%AA%A8%EB%8D%B8-%EC%84%B1%EB%8A%A5-%ED%8F%89%EA%B0%80-%EB%B0%8F-%EB%B6%84%EC%84%9D" class="hash-link" aria-label="6. 모델 성능 평가 및 분석에 대한 직접 링크" title="6. 모델 성능 평가 및 분석에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="61-기본-성능-지표">6.1 기본 성능 지표<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#61-%EA%B8%B0%EB%B3%B8-%EC%84%B1%EB%8A%A5-%EC%A7%80%ED%91%9C" class="hash-link" aria-label="6.1 기본 성능 지표에 대한 직접 링크" title="6.1 기본 성능 지표에 대한 직접 링크">​</a></h3>
 <p>학습이 완료되면 <code>모델 평가</code> 메뉴에서 다양한 성능 지표를 확인할 수 있습니다.</p>
@@ -368,12 +373,12 @@ D-Lab Flow의 서버(GPU) 사양에 따라 사용 가능한 메모리가 제한�
 </ul>
 </li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_16-5e2afdf39588167e611b1e90901d4eb0.gif" width="1920" height="1288" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-모델-배포-및-실제-활용">7. 모델 배포 및 실제 활용<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#7-%EB%AA%A8%EB%8D%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-%EC%8B%A4%EC%A0%9C-%ED%99%9C%EC%9A%A9" class="hash-link" aria-label="7. 모델 배포 및 실제 활용에 대한 직접 링크" title="7. 모델 배포 및 실제 활용에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="71-모델-다운로드">7.1 모델 다운로드<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#71-%EB%AA%A8%EB%8D%B8-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" class="hash-link" aria-label="7.1 모델 다운로드에 대한 직접 링크" title="7.1 모델 다운로드에 대한 직접 링크">​</a></h3>
 <p>학습이 완료된 모델을 실제 애플리케이션에서 사용하기 위해 다운로드 할 수 있습니다.</p>
 <p>모델 다운로드에 관한 상세 매뉴얼은 <a href="https://grit-docs.github.io/dlabflow/docs/manage_ai_learning/manage_ai_model#ai-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener noreferrer">D-Lab Flow 공식 문서</a>를 참고하세요.</p>
-<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_12-07497f3356df450ad4bfd509cc0e2882.gif" width="1920" height="1080" class="img_ev3q"></p>]]></content:encoded>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/2025-06-18_17-ff5ccfdb73ae3301387f9fa5c72f34e8.gif" width="1920" height="1282" class="img_ev3q"></p>]]></content:encoded>
             <category>컴퓨터비전</category>
             <category>튜토리얼</category>
         </item>
