@@ -9,6 +9,6 @@
   description: 컴퓨터비전
 
 어노테이션:
-  label: 어노테이션
-  permalink: /어노테이션
-  description: 어노테이션
+  label: 라벨링
+  permalink: /라벨링
+  description: 라벨링
