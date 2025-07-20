@@ -330,9 +330,9 @@ npm run dev
 
 <div className="image-row cropped">
 
-![후면 카메라 화면](./img/2025-07-17_05.PNG)
+![후면 카메라 화면](./img/2025-07-17_05.png)
 
-![전면 카메라 화면](./img/2025-07-17_06.PNG)
+![전면 카메라 화면](./img/2025-07-17_06.png)
 
 </div>
 
@@ -345,9 +345,9 @@ npm run dev
 
 <div className="image-row cropped">
 
-![후면 카메라 화면](./img/2025-07-17_07.PNG)
+![후면 카메라 화면](./img/2025-07-17_07.png)
 
-![전면 카메라 화면](./img/2025-07-17_08.PNG)
+![전면 카메라 화면](./img/2025-07-17_08.png)
 
 </div>
 
