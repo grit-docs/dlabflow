@@ -18,3 +18,10 @@ sylee:
   url: https://grit.gwnu.ac.kr/
   image_url: /img/grit-logo.png
   page: true
+
+jh:
+  name: 전준호 책임연구원
+  title: AIoT 융합 플랫폼 그룹
+  url: https://grit.gwnu.ac.kr/
+  image_url: /img/grit-logo.png
+  page: true

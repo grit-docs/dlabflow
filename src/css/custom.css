@@ -172,6 +172,43 @@
   transform: scale(1.05);
 }
 
+/* 이미지 가로 배치 스타일 */
+.image-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
 
+.image-row p {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+  margin: 0;
+  text-align: center;
+}
 
+.image-row img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.image-row.cropped img {
+  border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-row p {
+    max-width: 100%;
+    min-width: auto;
+  }
+}
