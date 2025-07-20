@@ -4,10 +4,275 @@
         <title>D-Lab Flow 도움말 센터 Blog</title>
         <link>https://grit-docs.github.io/dlabflow/blog</link>
         <description>D-Lab Flow 도움말 센터 Blog</description>
-        <lastBuildDate>Mon, 30 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[실시간 객체 탐지: React와 ONNX Runtime으로 YOLO 웹 앱 만들기]]></title>
+            <link>https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react</link>
+            <guid>https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react</guid>
+            <pubDate>Thu, 17 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[별도 서버 없이, 사용자의 브라우저에서 모든 것이 이루어지는 놀라운 경험을 소개합니다. D-Lab Flow로 학습한 모델을 웹에서 직접 확인해보세요.]]></description>
+            <content:encoded><![CDATA[<p>서버나 복잡한 백엔드 설정 없이, 순수 웹 기술만으로 실시간 AI를 구현할 수 있습니다. 사용자의 웹캠을 이용해 눈앞의 사물을 즉시 인식하는 마법 같은 경험을 선사하는 방법을 알려드립니다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#introduction" class="hash-link" aria-label="Introduction에 대한 직접 링크" title="Introduction에 대한 직접 링크">​</a></h2>
+<p>최근 웹 기술의 발전은 정말 놀랍습니다. WebAssembly와 ONNX Runtime Web 같은 기술들이 등장하면서, 브라우저는 이제 단순한 문서 뷰어를 넘어 강력한 연산 플랫폼으로 진화했습니다. 복잡한 머신러닝 모델도 이제 브라우저에서 직접 실행할 수 있게 되었죠.</p>
+<p><code>dlabflow-yolo-onnx-react</code> 프로젝트는 바로 이런 가능성을 보여주는 완벽한 예시입니다. React와 ONNX Runtime을 사용하여 브라우저에서 직접 YOLO 모델을 실행하는 실시간 객체 탐지 데모로, 서버 없이도 사용자의 카메라로 실시간 객체 인식을 수행합니다.</p>
+<p>이 글을 통해 여러분은:</p>
+<ul>
+<li>브라우저 기반 AI의 작동 원리를 이해할 수 있습니다.</li>
+<li>D-Lab Flow에서 학습한 모델을 웹에서 직접 테스트하는 방법을 배울 수 있습니다.</li>
+<li>실제로 동작하는 실시간 객체 탐지 웹 앱을 만들어볼 수 있습니다.</li>
+</ul>
+<div class="image-row"><p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react 모바일 데모 실행 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_00-96ce314fd0afd41d2c2dc6d32ac3d921.png" width="936" height="1904" class="img_ev3q"></p></div>
+<p><em>dlabflow-yolo-onnx-react 모바일에서의 실시간 객체 탐지 화면 - <a href="https://dlabflow-yolo-onnx-react.vercel.app/" target="_blank" rel="noopener noreferrer">라이브 데모 바로 가기</a></em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="주요-기능">주요 기능<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5" class="hash-link" aria-label="주요 기능에 대한 직접 링크" title="주요 기능에 대한 직접 링크">​</a></h2>
+<ul>
+<li>
+<p><strong>🚀 실시간 추론</strong></p>
+<ul>
+<li>브라우저 내 처리로 지연시간 최소화</li>
+<li>개인정보 보호 보장</li>
+<li>서버 인프라 불필요</li>
+</ul>
+</li>
+<li>
+<p><strong>🔄 다양한 YOLO 모델 지원</strong></p>
+<ul>
+<li>YOLOv3, YOLOv5, YOLOv8, YOLOv11 호환</li>
+<li>출력 형식 자동 감지</li>
+<li>코드 수정 없이 모델 교체 가능</li>
+</ul>
+</li>
+<li>
+<p><strong>📱 모바일 완벽 지원</strong></p>
+<ul>
+<li>데스크톱/모바일 반응형 디자인</li>
+<li>후면 카메라 지원</li>
+</ul>
+</li>
+<li>
+<p><strong>🎛️ 직관적인 UI</strong></p>
+<ul>
+<li>신뢰도 조절 슬라이더</li>
+<li>실시간 결과 반영</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="작동-원리">작동 원리<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC" class="hash-link" aria-label="작동 원리에 대한 직접 링크" title="작동 원리에 대한 직접 링크">​</a></h2>
+<p>복잡해 보이지만, 사실 명확한 단계들로 이루어져 있습니다. 카메라에서 이미지를 가져와 모델이 이해할 수 있는 형태로 만들고, 결과를 다시 화면에 그려주는 과정입니다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-모델-로딩">1. 모델 로딩<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#1-%EB%AA%A8%EB%8D%B8-%EB%A1%9C%EB%94%A9" class="hash-link" aria-label="1. 모델 로딩에 대한 직접 링크" title="1. 모델 로딩에 대한 직접 링크">​</a></h3>
+<p>애플리케이션이 시작되면 먼저 ONNX 모델을 로드합니다. ONNX Runtime Web은 WebAssembly를 기반으로 동작하여 브라우저에서 고성능 추론을 가능하게 합니다.</p>
+<p><strong>모델 로딩 과정:</strong></p>
+<ul>
+<li>디바이스 타입 감지 후 최적의 실행 백엔드 선택<!-- -->
+<ul>
+<li>데스크톱: WebGPU→WebGL→CPU</li>
+<li>모바일: WebGL→CPU</li>
+</ul>
+</li>
+<li><code>public/models/model.onnx</code> 파일을 비동기적으로 로드</li>
+<li>클래스 정보를 <code>classes.json</code> 파일에서 우선 로드, 실패 시 모델 메타데이터에서 바이트 단위 파싱으로 추출</li>
+<li>ONNX Runtime 세션 생성 및 그래프 최적화 설정 적용</li>
+<li>첫 추론 시점에 모델 구조 자동 감지</li>
+</ul>
+<p><strong>YOLO 기본 클래스 예제 (<code>classes.json</code>)</strong>:</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"person"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bicycle"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"car"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"motorcycle"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"airplane"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"bus"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"train"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"truck"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"boat"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"traffic light"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"fire hydrant"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"stop sign"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"parking meter"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bench"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bird"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"cat"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"dog"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"horse"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"sheep"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"cow"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"elephant"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bear"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"zebra"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"giraffe"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"backpack"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"umbrella"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"handbag"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"tie"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"suitcase"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"frisbee"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"skis"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"snowboard"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"sports ball"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"kite"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"baseball bat"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"baseball glove"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"skateboard"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"surfboard"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"tennis racket"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bottle"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"wine glass"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"cup"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"fork"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"knife"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"spoon"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"bowl"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"banana"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"apple"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"sandwich"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"orange"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"broccoli"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"carrot"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"hot dog"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"pizza"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"donut"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"cake"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"chair"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"couch"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"potted plant"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"bed"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"dining table"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"toilet"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"tv"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"laptop"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"mouse"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"remote"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"keyboard"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"cell phone"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"microwave"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"oven"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"toaster"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"sink"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"refrigerator"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"book"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"clock"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"vase"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"scissors"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"teddy bear"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"hair drier"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"toothbrush"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">]</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-카메라-준비">2. 카메라 준비<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#2-%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%A4%80%EB%B9%84" class="hash-link" aria-label="2. 카메라 준비에 대한 직접 링크" title="2. 카메라 준비에 대한 직접 링크">​</a></h3>
+<p><code>react-webcam</code> 라이브러리를 사용해 디바이스에 최적화된 카메라 설정을 자동으로 구성합니다.</p>
+<p><strong>카메라 초기화 과정:</strong></p>
+<ul>
+<li>User Agent 기반 디바이스 타입 자동 감지 (모바일/데스크톱)</li>
+<li>디바이스별 최적 카메라 설정: 데스크톱은 전면 카메라, 모바일은 후면 카메라로 시작</li>
+<li>스마트 미러링 시스템: 전면 카메라는 미러링, 후면 카메라는 정방향 표시, 수동 전환 지원</li>
+<li>카메라 전환 기능 (모바일): 전면/후면 카메라 간 원활한 전환 지원</li>
+<li>리소스 누수 방지를 위한 스트림 관리 및 Webcam 컴포넌트 강제 리마운트</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-데이터-전처리">3. 데이터 전처리<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC" class="hash-link" aria-label="3. 데이터 전처리에 대한 직접 링크" title="3. 데이터 전처리에 대한 직접 링크">​</a></h3>
+<p>성능 최적화를 위해 비디오 프레임을 단계적으로 스케일링한 후 YOLO 모델 입력으로 변환합니다.</p>
+<p><strong>전처리 단계:</strong></p>
+<ul>
+<li>성능 최적화: 비디오 프레임을 40% 크기로 먼저 축소하여 연산량 감소</li>
+<li>Canvas 2D Context 설정 최적화 (<code>willReadFrequently: true</code>, <code>alpha: false</code>, <code>desynchronized: true</code>)</li>
+<li><code>drawImage()</code>를 사용하여 축소된 프레임을 직접 640×640으로 리사이즈</li>
+<li>캐시 친화적 픽셀 데이터 변환: RGB 채널별로 순차 처리하여 메모리 접근 최적화</li>
+<li>RGB 픽셀 값을 0~1 범위로 정규화 및 NCHW 형태 (1×3×640×640)로 텐서 변환</li>
+<li>메모리 효율성을 위한 재사용 가능한 임시 Canvas 활용</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-추론-실행">4. 추론 실행<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#4-%EC%B6%94%EB%A1%A0-%EC%8B%A4%ED%96%89" class="hash-link" aria-label="4. 추론 실행에 대한 직접 링크" title="4. 추론 실행에 대한 직접 링크">​</a></h3>
+<p>안정성과 성능을 위한 정교한 추론 관리 시스템을 통해 모델을 실행합니다.</p>
+<p><strong>추론 과정:</strong></p>
+<ul>
+<li>추론 중복 방지: 고유 ID 기반 활성 추론 세션 관리 (동시 실행 1개 제한)</li>
+<li>60fps 제한을 통한 결과 반영 최적화 (16ms 간격)</li>
+<li>카메라 전환 중에는 추론 자동 일시 중지</li>
+<li>첫 추론 시 모델 구조 실시간 감지: 출력 텐서 차원 분석으로 모델 구조 자동 판별</li>
+<li><code>session.run()</code> 비동기 실행으로 UI 블로킹 방지</li>
+<li>WebAssembly, WebGL, WebGPU 백엔드를 통한 하드웨어 가속</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-후처리-nms">5. 후처리 (NMS)<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#5-%ED%9B%84%EC%B2%98%EB%A6%AC-nms" class="hash-link" aria-label="5. 후처리 (NMS)에 대한 직접 링크" title="5. 후처리 (NMS)에 대한 직접 링크">​</a></h3>
+<p>모델 구조에 따른 동적 처리와 Non-Maximum Suppression을 적용하여 최종 탐지 결과를 생성합니다.</p>
+<p><strong>NMS 처리 단계:</strong></p>
+<ul>
+<li>모델 타입별 데이터 파싱: transpose 여부, YOLOv5s/v8/Custom 모델 대응</li>
+<li>좌표 정규화 자동 감지: 0~1 범위는 캔버스 크기로 스케일링, 이미 픽셀 단위는 모델 크기 기준 변환</li>
+<li>신뢰도 계산: YOLOv5s는 objectness × class_prob, YOLOv8은 class_prob 직접 사용</li>
+<li>사용자 설정 임계값(기본 0.5) 기반 신뢰도 필터링</li>
+<li>IoU 0.45 기준 클래스별 중복 제거</li>
+<li>메모리 기반 부드러운 바운딩 박스: 3프레임 동안 사라진 객체도 유지하여 깜빡임 방지</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-시각화">6. 시각화<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#6-%EC%8B%9C%EA%B0%81%ED%99%94" class="hash-link" aria-label="6. 시각화에 대한 직접 링크" title="6. 시각화에 대한 직접 링크">​</a></h3>
+<p>Canvas 오버레이를 통해 비디오 위에 탐지 결과를 실시간으로 렌더링합니다.</p>
+<p><strong>렌더링 과정:</strong></p>
+<ul>
+<li>HTML5 Canvas를 비디오와 완전히 동일한 크기로 오버레이 배치</li>
+<li>스마트 좌표 변환: 전면 카메라는 CSS 미러링에 맞춰 x좌표 반전, 후면 카메라는 정방향 유지</li>
+<li>클래스별 고유 색상으로 바운딩 박스 및 라벨 렌더링</li>
+<li>메모리 기반 부드러운 애니메이션: 이전 프레임 탐지 결과를 3프레임 동안 유지</li>
+<li>requestAnimationFrame 기반 독립적인 draw loop로 추론과 렌더링 분리</li>
+<li>터치 이벤트 비활성화로 모바일에서의 성능 최적화</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="주목할-만한-기술-포인트">주목할 만한 기술 포인트<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EC%A3%BC%EB%AA%A9%ED%95%A0-%EB%A7%8C%ED%95%9C-%EA%B8%B0%EC%88%A0-%ED%8F%AC%EC%9D%B8%ED%8A%B8" class="hash-link" aria-label="주목할 만한 기술 포인트에 대한 직접 링크" title="주목할 만한 기술 포인트에 대한 직접 링크">​</a></h2>
+<p>실제 프로덕션 환경에서 안정적으로 동작하기 위한 정교한 기술적 해결책들이 구현되어 있습니다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-지능형-모델-구조-자동-감지">🎯 지능형 모델 구조 자동 감지<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#-%EC%A7%80%EB%8A%A5%ED%98%95-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%EC%A1%B0-%EC%9E%90%EB%8F%99-%EA%B0%90%EC%A7%80" class="hash-link" aria-label="🎯 지능형 모델 구조 자동 감지에 대한 직접 링크" title="🎯 지능형 모델 구조 자동 감지에 대한 직접 링크">​</a></h3>
+<p>이 프로젝트의 핵심은 첫 추론 시점에 모델의 출력 구조를 실시간으로 분석하여 적절한 후처리 전략을 자동 선택한다는 것입니다.</p>
+<p><strong>지원하는 모델 형식:</strong></p>
+<p>YOLOv3부터 YOLOv11까지 모든 주요 YOLO 버전을 폭넓게 지원합니다. 각 모델의 다양한 출력 형식(<code>[1, 25200, 85]</code>, <code>[1, 84, 8400]</code> 등)과 구조적 차이점(objectness 유무, transpose 여부)을 자동으로 감지하여 적절한 후처리를 적용합니다. 또한 사용자 정의 클래스로 학습된 Custom 모델도 클래스 개수에 따라 동적으로 처리 가능합니다.</p>
+<p>로드된 클래스 개수와 출력 텐서 차원을 교차 분석하여 모델 타입을 명확히 판별합니다. 모호한 경우에는 크기 비교 방식으로 안전하게 fallback 처리하죠.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-메모리-기반-안정화-시스템">🎞️ 메모리 기반 안정화 시스템<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EF%B8%8F-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B8%B0%EB%B0%98-%EC%95%88%EC%A0%95%ED%99%94-%EC%8B%9C%EC%8A%A4%ED%85%9C" class="hash-link" aria-label="🎞️ 메모리 기반 안정화 시스템에 대한 직접 링크" title="🎞️ 메모리 기반 안정화 시스템에 대한 직접 링크">​</a></h3>
+<p>실시간 탐지에서 발생하는 바운딩 박스 깜빡임을 방지하기 위해 <code>detectionMemoryRef</code>를 활용한 정교한 메모리 시스템이 구현되어 있습니다.</p>
+<p><strong>동작 원리:</strong></p>
+<ul>
+<li>최신 탐지 결과 + 이전 3프레임의 결과를 메모리에 보관</li>
+<li>객체가 일시적으로 탐지되지 않아도 <code>MAX_MISSED_FRAMES</code> 동안 유지</li>
+<li>카메라 전환이나 설정 변경 시 메모리 자동 초기화로 잘못된 결과 방지</li>
+</ul>
+<p>이를 통해 마치 전문적인 비디오 분석 도구처럼 안정적이고 부드러운 탐지 결과를 제공합니다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-디바이스별-최적화-전략">📱 디바이스별 최적화 전략<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#-%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%EB%B3%84-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%A0%84%EB%9E%B5" class="hash-link" aria-label="📱 디바이스별 최적화 전략에 대한 직접 링크" title="📱 디바이스별 최적화 전략에 대한 직접 링크">​</a></h3>
+<p>모바일과 데스크톱 환경의 차이를 고려한 세밀한 최적화가 적용되어 있습니다:</p>
+<ul>
+<li><strong>백엔드 선택</strong>
+<ul>
+<li><strong>데스크톱</strong>: WebGPU→WebGL→CPU</li>
+<li><strong>모바일</strong>: WebGL→CPU</li>
+</ul>
+</li>
+<li><strong>성능 조절</strong>: 모든 디바이스에서 40% 스케일링으로 통일하여 안정성 확보</li>
+<li><strong>카메라 전환</strong>: 모바일에서 전면/후면 카메라 간 원활한 전환 지원</li>
+<li><strong>스마트 미러링</strong>: 전면/후면 카메라에 따른 자동, 수동 미러링 설정</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="직접-만들어보기">직접 만들어보기<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EC%A7%81%EC%A0%91-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0" class="hash-link" aria-label="직접 만들어보기에 대한 직접 링크" title="직접 만들어보기에 대한 직접 링크">​</a></h2>
+<p>이제 직접 이 멋진 웹 앱을 만들어보겠습니다. 단계별로 차근차근 따라해보시면 금세 여러분만의 실시간 객체 탐지 웹 앱을 갖게 될 것입니다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-프로젝트-클론-및-설정">1. 프로젝트 클론 및 설정<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%81%B4%EB%A1%A0-%EB%B0%8F-%EC%84%A4%EC%A0%95" class="hash-link" aria-label="1. 프로젝트 클론 및 설정에 대한 직접 링크" title="1. 프로젝트 클론 및 설정에 대한 직접 링크">​</a></h3>
+<p>먼저 GitHub에서 프로젝트를 클론하고 필요한 의존성을 설치합니다:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/grit-docs/dlabflow-yolo-onnx-react.git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cd dlabflow-yolo-onnx-react</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm install</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-d-lab-flow에서-학습한-모델-준비하기">2. D-Lab Flow에서 학습한 모델 준비하기<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#2-d-lab-flow%EC%97%90%EC%84%9C-%ED%95%99%EC%8A%B5%ED%95%9C-%EB%AA%A8%EB%8D%B8-%EC%A4%80%EB%B9%84%ED%95%98%EA%B8%B0" class="hash-link" aria-label="2. D-Lab Flow에서 학습한 모델 준비하기에 대한 직접 링크" title="2. D-Lab Flow에서 학습한 모델 준비하기에 대한 직접 링크">​</a></h3>
+<p>이 단계가 가장 중요합니다. D-Lab Flow에서 학습한 모델을 웹에서 사용할 수 있도록 ONNX 형식으로 변환해야 합니다.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-1-python-가상환경-설정">2-1. Python 가상환경 설정<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#2-1-python-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95" class="hash-link" aria-label="2-1. Python 가상환경 설정에 대한 직접 링크" title="2-1. Python 가상환경 설정에 대한 직접 링크">​</a></h4>
+<p>먼저 독립적인 Python 환경을 만들어 의존성 충돌을 방지합니다.</p>
+<p><strong>가상환경 생성</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">python -m venv yolo-env</span><br></span></code></pre></div></div>
+<p><strong>가상환경 활성화</strong></p>
+<p>Windows:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">yolo-env\Scripts\activate</span><br></span></code></pre></div></div>
+<p>macOS/Linux:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">source yolo-env/bin/activate</span><br></span></code></pre></div></div>
+<p>가상환경이 활성화되면 프롬프트 앞에 <code>(yolo-env)</code>가 표시됩니다.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-2-yolov5-저장소-준비">2-2. YOLOv5 저장소 준비<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#2-2-yolov5-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%A4%80%EB%B9%84" class="hash-link" aria-label="2-2. YOLOv5 저장소 준비에 대한 직접 링크" title="2-2. YOLOv5 저장소 준비에 대한 직접 링크">​</a></h4>
+<p>가상환경이 활성화된 상태에서 YOLOv5 저장소를 클론하고 의존성을 설치합니다:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/ultralytics/yolov5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cd yolov5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pip install -r requirements.txt</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pip install "numpy&lt;2"</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-3-모델-변환">2-3. 모델 변환<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#2-3-%EB%AA%A8%EB%8D%B8-%EB%B3%80%ED%99%98" class="hash-link" aria-label="2-3. 모델 변환에 대한 직접 링크" title="2-3. 모델 변환에 대한 직접 링크">​</a></h4>
+<p>D-Lab Flow에서 학습한 <code>.pt</code> 가중치 파일을 YOLOv5 폴더에 복사한 후, 다음 명령어로 ONNX 형식으로 변환합니다:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">python export.py --weights your_model.pt --include onnx</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-4-모델-파일-배치">2-4. 모델 파일 배치<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#2-4-%EB%AA%A8%EB%8D%B8-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%EC%B9%98" class="hash-link" aria-label="2-4. 모델 파일 배치에 대한 직접 링크" title="2-4. 모델 파일 배치에 대한 직접 링크">​</a></h4>
+<p>변환된 <code>.onnx</code> 파일을 프로젝트의 <code>public/models/</code> 디렉토리에 <code>model.onnx</code>라는 이름으로 복사합니다:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mkdir -p public/models/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cp your_model.onnx public/models/model.onnx</span><br></span></code></pre></div></div>
+<p><strong>선택사항</strong>: 더 명확한 클래스 이름을 원한다면 <code>classes.json</code> 파일을 생성하여 같은 디렉토리에 넣어주세요:</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"person"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"bicycle"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"car"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token string" style="color:#e3116c">"motorcycle"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">// ... 여러분의 클래스 이름들</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">]</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-개발-서버-실행">3. 개발 서버 실행<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#3-%EA%B0%9C%EB%B0%9C-%EC%84%9C%EB%B2%84-%EC%8B%A4%ED%96%89" class="hash-link" aria-label="3. 개발 서버 실행에 대한 직접 링크" title="3. 개발 서버 실행에 대한 직접 링크">​</a></h3>
+<p>이제 모든 준비가 완료되었습니다. 개발 서버를 실행해보겠습니다:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run dev</span><br></span></code></pre></div></div>
+<p>터미널에 출력된 URL(보통 <code>https://localhost:5173</code>)로 브라우저에서 접속하면 "카메라 시작" 버튼이 보이는 화면을 만날 수 있습니다.</p>
+<p>카메라 권한을 허용하고 버튼을 클릭하면, 바로 여러분만의 실시간 객체 탐지 웹 앱이 동작하는 것을 확인할 수 있습니다!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="웹-앱-사용법-가이드">웹 앱 사용법 가이드<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EC%9B%B9-%EC%95%B1-%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B0%80%EC%9D%B4%EB%93%9C" class="hash-link" aria-label="웹 앱 사용법 가이드에 대한 직접 링크" title="웹 앱 사용법 가이드에 대한 직접 링크">​</a></h2>
+<p>웹 앱이 성공적으로 실행되었다면, 이제 다양한 기능들을 활용해보세요.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-기본-사용법">🎥 기본 사용법<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9%EB%B2%95" class="hash-link" aria-label="🎥 기본 사용법에 대한 직접 링크" title="🎥 기본 사용법에 대한 직접 링크">​</a></h3>
+<p><strong>1. 카메라 시작하기</strong></p>
+<ul>
+<li>"카메라 시작" 버튼을 클릭하여 실시간 탐지를 시작합니다.</li>
+<li>브라우저에서 카메라 권한을 요청하면 "허용"을 선택해주세요.</li>
+</ul>
+<div class="image-row"><p><img decoding="async" loading="lazy" alt="카메라 시작 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_01-143376f096bb7c986e86b07e99461883.PNG" width="1179" height="2556" class="img_ev3q"></p><p><img decoding="async" loading="lazy" alt="카메라 권한 요청 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_02-f1e4901393012ebf3ff9e9a02358ff7b.PNG" width="1179" height="2556" class="img_ev3q"></p></div>
+<p><strong>2. 실시간 탐지 결과 확인</strong></p>
+<ul>
+<li>탐지된 객체는 컬러풀한 바운딩 박스로 표시됩니다.</li>
+<li>각 객체 위에는 클래스명과 신뢰도(%)가 함께 표시됩니다.</li>
+<li>화면 하단에서 탐지된 객체 목록과 전체 FPS를 확인할 수 있습니다.</li>
+</ul>
+<div class="image-row"><p><img decoding="async" loading="lazy" alt="실시간 탐지 결과 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_03-f3bdd78cc6ce2b73dc5931fb05a316b9.png" width="1179" height="2556" class="img_ev3q"></p></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-고급-기능-활용">🎛️ 고급 기능 활용<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EF%B8%8F-%EA%B3%A0%EA%B8%89-%EA%B8%B0%EB%8A%A5-%ED%99%9C%EC%9A%A9" class="hash-link" aria-label="🎛️ 고급 기능 활용에 대한 직접 링크" title="🎛️ 고급 기능 활용에 대한 직접 링크">​</a></h3>
+<p><strong>신뢰도 조절</strong></p>
+<ul>
+<li>화면 우상단의 슬라이더로 탐지 민감도를 실시간 조절할 수 있습니다.</li>
+<li>낮은 값(1-50%): 더 많은 객체 탐지, 오탐지 가능성 증가</li>
+<li>높은 값(60-100%): 확실한 객체만 탐지, 놓치는 객체 증가</li>
+<li>권장값: 50-60% (일반적인 환경에서 최적)</li>
+</ul>
+<div class="image-row cropped"><p><img decoding="async" loading="lazy" alt="신뢰도 조절 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_04-2adfe8d0664c37f4b9f9c21de4f44ad9.png" width="1179" height="621" class="img_ev3q"></p></div>
+<p><strong>모바일에서 카메라 전환</strong></p>
+<ul>
+<li>📱 모바일 기기에서는 전면/후면 카메라 전환이 가능합니다.</li>
+<li>화면의 카메라 전환 버튼을 탭하여 변경할 수 있습니다.</li>
+<li>후면 카메라: 주변 환경 탐지에 최적</li>
+<li>전면 카메라: 셀프 모드, 자동 미러링 적용</li>
+</ul>
+<div class="image-row cropped"><p><img decoding="async" loading="lazy" alt="후면 카메라 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_05-c0454e3635a1dad90630f0d25a02576c.PNG" width="1179" height="600" class="img_ev3q"></p><p><img decoding="async" loading="lazy" alt="전면 카메라 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_06-8e127b7f053cfc6e66860fb0b54ffcc7.PNG" width="1179" height="600" class="img_ev3q"></p></div>
+<p><strong>스마트 카메라 미러링 시스템</strong></p>
+<ul>
+<li>카메라 방향에 따라 자동으로 최적의 표시 방식이 적용됩니다.</li>
+<li>후면 카메라는 실제 환경과 동일한 정방향으로, 전면 카메라는 거울처럼 미러링되어 표시됩니다.</li>
+<li>화면의 미러링 전환 버튼을 클릭하여 언제든지 정방향과 미러링 모드를 수동으로 변경할 수 있습니다.</li>
+<li>바운딩 박스와 라벨이 각 카메라 모드에 맞춰 정확한 위치에 자동 배치되며, 수동 전환 시에도 실시간으로 정확하게 조정됩니다.</li>
+<li>자동 설정과 수동 조절을 통해 개인 선호도나 특정 상황에 맞춘 최적화된 UI/UX를 제공합니다.</li>
+</ul>
+<div class="image-row cropped"><p><img decoding="async" loading="lazy" alt="후면 카메라 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_07-de794c49117100c5c024dc881fa6fc03.PNG" width="1179" height="1209" class="img_ev3q"></p><p><img decoding="async" loading="lazy" alt="전면 카메라 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-07-17_08-c6eba2ae75ea2e160e37374ab626f98a.PNG" width="1179" height="1210" class="img_ev3q"></p></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-최적-사용-팁">💡 최적 사용 팁<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#-%EC%B5%9C%EC%A0%81-%EC%82%AC%EC%9A%A9-%ED%8C%81" class="hash-link" aria-label="💡 최적 사용 팁에 대한 직접 링크" title="💡 최적 사용 팁에 대한 직접 링크">​</a></h3>
+<p><strong>성능 최적화</strong></p>
+<ul>
+<li>충분한 조명이 있는 환경에서 사용하면 탐지 정확도가 높아집니다.</li>
+<li>너무 빠른 움직임보다는 안정적인 각도에서 객체를 비춰주세요.</li>
+<li>모바일에서는 가로 모드보다 세로 모드가 더 안정적입니다.</li>
+</ul>
+<p><strong>정확도 향상</strong></p>
+<ul>
+<li>객체가 화면의 중앙에 위치할 때 가장 정확한 탐지가 이루어집니다.</li>
+<li>여러 객체가 겹쳐있을 때는 약간의 거리를 두고 촬영하면 더 정확합니다.</li>
+<li>배경이 복잡하지 않은 환경에서 더 좋은 결과를 얻을 수 있습니다.</li>
+</ul>
+<p><strong>문제 해결</strong></p>
+<ul>
+<li>카메라가 작동하지 않는다면: 브라우저 설정에서 카메라 권한을 확인해주세요.</li>
+<li>탐지가 느리다면: 신뢰도를 조금 높여서 연산량을 줄여보세요.</li>
+<li>모바일에서 화면이 깨진다면: 페이지를 새로고침한 후 다시 시도해보세요.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="마무리">마무리<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EB%A7%88%EB%AC%B4%EB%A6%AC" class="hash-link" aria-label="마무리에 대한 직접 링크" title="마무리에 대한 직접 링크">​</a></h2>
+<p>브라우저 기반 AI의 가능성은 정말 무궁무진합니다. 서버 인프라의 제약 없이, 사용자의 기기에서 직접 AI가 동작한다는 것은 단순히 기술적 진보를 넘어 새로운 사용자 경험의 패러다임을 제시합니다.</p>
+<p><code>dlabflow-yolo-onnx-react</code> 프로젝트는 D-Lab Flow 사용자들에게 특별한 가치를 제공합니다. 여러분이 정성스럽게 학습한 모델을 즉시 웹에서 테스트하고, 동료들과 공유하며, 실제 환경에서의 성능을 바로 확인할 수 있습니다.</p>
+<p>더 이상 복잡한 배포 과정을 거치거나 서버를 관리할 필요가 없습니다. 단순히 브라우저 URL 하나만 공유하면, 누구나 여러분의 AI 모델을 경험할 수 있습니다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="다음-단계">다음 단계<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react#%EB%8B%A4%EC%9D%8C-%EB%8B%A8%EA%B3%84" class="hash-link" aria-label="다음 단계에 대한 직접 링크" title="다음 단계에 대한 직접 링크">​</a></h3>
+<ul>
+<li><strong>라이브 데모</strong>: <a href="https://dlabflow-yolo-onnx-react.vercel.app/" target="_blank" rel="noopener noreferrer">https://dlabflow-yolo-onnx-react.vercel.app/</a>에서 바로 체험해보세요.</li>
+<li><strong>GitHub 저장소</strong>: <a href="https://github.com/grit-docs/dlabflow-yolo-onnx-react" target="_blank" rel="noopener noreferrer">https://github.com/grit-docs/dlabflow-yolo-onnx-react</a>에서 전체 소스코드를 확인하실 수 있습니다.</li>
+</ul>
+<p>여러분도 직접 시도해보시고, D-Lab Flow에서 학습한 여러분만의 모델로 멋진 웹 데모를 만들어보세요. 궁금한 점이나 피드백이 있으시면 언제든 GitHub Issues나 D-Lab Flow 커뮤니티를 통해 공유해주시기 바랍니다.</p>
+<p>함께 웹 기반 AI의 새로운 가능성을 탐험해나가요! 🚀</p>]]></content:encoded>
+            <category>React</category>
+            <category>ONNX</category>
+            <category>YOLO</category>
+            <category>Object Detection</category>
+            <category>Web AI</category>
+            <category>D-Lab Flow</category>
+        </item>
         <item>
             <title><![CDATA[AI 학습을 위한 이미지 라벨링, 실전 팁과 노하우까지 한눈에!]]></title>
             <link>https://grit-docs.github.io/dlabflow/blog/annotation</link>
