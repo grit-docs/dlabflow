@@ -21,7 +21,7 @@ D-Lab Flow는 AI 모델 개발에 필요한 핵심 기능을 직관적인 인터
   url: 'https://grit-docs.github.io',
   baseUrl: '/dlabflow/',
 
-  organizationName: 'gritdevops',
+  organizationName: 'grit-docs',
   projectName: 'dlabflow',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
