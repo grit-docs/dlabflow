@@ -304,7 +304,7 @@ npm run dev
 
 <div className="image-row">
 
-![실시간 탐지 결과 화면](./img/2025-07-17_03.png)
+![실시간 탐지 결과 화면](./img/2025-07-17_03.PNG)
 
 </div>
 
