@@ -4,10 +4,79 @@
         <title>D-Lab Flow 도움말 센터 Blog</title>
         <link>https://grit-docs.github.io/dlabflow/blog</link>
         <description>D-Lab Flow 도움말 센터 Blog</description>
-        <lastBuildDate>Thu, 17 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Oct 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[브라우저에서 동작하는 실시간 적혈구 탐지 데모]]></title>
+            <link>https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc</link>
+            <guid>https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc</guid>
+            <pubDate>Mon, 27 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[본 포스트에서는 D-Lab Flow에서 학습한 YOLO 기반 적혈구 탐지 모델을 ONNX 형식으로 변환하고,]]></description>
+            <content:encoded><![CDATA[<p>본 포스트에서는 D-Lab Flow에서 학습한 <strong>YOLO 기반 적혈구 탐지 모델</strong>을 ONNX 형식으로 변환하고,<br>
+<!-- -->이를 <strong>브라우저에서 실시간 객체 탐지</strong>로 구현하는 방법을 소개합니다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="결과물-소개">결과물 소개<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#%EA%B2%B0%EA%B3%BC%EB%AC%BC-%EC%86%8C%EA%B0%9C" class="hash-link" aria-label="결과물 소개에 대한 직접 링크" title="결과물 소개에 대한 직접 링크">​</a></h2>
+<p>이 글을 통해 아래 내용을 학습할 수 있습니다</p>
+<ul>
+<li>D-Lab Flow를 활용한 객체 탐지 모델 생성</li>
+<li>YOLO 모델을 ONNX로 변환하여 웹에서 활용하기</li>
+<li>React 기반 실시간 적혈구 탐지 웹 애플리케이션 구현</li>
+</ul>
+<div class="image-row"><p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react 모바일 데모 실행 화면" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_00-dcd4628f277e4463d75bd17fb10b938f.png" width="1075" height="2147" class="img_ev3q"></p></div>
+<p><em><a href="https://dlabflow-yolo-onnx-react-rbc.vercel.app/" target="_blank" rel="noopener noreferrer">라이브 데모 링크 열기</a></em></p>
+<p>스마트폰으로 접속 후 아래 이미지를 카메라로 비추면 적혈구 탐지가 실시간으로 실행됩니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_000-e6dbbbd21afb15569cecba068a3cd691.png" width="640" height="640" class="img_ev3q"></p>
+<p>촬영 거리를 조절하며 탐지 변화를 확인해보세요.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="d-lab-flow에서-모델-생성-하기">D-Lab Flow에서 모델 생성 하기<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#d-lab-flow%EC%97%90%EC%84%9C-%EB%AA%A8%EB%8D%B8-%EC%83%9D%EC%84%B1-%ED%95%98%EA%B8%B0" class="hash-link" aria-label="D-Lab Flow에서 모델 생성 하기에 대한 직접 링크" title="D-Lab Flow에서 모델 생성 하기에 대한 직접 링크">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-저장소-생성">1. 저장소 생성<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#1-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%83%9D%EC%84%B1" class="hash-link" aria-label="1. 저장소 생성에 대한 직접 링크" title="1. 저장소 생성에 대한 직접 링크">​</a></h3>
+<p>이미지 형식으로 저상소를 생성합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_01-253b23725f52048bc5e95a81f9d2e5db.png" width="1465" height="816" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-이미지-파일-업로드">2. 이미지 파일 업로드<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#2-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C" class="hash-link" aria-label="2. 이미지 파일 업로드에 대한 직접 링크" title="2. 이미지 파일 업로드에 대한 직접 링크">​</a></h3>
+<p>아래 데이터셋을 다운로드하여 <code>RBC_images</code> 폴더를 업로드합니다.</p>
+<p><a href="https://grit-docs.github.io/dlabflow/assets/files/RBC_dataset-52f6704e4ead7a1670cdb6f6f2e30332.zip" target="_blank">적혈구 객체탐지 데이터셋 다운로드 링크</a></p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_02-34e2a891b409298bfa4b93fb72d3d88b.png" width="1470" height="859" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-데이터셋-생성">3. 데이터셋 생성<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#3-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B-%EC%83%9D%EC%84%B1" class="hash-link" aria-label="3. 데이터셋 생성에 대한 직접 링크" title="3. 데이터셋 생성에 대한 직접 링크">​</a></h3>
+<p>이미지 유형으로 데이터셋을 생성합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_03-853974c733ad042cd2af8092bc6ed751.png" width="1469" height="785" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-라벨링-파일-업로드-및-라벨링-작업">4. 라벨링 파일 업로드 및 라벨링 작업<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#4-%EB%9D%BC%EB%B2%A8%EB%A7%81-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EB%B0%8F-%EB%9D%BC%EB%B2%A8%EB%A7%81-%EC%9E%91%EC%97%85" class="hash-link" aria-label="4. 라벨링 파일 업로드 및 라벨링 작업에 대한 직접 링크" title="4. 라벨링 파일 업로드 및 라벨링 작업에 대한 직접 링크">​</a></h3>
+<p>첨부된 <code>RBC_annotations</code> 폴더를 업로드합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_04-866182a84bd5307a1697341dc82be7a9.png" width="1339" height="754" class="img_ev3q"></p>
+<p>라벨링 상태를 확인합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_05-69ed1e6e327c5a66854de8db47976530.png" width="1676" height="976" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-프로젝트-생성">5. 프로젝트 생성<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#5-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1" class="hash-link" aria-label="5. 프로젝트 생성에 대한 직접 링크" title="5. 프로젝트 생성에 대한 직접 링크">​</a></h3>
+<p>객체탐지 타입의 프로젝트를 생성합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_06-ff19f26669c1912caff7889270e443f5.png" width="1525" height="815" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-인공지능-학습">5. 인공지능 학습<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#5-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%ED%95%99%EC%8A%B5" class="hash-link" aria-label="5. 인공지능 학습에 대한 직접 링크" title="5. 인공지능 학습에 대한 직접 링크">​</a></h3>
+<p>학습할 버전을 생성하고 모델을 지정하여 학습을 진행합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_07-09d3588036125fcf552a3ac53941b2dc.png" width="1435" height="875" class="img_ev3q"></p>
+<p>하이퍼파라미터 설정 값 및 다양한 모델을 사용하여 학습을 해보고 성능지표를 비교합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_08-ca58c7e58489530f5b1b26b1318471cd.png" width="1436" height="774" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="적혈구-객체탐지-데모-만들기">적혈구 객체탐지 데모 만들기<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#%EC%A0%81%ED%98%88%EA%B5%AC-%EA%B0%9D%EC%B2%B4%ED%83%90%EC%A7%80-%EB%8D%B0%EB%AA%A8-%EB%A7%8C%EB%93%A4%EA%B8%B0" class="hash-link" aria-label="적혈구 객체탐지 데모 만들기에 대한 직접 링크" title="적혈구 객체탐지 데모 만들기에 대한 직접 링크">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-모델-가중치를-onnx-파일로-변환">1. 모델 가중치를 onnx 파일로 변환<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#1-%EB%AA%A8%EB%8D%B8-%EA%B0%80%EC%A4%91%EC%B9%98%EB%A5%BC-onnx-%ED%8C%8C%EC%9D%BC%EB%A1%9C-%EB%B3%80%ED%99%98" class="hash-link" aria-label="1. 모델 가중치를 onnx 파일로 변환에 대한 직접 링크" title="1. 모델 가중치를 onnx 파일로 변환에 대한 직접 링크">​</a></h3>
+<p>D-Lab Flow에서 학습 완료된 best.pt 모델을 다운로드합니다.
+Ultralytics 저장소를 클론하여 ONNX 변환을 수행합니다.</p>
+<p><img decoding="async" loading="lazy" alt="dlabflow-yolo-onnx-react-rbc" src="https://grit-docs.github.io/dlabflow/assets/images/2025-10-27_09-ee9eb88716671496345ca11471c57e78.png" width="1185" height="714" class="img_ev3q"></p>
+<p>아래 절차는 YOLOv8 이후 모델(YOLOv8, v9, v11) 모두 지원합니다.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/ultralytics/ultralytics.git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cd ultralytics</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pip install ultralytics onnx onnxruntime</span><br></span></code></pre></div></div>
+<p>CLI 방식으로 변환</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">yolo export model=best.pt format=onnx</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-데모-프로젝트-다운로드">2. 데모 프로젝트 다운로드<a href="https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react-rbc#2-%EB%8D%B0%EB%AA%A8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" class="hash-link" aria-label="2. 데모 프로젝트 다운로드에 대한 직접 링크" title="2. 데모 프로젝트 다운로드에 대한 직접 링크">​</a></h3>
+<p>실시간 객체 탐지 데모 프로젝트를 클론하고 필요한 의존성을 설치합니다</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/grit-docs/dlabflow-yolo-onnx-react.git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cd dlabflow-yolo-onnx-react</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm install</span><br></span></code></pre></div></div>
+<p>변환된 onnx 모델 파일을 복사 후 이름을 model.onnx 로 변경하여 아래 경로에 저장합니다</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">public/models/model.onnx</span><br></span></code></pre></div></div>
+<p>웹앱을 실행합니다.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm run dev</span><br></span></code></pre></div></div>
+<p>완성된 적혈구 객체 탐지 데모 GitHub 저장소</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">https://github.com/grit-docs/dlabflow-yolo-onnx-react-rbc.git</span><br></span></code></pre></div></div>]]></content:encoded>
+            <category>React</category>
+            <category>ONNX</category>
+            <category>YOLO</category>
+            <category>Object Detection</category>
+            <category>Web AI</category>
+            <category>D-Lab Flow</category>
+        </item>
         <item>
             <title><![CDATA[실시간 객체 탐지: React와 ONNX Runtime으로 YOLO 웹 앱 만들기]]></title>
             <link>https://grit-docs.github.io/dlabflow/blog/yolo-onnx-object-detection-react</link>
