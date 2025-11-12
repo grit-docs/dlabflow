@@ -67,7 +67,7 @@ tags: [React, ONNX, YOLO, Object Detection, Web AI, D-Lab Flow]
 
 ![dlabflow-yolo-onnx-react-rbc](./img/2025-10-27_06.png)
 
-### 5. 인공지능 학습
+### 6. 인공지능 학습
 학습할 버전을 생성하고 모델을 지정하여 학습을 진행합니다.
 
 ![dlabflow-yolo-onnx-react-rbc](./img/2025-10-27_07.png)
