@@ -13,7 +13,7 @@
 
 <meta name="algolia-site-verification" content="139F10EE611CB946">
 <meta name="google-site-verification" content="FBcr1wZm2BNh7GnWcGHPij6d3Rl9M1dpNtbWHI__4fc"><link rel="stylesheet" href="/dlabflow/assets/css/styles.783baf9b.css">
-<script src="/dlabflow/assets/js/runtime~main.344fc300.js" defer="defer"></script>
+<script src="/dlabflow/assets/js/runtime~main.77e0bc10.js" defer="defer"></script>
 <script src="/dlabflow/assets/js/main.b6137e0d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -85,6 +85,21 @@ Ultralytics 저장소를 클론하여 ONNX 변환을 수행합니다.</p>
 <p>아래 절차는 YOLOv8 이후 모델(YOLOv8, v9, v11) 모두 지원합니다.</p>
 <p>가중치 파일 변환을 위한 과정을 진행합니다.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">// 작업환경을 준비</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/ultralytics/ultralytics.git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cd ultralytics</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">// 가상환경 활성화 및 의존성 설치</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">python -m venv yolo-env</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">yolo-env\Scripts\activate</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">pip install ultralytics onnx onnxruntime</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">// onnx 형태로 변환</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">yolo export model=best.pt format=onnx</span><br></span></code></pre></div></div>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>경고</div><div class="admonitionContent_BuS1"><ul>
+<li>
+<p>후처리(NMS) 포함 모델로 생성하고 싶다면 변환시 해당 옵션 추가</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">yolo export model=best.pt format=onnx nms=true</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p>옵션을 추가하지 않을시 기본값은 nms=false 입니다.</p>
+</li>
+<li>
+<p>후처리(NMS)포함 모델은 YOLOv8 부터 지원 합니다.</p>
+</li>
+<li>
+<p>후처리는 모델이 예측한 여러 중복된 바운딩 박스 중에서 가장 신뢰도 높은 것만 남기고 나머지를 제거해 정확도와 결과 해석의 명확성을 높이는 과정입니다.</p>
+</li>
+</ul></div></div>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>정보</div><div class="admonitionContent_BuS1"><ul>
 <li>위 과정을 완료하면 <code>ultralytics</code> 폴더에 best.onnx 파일이 생성됩니다.</li>
 </ul></div></div>
