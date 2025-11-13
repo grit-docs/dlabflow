@@ -135,6 +135,18 @@ pip install ultralytics onnx onnxruntime
 // onnx 형태로 변환
 yolo export model=best.pt format=onnx
 ```
+
+:::warning
+- 후처리(NMS) 포함 모델로 생성하고 싶다면 변환시 해당 옵션 추가 
+  ```bash
+  yolo export model=best.pt format=onnx nms=true
+  ```
+   
+- 옵션을 추가하지 않을시 기본값은 nms=false 입니다.
+- 후처리(NMS)포함 모델은 YOLOv8 부터 지원 합니다.
+- 후처리는 모델이 예측한 여러 중복된 바운딩 박스 중에서 가장 신뢰도 높은 것만 남기고 나머지를 제거해 정확도와 결과 해석의 명확성을 높이는 과정입니다.
+  :::
+
 :::info
 - 위 과정을 완료하면 `ultralytics` 폴더에 best.onnx 파일이 생성됩니다.
   :::
