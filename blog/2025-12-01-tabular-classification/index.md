@@ -1,7 +1,7 @@
 ---
 slug: tabular-classification
 title: "정형 데이터 분류 모델 만들기"
-authors: [sylee]
+authors: [dgkim1108]
 tags: [지도학습, 정형데이터분류]
 ---
 
