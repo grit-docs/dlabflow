@@ -5,9 +5,7 @@ authors: [sylee]
 tags: [라벨링]
 ---
 
-<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px'}}>
-  <span>직관적인 웹 인터페이스를 통해 누구나 손쉽게 이미지를 분류하고, 객체를 표시하여 AI 학습에 필요한 고품질 데이터를 손쉽게 만들 수 있습니다. 어노테이션(라벨링) 기능을 200% 활용해 보세요.</span>
-</div>
+직관적인 웹 인터페이스를 통해 누구나 손쉽게 이미지를 분류하고, 객체를 표시하여 AI 학습에 필요한 고품질 데이터를 손쉽게 만들 수 있습니다. 어노테이션(라벨링) 기능을 200% 활용해 보세요.
 
 <!-- truncate -->
 

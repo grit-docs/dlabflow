@@ -1,14 +1,54 @@
 튜토리얼:
   label: 튜토리얼
   permalink: /튜토리얼
-  description: 단계별 튜토리얼
+  description: 튜토리얼
 
 컴퓨터비전:
   label: 컴퓨터비전
   permalink: /컴퓨터비전
   description: 컴퓨터비전
 
-어노테이션:
+라벨링:
   label: 라벨링
   permalink: /라벨링
   description: 라벨링
+
+지도학습:
+  label: 지도학습
+  permalink: /지도학습
+  description: 지도학습
+
+정형데이터분류:
+  label: 정형데이터분류
+  permalink: /정형데이터분류
+  description: 정형데이터분류
+
+React:
+  label: React
+  permalink: /React
+  description: React
+
+ONNX:
+  label: ONNX
+  permalink: /ONNX
+  description: ONNX
+
+Object Detection:
+  label: Object Detection
+  permalink: /ObjectDetection
+  description: Object Detection
+
+Web AI:
+  label: Web AI
+  permalink: /WebAI
+  description: Web AI
+
+D-Lab Flow:
+  label: D-Lab Flow
+  permalink: /D-Lab Flow
+  description: D-Lab Flow
+
+YOLO:
+  label: YOLO
+  permalink: /YOLO
+  description: YOLO

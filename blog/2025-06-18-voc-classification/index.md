@@ -5,9 +5,9 @@ authors: [silee]
 tags: [컴퓨터비전, 튜토리얼]
 ---
 
-<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px'}}>
-  <span>PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 탐지(Object Detection) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</span>
-</div>
+
+**PASCAL VOC 2012 공개 데이터셋**을 활용해 **D-Lab Flow**에서 **객체 탐지(Object Detection) 모델**을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.
+
 
 <!-- truncate -->
 
