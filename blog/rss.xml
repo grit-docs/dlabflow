@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>D-Lab Flow 도움말 센터 Blog</title>
@@ -656,7 +656,7 @@ Ultralytics 저장소를 클론하여 ONNX 변환을 수행합니다.</p>
             <guid>https://grit-docs.github.io/dlabflow/blog/annotation</guid>
             <pubDate>Mon, 30 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[직관적인 웹 인터페이스를 통해 누구나 손쉽게 이미지를 분류하고, 객체를 표시하여 AI 학습에 필요한 고품질 데이터를 손쉽게 만들 수 있습니다. 어노테이션(라벨링) 기능을 200% 활용해 보세요.]]></description>
-            <content:encoded><![CDATA[<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><span>직관적인 웹 인터페이스를 통해 누구나 손쉽게 이미지를 분류하고, 객체를 표시하여 AI 학습에 필요한 고품질 데이터를 손쉽게 만들 수 있습니다. 어노테이션(라벨링) 기능을 200% 활용해 보세요.</span></div>
+            <content:encoded><![CDATA[<p>직관적인 웹 인터페이스를 통해 누구나 손쉽게 이미지를 분류하고, 객체를 표시하여 AI 학습에 필요한 고품질 데이터를 손쉽게 만들 수 있습니다. 어노테이션(라벨링) 기능을 200% 활용해 보세요.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="개념-익히기">개념 익히기<a href="https://grit-docs.github.io/dlabflow/blog/annotation#%EA%B0%9C%EB%85%90-%EC%9D%B5%ED%9E%88%EA%B8%B0" class="hash-link" aria-label="개념 익히기에 대한 직접 링크" title="개념 익히기에 대한 직접 링크">​</a></h2>
 <p>데이터 <strong>어노테이션은</strong> AI 모델이 이미지를 이해하고 학습할 수 있도록, <strong>각 데이터에 의미 있는 정보를 추가</strong>하는 작업입니다.</p>
 <p><strong>이미지 라벨링</strong>은 데이터 어노테이션의 한 종류로, 이미지 데이터에 특화된 어노테이션 작업입니다.</p>
@@ -882,7 +882,7 @@ Ultralytics 저장소를 클론하여 ONNX 변환을 수행합니다.</p>
             <guid>https://grit-docs.github.io/dlabflow/blog/voc-classification</guid>
             <pubDate>Wed, 18 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 탐지(Object Detection) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.]]></description>
-            <content:encoded><![CDATA[<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px"><span>PASCAL VOC 2012 공개 데이터셋을 활용해 D-Lab Flow에서 객체 탐지(Object Detection) 모델을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</span></div>
+            <content:encoded><![CDATA[<p><strong>PASCAL VOC 2012 공개 데이터셋</strong>을 활용해 <strong>D-Lab Flow</strong>에서 <strong>객체 탐지(Object Detection) 모델</strong>을 만드는 방법을 소개합니다. D-Lab Flow는 코드 작성 없이도 학습부터 평가까지 한 번에 진행할 수 있어, 초보자도 손쉽게 비전 AI 프로젝트를 시작할 수 있습니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="시작하기-전에">시작하기 전에<a href="https://grit-docs.github.io/dlabflow/blog/voc-classification#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90" class="hash-link" aria-label="시작하기 전에에 대한 직접 링크" title="시작하기 전에에 대한 직접 링크">​</a></h2>
 <p>컴퓨터 비전 분야에서 널리 사용되는 PASCAL VOC 2012 공개 데이터셋을 활용하여 <strong>객체 탐지(Object Detection)</strong> AI 모델을 만들어 봅니다.</p>
 <p>D-Lab Flow 플랫폼을 사용하면 복잡한 코드 작성 없이도 데이터 준비부터 모델 학습, 평가까지 전체 과정을 직관적인 인터페이스로 진행할 수 있습니다.</p>
