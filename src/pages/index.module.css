@@ -1,98 +1,220 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
-/* 다크 모드에서도 헤더 배경이 어두우므로 오버레이 추가 */
-.heroBanner::before {
+.hero {
+  position: relative;
+  padding: 5rem 0 4rem;
+  overflow: hidden;
+  color: #0b1f1a;
+  isolation: isolate;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 120% at 10% 20%, rgba(0, 255, 200, 0.2), transparent),
+    radial-gradient(100% 80% at 80% 0%, rgba(6, 98, 74, 0.25), transparent),
+    linear-gradient(120deg, #061d13, #0f2a20);
+  opacity: 0.95;
+  z-index: -2;
+}
+
+.hero::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1); /* 어두운 오버레이 */
-  z-index: 1;
-  pointer-events: none;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  z-index: -3;
+  filter: saturate(0.9);
 }
 
-/* 헤더 내용물이 오버레이 위에 표시되도록 */
-.heroBanner .container {
-  position: relative;
-  z-index: 2;
+.heroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 620px;
+  color: #e4f2ed;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(176, 255, 225, 0.25));
+  border: 1px solid rgba(157, 226, 197, 0.55);
+  color: #eafaf3;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  width: fit-content;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.title {
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  margin: 0;
+  color: #eafaf3;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(228, 242, 237, 0.8);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.primary {
+  background: linear-gradient(135deg, #31d8a0, #1ea57b);
+  border: none;
+  color: #0b1f1a;
+  font-weight: 700;
+  padding-inline: 1.4rem;
+  box-shadow: 0 10px 25px rgba(49, 216, 160, 0.3);
+}
+
+.secondary {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #0b1f1a;
+  background: linear-gradient(135deg, #f9fffe, #b9f1e0);
+  box-shadow: 0 10px 25px rgba(21, 82, 63, 0.2);
+}
+
+.secondary:hover {
+  background: linear-gradient(135deg, #c3f4e5, #8be3c8);
+  border-color: rgba(21, 82, 63, 0.35);
+  color: #06271d;
+  box-shadow: 0 12px 28px rgba(12, 63, 45, 0.28);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.metaItem {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #b8d8cb;
+}
+
+.metaItem strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+  color: #f5fff9;
+}
+
+.cardRail {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f5fff9;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b7d7cb;
+  font-size: 0.9rem;
+}
+
+.cardDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #31d8a0, #00cfd0);
+  box-shadow: 0 0 0 6px rgba(49, 216, 160, 0.12);
+}
+
+.cardLabel {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cardBody h3 {
+  margin: 0.1rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: #f3fff9;
+}
+
+.cardBody p {
+  margin: 0;
+  color: rgba(245, 255, 249, 0.8);
+  line-height: 1.5;
+}
+
+.cardAction {
+  font-size: 0.95rem;
+  color: #99f0cd;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .heroGrid {
+    gap: 2rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* 모든 화면에서 버튼 사이에 간격 추가 */
-}
-
-.equalWidthButton {
-  min-width: 270px; /* 두 버튼의 최소 너비 설정 */
-  text-align: center;
-  justify-content: center;
-  display: inline-flex;
-  /* 새로운 스타일 추가 */
-  background-color: #e0fdf5; /* 옅은 녹색 배경 */
-  border: 2px solid #2d5a2d; /* 진한 녹색 둘레선 */
-  color: #2d5a2d; /* 텍스트 색상도 진한 녹색으로 */
-  border-radius: 8px; /* 둥근 모서리 */
-  padding: 12px 24px; /* 내부 여백 */
-  font-weight: 600; /* 글자 굵기 */
-  transition: all 0.3s ease; /* 부드러운 전환 효과 */
-}
-
-/* 다크 모드에서도 동일한 스타일 유지 (배경 이미지가 어두워서) */
-[data-theme='dark'] .equalWidthButton {
-  background-color: #e0fdf5;
-  border: 2px solid #2d5a2d;
-  color: #2d5a2d;
-  /* 다크 모드에서 텍스트 더 잘 보이도록 강조 */
-  text-shadow: 0 0 2px #fff;
-}
-
-/* 호버 효과 추가 */
-.equalWidthButton:hover {
-  background-color: #00cfa0 ; /* 호버 시 조금 더 진한 녹색 */
-  border-color: #1e3a1e; /* 호버 시 더 진한 둘레선 */
-  color: #c9f7e9; /* 호버 시 더 진한 텍스트 */
-  text-decoration: none; /* 밑줄 제거 */
-  transform: translateY(-3px); /* 살짝 위로 올라가는 효과 */
-  box-shadow: 0 4px 12px rgba(45, 90, 45, 0.2); /* 그림자 효과 */
-}
-
-/* 클릭 시 효과 */
-.equalWidthButton:active {
-  transform: translateY(0); /* 클릭 시 원래 위치로 */
-  box-shadow: 0 2px 6px rgba(45, 90, 45, 0.2); /* 그림자 줄이기 */
-}
-
-/* 모바일 화면에서 버튼을 세로로 정렬 */
-@media screen and (max-width: 768px) {
-  .buttons {
+@media screen and (max-width: 640px) {
+  .actions {
     flex-direction: column;
-    gap: 16px; /* 모바일에서의 버튼 사이 간격 */
+    align-items: flex-start;
   }
 
-  /* 두 버튼 모두 모바일에서 동일한 크기 */
-  .equalWidthButton{
-    width: 100%; /* 모바일에서는 가로 전체 너비 사용 */
-    max-width: 300px; /* 최대 너비 제한 */
+  .cardRail {
+    grid-template-columns: 1fr;
   }
-
 }
