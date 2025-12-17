@@ -93,8 +93,8 @@ export default function HomepageFeatures() {
                             몇 분이면 충분해요! D-Lab Flow가 어떻게 동작하는지 간단한 영상으로 직접 체험해보세요.
                         </p>
                     </div>
-                    <div className="row" style={{justifyContent: 'center'}}>
-                        <div className="col col--12">
+                    <div className={styles.videoRow}>
+                        <div className={styles.videoColumn}>
                             <div className={styles.videoContainer} id="youtubePlayerContainer">
                                 <iframe
                                     id="youtubePlayer"
@@ -106,10 +106,7 @@ export default function HomepageFeatures() {
                                 />
                             </div>
                         </div>
-                    </div>
-
-                    <div className="row" style={{justifyContent: 'center', marginTop: '1rem'}}>
-                        <div className="col col--12">
+                        <div className={styles.timelineColumn}>
                             <div className={styles.videoTimelineMenu}>
                                 <h3 className={styles.videoTimelineTitle}>📌 클릭하면 해당 부분으로 이동해요!</h3>
                                 <div className={styles.videoTimelineList}>
