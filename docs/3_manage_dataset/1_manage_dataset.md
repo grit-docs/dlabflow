@@ -23,7 +23,7 @@ sidebar_position: 1
 각 항목에 대해서 다음과 같은 기능을 제공합니다.
 - `(조작) 데이터셋 이름 변경`
 - `(조작) 관련 메모 수정`
-- `(조작) 관련 헤시테그 수정`
+- `(조작) 관련 해시테그 수정`
 - `(조작) 삭제`
 
 ![dataset_list_by_owner](./img/dataset_list_by_owner.png)
