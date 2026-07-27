@@ -71,10 +71,6 @@ D-Lab Flow의 전체 업무 흐름을 단계별로 확인하세요.`,
     ],
   ],
 
-  plugins: [
-    "docusaurus-plugin-zooming",
-  ],
-
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
@@ -148,17 +144,6 @@ D-Lab Flow의 전체 업무 흐름을 단계별로 확인하세요.`,
         prism: {
           theme: prismThemes.github,
           darkTheme: prismThemes.dracula,
-        },
-        zooming: {
-          selector: '.markdown img',
-          delay: 500,
-          background: {
-            light: 'rgba(101,108,133,0.8)',
-            dark: 'rgba(9,10,17,0.8)'
-          },
-          options: {
-            // See the docs of zooming for all available options: https://github.com/francoischalifour/medium-zoom#usage
-          }
         },
       }),
 
