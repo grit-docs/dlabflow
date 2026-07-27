@@ -16,23 +16,17 @@ D-Lab Flow는 이미지와 정형데이터를 관리하고, 데이터셋 구성�
 
 D-Lab Flow v2.5.0의 데이터 저장소 구성부터 데이터셋·라벨링, AI 프로젝트 생성, 모델 학습·평가·다운로드와 관리자 기능까지의 전체 흐름을 영상으로 확인할 수 있습니다.
 
-<div className="intro-video">
-  <iframe
-    src="https://www.youtube.com/embed/2TtR36Yo8T8"
-    title="D-Lab Flow v2.5.0 핵심 사용자 가이드"
-    className="intro-video__frame"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  />
-</div>
+<iframe
+  width="100%"
+  height="540"
+  src="https://www.youtube.com/embed/2TtR36Yo8T8"
+  title="D-Lab Flow v2.5.0 핵심 사용자 가이드"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+/>
 
-<a
-  href="https://www.youtube.com/watch?v=2TtR36Yo8T8"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  YouTube에서 영상 보기
-</a>
+[YouTube에서 영상 보기](https://www.youtube.com/watch?v=2TtR36Yo8T8)
 
 영상으로 전체 흐름을 먼저 확인한 뒤, 아래 단계에 따라 필요한 기능을 자세히 살펴보세요.
 
@@ -50,39 +44,20 @@ D-Lab Flow v2.5.0의 데이터 저장소 구성부터 데이터셋·라벨링, A
 
 ## 전체 업무 흐름
 
-<div
-  aria-label="D-Lab Flow 전체 업무 흐름"
-  className="intro-workflow"
->
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">1</span>
-    <div><strong>사용 현황 확인</strong><br /><small>저장소와 GPU 사용량, 최근 작업 상태를 확인합니다.</small></div>
-  </div>
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">2</span>
-    <div><strong>데이터 준비</strong><br /><small>데이터 저장소를 만들고 원본 파일을 등록합니다.</small></div>
-  </div>
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">3</span>
-    <div><strong>데이터셋 구성</strong><br /><small>학습에 사용할 파일과 정답 정보를 구성합니다.</small></div>
-  </div>
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">4</span>
-    <div><strong>AI 프로젝트 생성</strong><br /><small>프로젝트 유형을 선택하고 데이터셋을 연결합니다.</small></div>
-  </div>
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">5</span>
-    <div><strong>학습 버전 생성</strong><br /><small>전처리와 하이퍼파라미터를 설정해 버전을 만듭니다.</small></div>
-  </div>
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">6</span>
-    <div><strong>모델 학습과 평가</strong><br /><small>모델을 학습시키고 성능과 예측 결과를 확인합니다.</small></div>
-  </div>
-  <div className="intro-workflow__step">
-    <span aria-hidden="true" className="intro-workflow__number">7</span>
-    <div><strong>모델 다운로드 및 활용</strong><br /><small>실행 환경에 맞는 형식으로 모델을 내보내 활용합니다.</small></div>
-  </div>
-</div>
+1. **사용 현황 확인**  
+   저장소와 GPU 사용량, 최근 작업 상태를 확인합니다.
+2. **데이터 준비**  
+   데이터 저장소를 만들고 원본 파일을 등록합니다.
+3. **데이터셋 구성**  
+   학습에 사용할 파일과 정답 정보를 구성합니다.
+4. **AI 프로젝트 생성**  
+   프로젝트 유형을 선택하고 데이터셋을 연결합니다.
+5. **학습 버전 생성**  
+   전처리와 하이퍼파라미터를 설정해 버전을 만듭니다.
+6. **모델 학습과 평가**  
+   모델을 학습시키고 성능과 예측 결과를 확인합니다.
+7. **모델 다운로드 및 활용**  
+   실행 환경에 맞는 형식으로 모델을 내보내 활용합니다.
 
 ### 1. 사용 현황 확인
 
