@@ -23,8 +23,8 @@ function loadYouTubeAPI() {
 
 // 플레이어 초기화
 function initPlayer() {
-  if (typeof window !== 'undefined' && window.YT && document.getElementById('youtubePlayer')) {
-    player = new window.YT.Player('youtubePlayer', {
+  if (typeof window !== 'undefined' && window.YT && document.getElementById('legacyYoutubePlayer')) {
+    player = new window.YT.Player('legacyYoutubePlayer', {
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange
@@ -34,12 +34,12 @@ function initPlayer() {
 }
 
 // 플레이어 준비 완료 이벤트
-function onPlayerReady(event) {
+function onPlayerReady() {
   console.log('Player is ready');
 }
 
 // 플레이어 상태 변경 이벤트
-function onPlayerStateChange(event) {
+function onPlayerStateChange() {
   // 상태 변경 시 필요한 로직 구현
 }
 

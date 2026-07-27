@@ -1,179 +1,102 @@
-import React, { useEffect } from 'react';
-import clsx from 'clsx';
+import React, {useEffect} from 'react';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import { initYouTubePlayer, seekToTime } from './youtube-player';
+import {initYouTubePlayer, seekToTime} from './youtube-player';
 
-// 이미지 파일 가져오기
-import uploadImage from '@site/static/img/feature_1.png';
-import datasetImage from '@site/static/img/feature_2.png';
-import projectImage from '@site/static/img/feature_3.png';
-import modelImage from '@site/static/img/feature_4.png';
-
-import featureImage_1 from '@site/static/img/intro_1.png';
-
-const FeatureList = [
-    {
-        title: '📂 간편한 데이터 업로드',
-        image: uploadImage,
-        description: (
-            <>
-                학습에 쓸 이미지를 손쉽게 올려보세요.
-                JPG, PNG, BMP 파일을 지원하며, 폴더 전체를 업로드하는 것도 가능해요!
-            </>
-        ),
-    },
-    {
-        title: '🏷️ 스마트한 데이터셋 관리',
-        image: datasetImage,
-        description: (
-            <>
-                이미지에 라벨을 붙여 데이터셋을 만들어보세요.
-                팀원들과 함께 나눠서 작업하면 더 빠르고 효율적으로 끝낼 수 있어요!
-            </>
-        ),
-    },
-    {
-        title: '🚀 누구나 쉽게 만드는 AI 프로젝트',
-        image: projectImage,
-        description: (
-            <>
-                준비된 데이터셋으로 바로 프로젝트를 시작해보세요.
-                복잡한 설정은 NO! 몇 번만 클릭하면 바로 시작할 수 있어요!
-            </>
-        ),
-    },
-    {
-        title: '🎯 원클릭 AI 학습',
-        image: modelImage,
-        description: (
-            <>
-                YOLO, EfficientDet 같은 최신 AI 모델을 자동으로 학습할 수 있어요.
-                어려운 설정은 D-Lab Flow가 도와드릴게요! 그냥 클릭 한 번이면 끝!
-            </>
-        ),
-    },
+const videoTopics = [
+  '사용 현황과 GPU 자원 확인', '데이터 저장소 생성과 파일 업로드', '수집 장치 생성 및 데이터 자동 수집',
+  '데이터셋 구성과 라벨링', 'AI 프로젝트와 학습 버전 생성', '하이퍼파라미터 설정과 모델 학습',
+  '모델 성능 평가', 'PyTorch, ONNX, OpenVINO 모델 다운로드', '사용자 관리와 관리자 전체 대시보드',
 ];
 
-    function Feature({image, title, description}) {
-    return (
-        <div className="col col--6" style={{marginBottom: '40px'}}>
-            <div className={styles.featureCard}>
-                <div className={styles.featureImageWrapper}>
-                    {image && (
-                        <img
-                            src={image}
-                            alt={title}
-                            className={styles.featureSvg}
-                            loading="lazy" // 이미지 로딩 최적화
-                        />
-                    )}
-                </div>
-                <div className={styles.featureCardBody}>
-                    <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
-                    <div className={styles.featureDescription}>{description}</div>
-                </div>
-            </div>
-        </div>
-    );
+const oldTimeline = [
+  ['데이터 저장소 만들기', 0, '0:00'], ['이미지 파일 업로드하기', 15, '0:15'], ['데이터셋 구성하기', 48, '0:48'],
+  ['라벨링 파일 등록하기', 60, '1:00'], ['직접 라벨링 작업하기', 92, '1:32'], ['프로젝트 시작하기', 117, '1:57'],
+  ['버전 설정하기', 141, '2:21'], ['AI 모델 학습시키기', 158, '2:38'], ['모델 성능 확인하기', 187, '3:07'],
+];
+
+const features = [
+  {title: '데이터 저장소와 업로드', icon: 'database', description: '이미지와 정형데이터 저장소를 생성하고, 파일 또는 폴더를 직접 업로드할 수 있습니다. 사용자 업로드와 장비 업로드를 구분해 데이터를 관리합니다.'},
+  {title: '수집 장치 연동', icon: 'radio', description: '카메라, 센서와 엣지 장치의 연결 정보를 생성하고, 현장 데이터를 지정된 장비 업로드 저장소로 자동 수집할 수 있습니다.'},
+  {title: '데이터셋과 협업 라벨링', icon: 'tags', description: '저장소의 데이터를 학습용 데이터셋으로 구성하고, 바운딩 박스와 폴리곤 라벨링을 수행합니다. 팀원별 작업 분배와 클래스 통계도 확인할 수 있습니다.'},
+  {title: '목적별 AI 프로젝트', icon: 'boxes', description: '객체 탐지, 인스턴스 분할과 정형데이터 분류 프로젝트를 생성하고, 프로젝트 목적에 맞는 데이터셋과 학습 조건을 설정합니다.'},
+  {title: '학습 버전과 성능 비교', icon: 'branch', description: '하나의 프로젝트에서 여러 학습 버전을 생성하고, 데이터 전처리·증강·하이퍼파라미터 설정에 따른 결과를 비교할 수 있습니다.'},
+  {title: '모델 평가와 배포', icon: 'chart', description: '평균정밀도, 정밀도와 재현율을 비교해 모델을 선택하고, PyTorch·ONNX·OpenVINO 형식으로 다운로드할 수 있습니다.'},
+];
+
+const adminMetrics = ['사용자 현황', '저장소 및 파일', '데이터셋 현황', '프로젝트와 버전', 'GPU 사용량', '학습 요청 및 실패'];
+
+function Badge({children, muted = false}) {
+  return <span className={`${styles.badge} ${muted ? styles.badgeMuted : ''}`}>{children}</span>;
+}
+
+function Icon({name}) {
+  const paths = {
+    database: <><ellipse cx="12" cy="5" rx="7" ry="3" /><path d="M5 5v7c0 1.7 3.1 3 7 3s7-1.3 7-3V5" /><path d="M5 9c0 1.7 3.1 3 7 3s7-1.3 7-3" /><path d="M5 12v7c0 1.7 3.1 3 7 3s7-1.3 7-3v-7" /></>,
+    radio: <><path d="M12 12v8" /><circle cx="12" cy="9" r="2" /><path d="M7.8 5.8a6 6 0 0 0 0 8.4M16.2 5.8a6 6 0 0 1 0 8.4M4.9 3a10 10 0 0 0 0 14M19.1 3a10 10 0 0 1 0 14" /></>,
+    tags: <><path d="M20 13 13 20a2 2 0 0 1-2.8 0L4 13V4h9l7 7a2 2 0 0 1 0 2Z" /><circle cx="8.5" cy="8.5" r="1" /><path d="M16 4h2l3 3v2" /></>,
+    boxes: <><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" /><path d="m4 7.5 8 4.5 8-4.5M12 12v9" /><path d="m8 5 8 4.5" /></>,
+    branch: <><path d="M6 3v12a3 3 0 0 0 3 3h9" /><path d="M6 9h6a3 3 0 0 0 3-3V3" /><path d="m16 16 2 2-2 2" /><circle cx="6" cy="3" r="2" /><circle cx="15" cy="3" r="2" /></>,
+    chart: <><path d="M4 19V5M4 19h16" /><path d="m7 15 3-4 3 2 5-7" /><circle cx="7" cy="15" r="1" /><circle cx="18" cy="6" r="1" /></>,
+    admin: <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M7 8h4M7 12h10M7 16h6" /><circle cx="18" cy="8" r="1" /></>,
+  };
+  return <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
+}
+
+function VideoFrame({id, src, title, featured = false}) {
+  return <div className={`${styles.videoContainer} ${featured ? styles.featuredVideo : ''}`}>
+    <iframe id={id} className={styles.videoIframe} src={src} title={title} allowFullScreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+  </div>;
+}
+
+function FeatureCard({title, icon, description}) {
+  return <article className={styles.featureCard}>
+    <div className={styles.featureIcon}><Icon name={icon} /></div>
+    <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+    <p className={styles.featureDescription}>{description}</p>
+  </article>;
+}
+
+function AdminFeatureBanner() {
+  return <article className={styles.adminBanner}>
+    <div className={styles.adminCopy}>
+      <div className={styles.adminIcon}><Icon name="admin" /></div>
+      <div><Badge muted>Admin</Badge><Heading as="h3">시스템 운영 관리</Heading>
+        <p>관리자는 사용자별 파일과 GPU 사용 현황을 확인하고, 전체 저장소·데이터셋·프로젝트·학습 요청 및 실패 현황을 통합적으로 관리할 수 있습니다.</p>
+      </div>
+    </div>
+    <div className={styles.metricList}>{adminMetrics.map((metric) => <span className={styles.metricChip} key={metric}><span aria-hidden="true">•</span>{metric}</span>)}</div>
+  </article>;
 }
 
 export default function HomepageFeatures() {
-    useEffect(() => {
-        const cleanup = initYouTubePlayer();
-        return cleanup;
-    }, []);
-    return (
-        <div>
-            <section className={styles.videoSection}>
-                <div className="container" style={{paddingBottom: '2rem'}}>
-                    <div className="text--center">
-                        <h2 className={styles.videoSectionTitle}>🎬 실제 사용 화면을 확인해보세요</h2>
-                        <p className={styles.videoSectionDescription}>
-                            몇 분이면 충분해요! D-Lab Flow가 어떻게 동작하는지 간단한 영상으로 직접 체험해보세요.
-                        </p>
-                    </div>
-                    <div className={styles.videoRow}>
-                        <div className={styles.videoColumn}>
-                            <div className={styles.videoContainer} id="youtubePlayerContainer">
-                                <iframe
-                                    id="youtubePlayer"
-                                    className={styles.videoIframe}
-                                    src="https://www.youtube.com/embed/ff7eLBVBEbE?enablejsapi=1&controls=1"
-                                    title="플랫폼 소개 동영상"
-                                    allowFullScreen
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                />
-                            </div>
-                        </div>
-                        <div className={styles.timelineColumn}>
-                            <div className={styles.videoTimelineMenu}>
-                                <h3 className={styles.videoTimelineTitle}>📌 클릭하면 해당 부분으로 이동해요!</h3>
-                                <div className={styles.videoTimelineList}>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(0)}>
-                                        <span className={styles.videoTimelineIndex}>1</span>
-                                        <span className={styles.videoTimelineText}>📁 데이터 저장소 만들기</span>
-                                        <span className={styles.videoTimelineTime}>0:00</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(15)}>
-                                        <span className={styles.videoTimelineIndex}>2</span>
-                                        <span className={styles.videoTimelineText}>🖼️ 이미지 파일 업로드하기</span>
-                                        <span className={styles.videoTimelineTime}>0:15</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(48)}>
-                                        <span className={styles.videoTimelineIndex}>3</span>
-                                        <span className={styles.videoTimelineText}>📊 데이터셋 구성하기</span>
-                                        <span className={styles.videoTimelineTime}>0:48</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(60)}>
-                                        <span className={styles.videoTimelineIndex}>4</span>
-                                        <span className={styles.videoTimelineText}>📋 라벨링 파일 등록하기</span>
-                                        <span className={styles.videoTimelineTime}>1:00</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(92)}>
-                                        <span className={styles.videoTimelineIndex}>5</span>
-                                        <span className={styles.videoTimelineText}>🏷️ 직접 라벨링 작업하기</span>
-                                        <span className={styles.videoTimelineTime}>1:32</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(117)}>
-                                        <span className={styles.videoTimelineIndex}>6</span>
-                                        <span className={styles.videoTimelineText}>🚀 프로젝트 시작하기</span>
-                                        <span className={styles.videoTimelineTime}>1:57</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(141)}>
-                                        <span className={styles.videoTimelineIndex}>7</span>
-                                        <span className={styles.videoTimelineText}>🔄 버전 설정하기</span>
-                                        <span className={styles.videoTimelineTime}>2:21</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(158)}>
-                                        <span className={styles.videoTimelineIndex}>8</span>
-                                        <span className={styles.videoTimelineText}>🧠 AI 모델 학습시키기</span>
-                                        <span className={styles.videoTimelineTime}>2:38</span>
-                                    </div>
-                                    <div className={styles.videoTimelineItem} onClick={() => seekToTime(187)}>
-                                        <span className={styles.videoTimelineIndex}>9</span>
-                                        <span className={styles.videoTimelineText}>📊 모델 성능 확인하기</span>
-                                        <span className={styles.videoTimelineTime}>3:07</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className={styles.features} style={{marginBottom: '3rem'}}>
-                <div className="container">
-                    <div className="text--center">
-                        <h2 className={styles.featuresTitle}>✨ 주요 기능</h2>
-                    </div>
-                    <div className="row" style={{marginTop: '1.5rem', rowGap: '2rem'}}>
-                        {FeatureList.map((props, idx) => (
-                            <Feature key={idx} {...props} />
-                        ))}
-                    </div>
-                </div>
-            </section>
+  useEffect(() => initYouTubePlayer(), []);
+  return <div>
+    <section className={styles.videoSection} aria-labelledby="latest-guide-title">
+      <div className="container">
+        <div className={styles.sectionIntro}>
+          <div className={styles.badges}><Badge>최신 가이드</Badge><Badge>v2.5.0</Badge></div>
+          <Heading as="h2" id="latest-guide-title">D-Lab Flow v2.5.0 핵심 사용자 가이드</Heading>
+          <p>데이터 수집과 저장소 구성부터 데이터셋·라벨링, AI 모델 학습·평가·배포, 관리자 기능까지 D-Lab Flow의 전체 업무 흐름을 확인할 수 있습니다.</p>
         </div>
-    );
+        <div className={styles.latestVideoLayout}>
+          <VideoFrame featured src="https://www.youtube.com/embed/2TtR36Yo8T8" title="D-Lab Flow v2.5.0 핵심 사용자 가이드" />
+          <aside className={styles.topicCard} aria-labelledby="video-topics-title"><h3 id="video-topics-title">영상에서 확인할 수 있는 내용</h3><ol className={styles.stepList}>{videoTopics.map((topic, index) => <li key={topic}><span className={styles.stepNumber}>{String(index + 1).padStart(2, '0')}</span><span>{topic}</span></li>)}</ol></aside>
+        </div>
+        <p className={styles.sectionBridge}>영상에서 소개한 주요 기능을 아래에서 확인할 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section className={styles.features} aria-labelledby="features-title"><div className="container">
+      <div className={styles.featuresIntro}><span className={styles.eyebrow}>CORE FEATURES</span><Heading as="h2" id="features-title" className={styles.featuresTitle}>데이터 준비부터 모델 운영까지</Heading><p>D-Lab Flow의 주요 기능을 업무 흐름에 따라 확인할 수 있습니다.</p></div>
+      <div className={styles.featureGrid}>{features.map((feature) => <FeatureCard key={feature.title} {...feature} />)}</div>
+      <AdminFeatureBanner />
+    </div></section>
+
+    <section className={styles.legacySection} aria-labelledby="legacy-title"><div className="container"><details className={styles.legacyDetails}>
+      <summary id="legacy-title"><span><Badge muted>이전 버전</Badge><Badge muted>v1.0</Badge> 이전 버전 영상 보기</span></summary>
+      <p className={styles.legacyDescription}>D-Lab Flow v1.0의 데이터 업로드, 데이터셋 구성과 AI 모델 학습 흐름을 확인할 수 있습니다. 현재 버전과 화면 구성 및 일부 기능이 다를 수 있습니다.</p>
+      <div className={styles.legacyLayout}><VideoFrame id="legacyYoutubePlayer" src="https://www.youtube.com/embed/ff7eLBVBEbE?enablejsapi=1&controls=1" title="D-Lab Flow v1.0 빠른 사용 영상" /><div className={styles.videoTimelineMenu}><h3>기존 영상 주요 장면</h3><div className={styles.videoTimelineList}>{oldTimeline.map(([label, seconds, time], index) => <button type="button" className={styles.videoTimelineItem} onClick={() => seekToTime(seconds)} key={label}><span className={styles.videoTimelineIndex}>{index + 1}</span><span>{label}</span><time>{time}</time></button>)}</div></div></div>
+    </details></div></section>
+  </div>;
 }

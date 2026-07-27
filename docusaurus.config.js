@@ -11,11 +11,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'D-Lab Flow 도움말 센터',
-  tagline: `데이터 수집부터 라벨링, 모델 학습과 평가까지.
-AI 개발의 모든 과정을 하나의 플랫폼에서 완성해보세요.
-
-D-Lab Flow는 AI 모델 개발에 필요한 핵심 기능을 직관적인 인터페이스로 제공합니다.
-복잡한 개발 환경이나 코드 작성 없이도, 클릭 몇 번으로 고성능 AI 모델을 생성할 수 있습니다.`,
+  tagline: `데이터 수집과 저장소 구성부터 데이터셋·라벨링, AI 모델 학습·평가와 배포까지
+D-Lab Flow의 전체 업무 흐름을 단계별로 확인하세요.`,
   favicon: 'img/favicon.ico',
   trailingSlash: false,
   url: 'https://grit-docs.github.io',
@@ -110,35 +107,6 @@ D-Lab Flow는 AI 모델 개발에 필요한 핵심 기능을 직관적인 인터
           style: 'dark',
           links: [
             {
-              title: '도움말 센터',
-              items: [
-                {
-                  label: '빠르게 시작하기',
-                  href: 'https://grit-docs.github.io/dlabflow/docs/intro',
-                },
-                {
-                  label: '데이터 관리',
-                  href: 'https://grit-docs.github.io/dlabflow/docs/category/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC',
-                },
-                {
-                  label: '학습 데이터 관리',
-                  href: 'https://grit-docs.github.io/dlabflow/docs/category/%ED%95%99%EC%8A%B5-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC',
-                },
-                {
-                  label: 'AI 학습관리',
-                  href: 'https://grit-docs.github.io/dlabflow/docs/category/ai-%ED%95%99%EC%8A%B5-%EA%B4%80%EB%A6%AC',
-                },
-                {
-                  label: '데이터 수집 장치 관리',
-                  href: 'https://grit-docs.github.io/dlabflow/docs/category/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%88%98%EC%A7%91-%EC%9E%A5%EC%B9%98-%EA%B4%80%EB%A6%AC',
-                },
-                {
-                  label: '시스템 관리',
-                  href: 'https://grit-docs.github.io/dlabflow/docs/category/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B4%80%EB%A6%AC',
-                },
-              ],
-            },
-            {
               title: '강원ICT융합연구원',
               items: [
                 {
@@ -164,19 +132,6 @@ D-Lab Flow는 AI 모델 개발에 필요한 핵심 기능을 직관적인 인터
                 {
                   label: '공지사항',
                   href: 'https://grit.gwnu.ac.kr/board/list?bmcode=notice',
-                },
-              ],
-            },
-            {
-              title: '보유 플랫폼',
-              items: [
-                {
-                  label: 'D-Lab FLow',
-                  href: 'https://dlabflow.grit.re.kr/',
-                },
-                {
-                  label: 'MEDBIZ',
-                  href: 'https://medbiz.or.kr/',
                 },
               ],
             },
