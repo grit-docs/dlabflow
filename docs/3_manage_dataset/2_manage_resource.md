@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# 데이터셋 저장소 관리 {#dataset-storage-management}
+# 데이터셋 저장소 관리
 
 데이터셋을 구성하는 기본 요소중 하나로 데이터셋에 사용될 파일 저장소를 `선택`할 수 있습니다.
 
