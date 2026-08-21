@@ -77,7 +77,7 @@ export default function HomepageFeatures() {
     <section id="product-video" className={styles.videoSection} aria-labelledby="product-video-title">
       <div className="container">
         <div className={styles.sectionIntro}>
-          <div className={styles.badges}><Badge>제품 소개</Badge><Badge>7분 10초</Badge></div>
+          <span className={styles.eyebrow}>INTRODUCING D-LAB FLOW</span>
           <Heading as="h2" id="product-video-title">D-Lab Flow, AI 개발을 더 쉽게</Heading>
           <p>데이터 준비부터 AI 모델 개발까지, D-Lab Flow가 복잡한 AI 개발 과정을 어떻게 하나의 흐름으로 연결하는지 영상으로 만나보세요.</p>
         </div>
