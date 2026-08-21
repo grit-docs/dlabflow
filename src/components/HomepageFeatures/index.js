@@ -92,7 +92,6 @@ export default function HomepageFeatures() {
             </div>
           </aside>
         </div>
-        <p className={styles.sectionBridge}>영상에서 소개한 주요 기능을 아래에서 자세히 확인할 수 있습니다.</p>
       </div>
     </section>
 
