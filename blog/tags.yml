@@ -52,3 +52,23 @@ YOLO:
   label: YOLO
   permalink: /YOLO
   description: YOLO
+
+MLOps:
+  label: MLOps
+  permalink: /MLOps
+  description: AI 모델 개발과 운영 자동화
+
+Kubeflow:
+  label: Kubeflow
+  permalink: /Kubeflow
+  description: 쿠브플로우 기반 AI 워크플로
+
+Kubernetes:
+  label: Kubernetes
+  permalink: /Kubernetes
+  description: 쿠버네티스 기반 인프라
+
+AI 모델 운영:
+  label: AI 모델 운영
+  permalink: /AI-model-operations
+  description: AI 모델의 배포와 운영

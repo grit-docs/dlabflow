@@ -3,6 +3,13 @@
 // 최신 게시일 순으로 정렬합니다.
 const blogPosts = [
   {
+    date: '2026-08-21',
+    tag: 'MLOps · Kubeflow',
+    title: '쿠브플로우 연구에서 D-Lab Flow까지, 강원ICT융합연구원의 MLOps 기술 여정',
+    description: '강원ICT융합연구원이 축적해 온 쿠브플로우 연구가 D-Lab Flow와 교육·출판으로 확장된 과정을 소개합니다.',
+    to: '/blog/kubeflow-research-to-dlabflow',
+  },
+  {
     date: '2026-03-31',
     tag: '사용 현황',
     title: 'D-Lab Flow 자원 모니터링, 사용 현황 대시보드로 한눈에 파악하기',

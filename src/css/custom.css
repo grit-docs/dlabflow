@@ -285,6 +285,27 @@
   border-radius: 14px;
 }
 
+/* 블로그 도서 표지 */
+.book-cover {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.book-cover p {
+  width: min(100%, 360px);
+  margin: 0;
+}
+
+.book-cover img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+}
+
 @media (max-width: 768px) {
   .image-row {
     flex-direction: column;

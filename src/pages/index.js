@@ -48,6 +48,10 @@ function Hero() {
                 <QuickIcon name="play" />
                 빠른 시작 가이드
               </Link>
+              <Link className={clsx('button', styles.secondary)} to="#product-video">
+                <QuickIcon name="play" />
+                소개 영상 보기
+              </Link>
               <Link
                 className={clsx('button', styles.tertiary)}
                 to="https://chatgpt.com/g/g-68464343c35c8191a08b1cd8c1d9a976-d-lab-flow-ai-doumi"

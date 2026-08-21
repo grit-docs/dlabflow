@@ -1,12 +1,14 @@
 import React, {useEffect} from 'react';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import {initYouTubePlayer, seekToTime} from './youtube-player';
 
-const videoTopics = [
-  '사용 현황과 GPU 자원 확인', '데이터 저장소 생성과 파일 업로드', '수집 장치 생성 및 데이터 자동 수집',
-  '데이터셋 구성과 라벨링', 'AI 프로젝트와 학습 버전 생성', '하이퍼파라미터 설정과 모델 학습',
-  '모델 성능 평가', 'PyTorch, ONNX, OpenVINO 모델 다운로드', '사용자 관리와 관리자 전체 대시보드',
+const promoTopics = [
+  '하나의 플랫폼으로 연결되는 AI 개발 과정',
+  '누구나 쉽게 시작할 수 있는 직관적인 환경',
+  '데이터 준비부터 모델 개발까지 이어지는 흐름',
+  '반복적인 AI 개발 작업의 효율적인 관리',
 ];
 
 const oldTimeline = [
@@ -45,7 +47,7 @@ function Icon({name}) {
 
 function VideoFrame({id, src, title, featured = false}) {
   return <div className={`${styles.videoContainer} ${featured ? styles.featuredVideo : ''}`}>
-    <iframe id={id} className={styles.videoIframe} src={src} title={title} allowFullScreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+    <iframe id={id} className={styles.videoIframe} src={src} title={title} loading="lazy" allowFullScreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" />
   </div>;
 }
 
@@ -72,18 +74,25 @@ function AdminFeatureBanner() {
 export default function HomepageFeatures() {
   useEffect(() => initYouTubePlayer(), []);
   return <div>
-    <section className={styles.videoSection} aria-labelledby="latest-guide-title">
+    <section id="product-video" className={styles.videoSection} aria-labelledby="product-video-title">
       <div className="container">
         <div className={styles.sectionIntro}>
-          <div className={styles.badges}><Badge>최신 가이드</Badge><Badge>v2.5.0</Badge></div>
-          <Heading as="h2" id="latest-guide-title">D-Lab Flow v2.5.0 핵심 사용자 가이드</Heading>
-          <p>데이터 수집과 저장소 구성부터 데이터셋·라벨링, AI 모델 학습·평가·배포, 관리자 기능까지 D-Lab Flow의 전체 업무 흐름을 확인할 수 있습니다.</p>
+          <div className={styles.badges}><Badge>제품 소개</Badge><Badge>7분 10초</Badge></div>
+          <Heading as="h2" id="product-video-title">D-Lab Flow, AI 개발을 더 쉽게</Heading>
+          <p>데이터 준비부터 AI 모델 개발까지, D-Lab Flow가 복잡한 AI 개발 과정을 어떻게 하나의 흐름으로 연결하는지 영상으로 만나보세요.</p>
         </div>
         <div className={styles.latestVideoLayout}>
-          <VideoFrame featured src="https://www.youtube.com/embed/2TtR36Yo8T8" title="D-Lab Flow v2.5.0 핵심 사용자 가이드" />
-          <aside className={styles.topicCard} aria-labelledby="video-topics-title"><h3 id="video-topics-title">영상에서 확인할 수 있는 내용</h3><ol className={styles.stepList}>{videoTopics.map((topic, index) => <li key={topic}><span className={styles.stepNumber}>{String(index + 1).padStart(2, '0')}</span><span>{topic}</span></li>)}</ol></aside>
+          <VideoFrame featured src="https://www.youtube-nocookie.com/embed/e_0r3UgGPA4" title="D-Lab Flow | 누구나 쉽게 시작하는 AI 모델 개발 플랫폼" />
+          <aside className={styles.topicCard} aria-labelledby="video-topics-title">
+            <h3 id="video-topics-title">D-Lab Flow가 제안하는 AI 개발 방식</h3>
+            <ol className={styles.stepList}>{promoTopics.map((topic, index) => <li key={topic}><span className={styles.stepNumber}>{String(index + 1).padStart(2, '0')}</span><span>{topic}</span></li>)}</ol>
+            <div className={styles.videoActions}>
+              <Link className={styles.guideLink} to="/docs/intro">빠른 시작 가이드 <span aria-hidden="true">→</span></Link>
+              <Link className={styles.textLink} to="https://youtu.be/2TtR36Yo8T8">상세 사용자 가이드 영상 보기 <span aria-hidden="true">↗</span></Link>
+            </div>
+          </aside>
         </div>
-        <p className={styles.sectionBridge}>영상에서 소개한 주요 기능을 아래에서 확인할 수 있습니다.</p>
+        <p className={styles.sectionBridge}>영상에서 소개한 주요 기능을 아래에서 자세히 확인할 수 있습니다.</p>
       </div>
     </section>
 

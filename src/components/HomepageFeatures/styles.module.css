@@ -1,4 +1,4 @@
-.videoSection { padding: 5rem 0 2.5rem; background: var(--landing-bg-muted); }
+.videoSection { padding: 5rem 0 2.5rem; background: var(--landing-bg-muted); scroll-margin-top: 4.5rem; }
 .sectionIntro { max-width: 760px; margin: 0 auto 2rem; text-align: center; }
 .sectionIntro h2, .featuresTitle { color: var(--landing-text-primary); }
 .sectionIntro p, .featuresIntro p { margin: 0; color: var(--landing-text-body); line-height: 1.7; }
@@ -17,6 +17,13 @@
 .stepList li { position: relative; z-index: 1; display: flex; align-items: center; gap: .8rem; min-height: 2.45rem; padding: .45rem .3rem; border-radius: 8px; color: var(--landing-text-primary); font-size: .9rem; line-height: 1.4; transition: background-color 180ms ease; }
 .stepList li:hover { background: color-mix(in srgb, var(--landing-accent) 7%, transparent); }
 .stepNumber { display: inline-flex; flex: 0 0 2rem; align-items: center; justify-content: center; height: 2rem; border: 1px solid var(--landing-border-soft); border-radius: 50%; background: var(--landing-card-bg); color: var(--landing-accent); font-size: .7rem; font-weight: 700; }
+.videoActions { display: grid; gap: .55rem; margin-top: 1.15rem; padding-top: 1.15rem; border-top: 1px solid var(--landing-border-soft); }
+.guideLink, .textLink { display: flex; align-items: center; justify-content: space-between; gap: .75rem; border-radius: 9px; font-size: .84rem; font-weight: 650; text-decoration: none; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; }
+.guideLink { padding: .7rem .8rem; border: 1px solid transparent; background: var(--landing-primary); color: #ffffff; }
+.guideLink:hover { background: var(--landing-primary-hover); color: #ffffff; text-decoration: none; }
+.textLink { padding: .55rem .2rem; color: var(--landing-text-secondary); }
+.textLink:hover { color: var(--landing-accent); text-decoration: none; }
+.guideLink:focus-visible, .textLink:focus-visible { outline: 3px solid var(--landing-focus-ring); outline-offset: 2px; }
 .sectionBridge { margin: 1.75rem 0 0; text-align: center; color: var(--landing-text-secondary); font-size: .9rem; }
 .features { padding: 5rem 0 5.5rem; background: var(--landing-card-bg); }
 .featuresIntro { max-width: 680px; margin: 0 auto 2rem; text-align: center; }

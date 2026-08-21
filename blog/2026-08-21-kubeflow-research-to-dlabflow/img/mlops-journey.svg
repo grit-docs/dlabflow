@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+  <title id="title">쿠브플로우 연구에서 확장된 기술 여정</title>
+  <desc id="desc">쿠브플로우와 MLOps 연구를 중심으로 D-Lab Flow, 온라인 강의, 전문 도서가 연결되는 구조</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0f9ff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.09"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="350" rx="28" fill="url(#background)"/>
+  <g transform="translate(0 -75)">
+
+  <rect x="410" y="120" width="380" height="105" rx="20" fill="#0f7fc4" filter="url(#shadow)"/>
+  <text x="600" y="162" text-anchor="middle" font-family="Pretendard, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">쿠브플로우 · MLOps 연구</text>
+  <text x="600" y="194" text-anchor="middle" font-family="Pretendard, Arial, sans-serif" font-size="15" fill="#e0f2fe">기술 전문성과 문제의식의 출발점</text>
+
+  <path d="M600 225 L600 258 L225 258 L225 290" fill="none" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 225 L600 290" fill="none" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 225 L600 258 L975 258 L975 290" fill="none" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="65" y="295" width="320" height="95" rx="18" fill="#ffffff" stroke="#bae6fd" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="112" cy="342" r="24" fill="#e0f2fe"/>
+  <text x="112" y="349" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0284c7">01</text>
+  <text x="155" y="334" font-family="Pretendard, Arial, sans-serif" font-size="19" font-weight="700" fill="#0f172a">D-Lab Flow</text>
+  <text x="155" y="362" font-family="Pretendard, Arial, sans-serif" font-size="14" fill="#64748b">AI 학습 백엔드 개발</text>
+
+  <rect x="440" y="295" width="320" height="95" rx="18" fill="#ffffff" stroke="#bae6fd" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="487" cy="342" r="24" fill="#e0f2fe"/>
+  <text x="487" y="349" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0284c7">02</text>
+  <text x="530" y="334" font-family="Pretendard, Arial, sans-serif" font-size="19" font-weight="700" fill="#0f172a">온라인 강의</text>
+  <text x="530" y="362" font-family="Pretendard, Arial, sans-serif" font-size="14" fill="#64748b">MLOps 실무 지식 공유</text>
+
+  <rect x="815" y="295" width="320" height="95" rx="18" fill="#ffffff" stroke="#bae6fd" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="862" cy="342" r="24" fill="#e0f2fe"/>
+  <text x="862" y="349" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#0284c7">03</text>
+  <text x="905" y="334" font-family="Pretendard, Arial, sans-serif" font-size="19" font-weight="700" fill="#0f172a">전문 도서</text>
+  <text x="905" y="362" font-family="Pretendard, Arial, sans-serif" font-size="14" fill="#64748b">설계와 운영 원칙 정리</text>
+  </g>
+</svg>
