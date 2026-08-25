@@ -49,6 +49,7 @@ sidebar_position: 1
 
 <img src="./img/resource/resource_hashtag.png" width="400">
 
+데이터셋의 특징 또는 해시태그를 변경합니다.
 <img src="./img/resource/resource_hashtag_modal.png" width="400">
 
 <Highlight color="rgb(24, 144, 255)">저장</Highlight>버튼을 클릭하여 수정작업을 완료하고 즉시 반영된 해시태그 확인이 가능합니다.
