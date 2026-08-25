@@ -15,7 +15,7 @@ sidebar_position: 1
 
 사용자는 테이블 상단에 위치한 검색창을 통해 원하는 항목을 손쉽게 찾을 수 있습니다. 입력한 키워드를 기준으로 테이블에 표시된 데이터가 실시간으로 필터링되어, 관련 있는 항목만 화면에 표시됩니다.
 
-![검색 기능 이미지](./img/resource/resource_search.PNG)
+![검색 기능 이미지](./img/resource/resource_search.png)
 
 
 ## 저장소 생성
@@ -24,20 +24,20 @@ sidebar_position: 1
 
 <Highlight color="rgb(24, 144, 255)">저장소 생성</Highlight> 버튼 클릭시 모달이 열리고 저장소 이름, 해시태그, 파일 타입을 입력 후 <Highlight color="rgb(24, 144, 255)">생성</Highlight> 버튼을 클릭하여 저장소를 생성합니다.
 
-![저장소 이미지](./img/resource/resource_create.PNG)
+![저장소 이미지](./img/resource/resource_create.png)
 
-![저장소 생성 이미지](./img/resource/resource_create_modal.PNG)
+![저장소 생성 이미지](./img/resource/resource_create_modal.png)
 
 생성 완료 후 목록에서 즉시 생성된 저장소 확인이 가능합니다.
 
-![저장소 생성 완료 이미지](./img/resource/resource_complete.PNG)
+![저장소 생성 완료 이미지](./img/resource/resource_complete.png)
 
 
 ## 즐겨찾기 기능
 
 저장소의 즐겨찾기 기능은 자주 찾는 데이터를 표시할 수 있습니다.
 
-![즐겨찾기 이미지](./img/resource/resource_favorites.PNG)
+![즐겨찾기 이미지](./img/resource/resource_favorites.png)
 
 
 ## 해시태그 변경 기능
@@ -49,13 +49,13 @@ sidebar_position: 1
  : 해시태그 변경 ] 버튼을 클릭시 모달이 열리고 각 저장소의 해시태그 수정이 가능합니다.
 
 
-![해시태그 이미지](./img/resource/resource_hashtag.PNG)
+![해시태그 이미지](./img/resource/resource_hashtag.png)
 
-![해시태그 변경 이미지](./img/resource/resource_hashtag_modal.PNG)
+![해시태그 변경 이미지](./img/resource/resource_hashtag_modal.png)
 
 <Highlight color="rgb(24, 144, 255)">저장</Highlight>버튼을 클릭하여 수정작업을 완료하고 즉시 반영된 해시태그 확인이 가능합니다.
 
-![해시태그 변경 완료 이미지](./img/resource/resource_hashtag_complete.PNG)
+![해시태그 변경 완료 이미지](./img/resource/resource_hashtag_complete.png)
 
 
 ## 이미지 크롭 관리 기능
@@ -69,20 +69,20 @@ sidebar_position: 1
 - 중첩 길이: 크롭 간 영역이 겹치는 정도 (중복 영역 설정)
 - 확장 여부: 이미지가 설정된 크기로 나누어지지 않을 경우, 크롭후 남는 영역을 내부로 포함할지 외부로 확장할지 선택
 
-![크롭 이미지](./img/resource/resource_crop_create.PNG)
+![크롭 이미지](./img/resource/resource_crop_create.png)
 
-![크롭 모달 이미지](./img/resource/resource_crop_modal.PNG)
+![크롭 모달 이미지](./img/resource/resource_crop_modal.png)
 
 <Highlight color="rgb(24, 144, 255)">이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
-![크롭 황성화 이미지](./img/resource/resource_crop_toggle.PNG)
+![크롭 황성화 이미지](./img/resource/resource_crop_toggle.png)
 
 
 ## 삭제 기능
 
 저장소의 삭제는 데이터를 삭제하는데 사용됩니다.
 
-![해시태그 이미지](./img/resource/resource_delete.PNG)
+![해시태그 이미지](./img/resource/resource_delete.png)
 
 
 
@@ -93,5 +93,5 @@ sidebar_position: 1
 
 저장소 목록에서 해당 버튼을 클릭하면, 현재 선택된 저장소에 대한 데이터 업로드 화면으로 전환되며 화면 우측에서는 이 저장소에 포함된 RAW 데이터와 Crop 데이터 목록이 함께 표시됩니다. (RAW : 전체 데이터)
 
-![바로가기 이미지](./img/resource/resource_goto.PNG)
+![바로가기 이미지](./img/resource/resource_goto.png)
 
