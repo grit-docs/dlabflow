@@ -72,7 +72,7 @@ sidebar_position: 1
 
 이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
-![크롭 황성화 이미지](./img/resource/resource_crop_toggle.png)
+<img src="./img/resource/resource_crop_toggle.png" width="400">
 
 
 ## 삭제 기능
