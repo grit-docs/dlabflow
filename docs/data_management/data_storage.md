@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import Highlight from '@site/src/components/Highlight';
+
 # 데이터 저장소
 
 데이터 저장소는 이 플랫폼에서 모든 작업이 시작되는 출발점입니다.
