@@ -33,6 +33,12 @@ sidebar_position: 1
 ![저장소 생성 완료 이미지](./img/resource/resource_complete.PNG)
 
 
+## 즐겨찾기 기능
+
+저장소의 즐겨찾기 기능은 자주 찾는 데이터를 표시할 수 있습니다.
+
+![즐겨찾기 이미지](./img/resource/resource_favorites.PNG)
+
 
 ## 해시태그 변경 기능
 
@@ -63,14 +69,21 @@ sidebar_position: 1
 - 중첩 길이: 크롭 간 영역이 겹치는 정도 (중복 영역 설정)
 - 확장 여부: 이미지가 설정된 크기로 나누어지지 않을 경우, 크롭후 남는 영역을 내부로 포함할지 외부로 확장할지 선택
 
-
 ![크롭 이미지](./img/resource/resource_crop_create.PNG)
 
-![크롭 모달 이미지](./img/resource/resource_crop.PNG)
+![크롭 모달 이미지](./img/resource/resource_crop_modal.PNG)
 
 <Highlight color="rgb(24, 144, 255)">이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
 ![크롭 황성화 이미지](./img/resource/resource_crop_toggle.PNG)
+
+
+## 삭제 기능
+
+저장소의 삭제는 데이터를 삭제하는데 사용됩니다.
+
+![해시태그 이미지](./img/resource/resource_delete.PNG)
+
 
 
 ## 이동하기 기능
@@ -78,29 +91,7 @@ sidebar_position: 1
 [ <Highlight color="rgb(24, 144, 255)"><span style={{ display: 'inline-flex', marginTop:3, verticalAlign: 'top'}}>![이동하기 아이콘 이미지](./img/resource/icon3.PNG)</span></Highlight> 
  : 이동하기 ] 버튼은 선택한 저장소의 데이터 업로드 페이지로 바로 이동할 수 있는 기능입니다. 
 
-저장소 목록에서 해당 버튼을 클릭하면, 현재 선택된 저장소에 대한 데이터 업로드 화면으로 전환되며 화면 우측에서는 이 저장소에 포함된 RAW 데이터 목록이 함께 표시됩니다. (RAW : 전체 데이터)
-
+저장소 목록에서 해당 버튼을 클릭하면, 현재 선택된 저장소에 대한 데이터 업로드 화면으로 전환되며 화면 우측에서는 이 저장소에 포함된 RAW 데이터와 Crop 데이터 목록이 함께 표시됩니다. (RAW : 전체 데이터)
 
 ![바로가기 이미지](./img/resource/resource_goto.PNG)
-
-![브라우저 목록 이미지](./img/resource/resource_browser.PNG)
-
-
-
-
-
-
-export const Highlight = ({children, color}) => (
-<span
-style={{
-border: `2px solid ${color}`,
-borderRadius: '5px',
-color: color,
-padding: '3px',
-cursor: 'pointer',
-backgroundColor: 'white', // 배경을 투명하게 설정
-}}>
-{children}
-</span>
-);
 
