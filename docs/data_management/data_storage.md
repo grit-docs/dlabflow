@@ -68,8 +68,6 @@ sidebar_position: 1
 - 중첩 길이: 크롭 간 영역이 겹치는 정도 (중복 영역 설정)
 - 확장 여부: 이미지가 설정된 크기로 나누어지지 않을 경우, 크롭후 남는 영역을 내부로 포함할지 외부로 확장할지 선택
 
-![크롭 이미지](./img/resource/resource_crop_create.png)
-
 ![크롭 모달 이미지](./img/resource/resource_crop_modal.png)
 
 이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
