@@ -43,9 +43,7 @@ sidebar_position: 1
 
 저장소의 해시태그는 데이터를 분류하고 검색하는 데 유용하게 사용됩니다.
 
-해시태그를 변경하려면 해당 저장소 항목의 [
-![해시태그 아이콘 이미지](./img/resource/icon1.PNG)</span></Highlight> 
- : 해시태그 변경 ] 버튼을 클릭시 모달이 열리고 각 저장소의 해시태그 수정이 가능합니다.
+해당 저장소 항목의 [ ![해시태그 아이콘 이미지](./img/resource/icon1.PNG) : 해시태그 변경 ] 버튼을 클릭시 모달이 열리고 각 저장소의 해시태그 수정이 가능합니다.
 
 <img src="./img/resource/resource_hashtag.png" width="400" />
 
@@ -61,8 +59,7 @@ sidebar_position: 1
 ## 이미지 크롭 관리 기능
 
 이미지 크롭 기능은 업로드된 원본 이미지를 일정한 크기로 분할하여, 라벨링 또는 학습에 더 적합한 형태로 가공할 수 있는 기능입니다.
-해당 저장소 항목의 [ 
-![크롭 아이콘 이미지](./img/resource/icon2.PNG)</span></Highlight> : 크롭 관리 ] 버튼을 클릭하면 모달 창이 열리며, 다음과 같은 항목을 입력하여 크롭 작업을 설정할 수 있습니다.
+해당 저장소 항목의 [ ![크롭 아이콘 이미지](./img/resource/icon2.PNG) : 크롭 관리 ] 버튼을 클릭하면 모달 창이 열리며, 다음과 같은 항목을 입력하여 크롭 작업을 설정할 수 있습니다.
 
 - 크롭 폭 / 높이: 분할될 이미지의 가로 세로 크기
 - 중첩 길이: 크롭 간 영역이 겹치는 정도 (중복 영역 설정)
@@ -70,7 +67,7 @@ sidebar_position: 1
 
 <img src="./img/resource/resource_crop_modal.png" width="400" />
 
-이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
+<Highlight color="rgb(24, 144, 255)">이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
 <img src="./img/resource/resource_crop_toggle.png" width="400" />
 
@@ -84,10 +81,6 @@ sidebar_position: 1
 
 ## 이동하기 기능
 
-![이동하기 아이콘 이미지](./img/resource/icon3.PNG)</span></Highlight> 
- : 이동하기 ] 버튼은 선택한 저장소의 데이터 업로드 페이지로 바로 이동할 수 있는 기능입니다. 
+[ ![이동하기 아이콘 이미지](./img/resource/icon3.PNG) : 이동하기 ] 버튼은 선택한 저장소의 데이터 업로드 페이지로 바로 이동할 수 있는 기능입니다. 
 
 저장소 목록에서 해당 버튼을 클릭하면, 현재 선택된 저장소에 대한 데이터 업로드 화면으로 전환되며 화면 우측에서는 이 저장소에 포함된 RAW 데이터와 CROP 데이터 목록이 함께 표시됩니다. (RAW : 전체 데이터)
-
-![바로가기 이미지](./img/resource/resource_goto.png)
-
