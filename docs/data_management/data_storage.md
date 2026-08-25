@@ -48,15 +48,13 @@ sidebar_position: 1
 ![해시태그 아이콘 이미지](./img/resource/icon1.PNG)</span></Highlight> 
  : 해시태그 변경 ] 버튼을 클릭시 모달이 열리고 각 저장소의 해시태그 수정이 가능합니다.
 
+<img src="./img/resource/resource_hashtag.png" width="400">
 
-![해시태그 이미지](./img/resource/resource_hashtag.png)
-
-![해시태그 변경 이미지](./img/resource/resource_hashtag_modal.png)
+<img src="./img/resource/resource_hashtag_modal.png" width="400">
 
 <Highlight color="rgb(24, 144, 255)">저장</Highlight>버튼을 클릭하여 수정작업을 완료하고 즉시 반영된 해시태그 확인이 가능합니다.
 
-![해시태그 변경 완료 이미지](./img/resource/resource_hashtag_complete.png)
-
+<img src="./img/resource/resource_hashtag_complete.png" width="400">
 
 ## 이미지 크롭 관리 기능
 
@@ -68,7 +66,7 @@ sidebar_position: 1
 - 중첩 길이: 크롭 간 영역이 겹치는 정도 (중복 영역 설정)
 - 확장 여부: 이미지가 설정된 크기로 나누어지지 않을 경우, 크롭후 남는 영역을 내부로 포함할지 외부로 확장할지 선택
 
-![크롭 모달 이미지](./img/resource/resource_crop_modal.png)
+<img src="./img/resource/resource_crop_modal.png" width="400">
 
 이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
