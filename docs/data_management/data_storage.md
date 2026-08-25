@@ -37,8 +37,7 @@ sidebar_position: 1
 
 저장소의 즐겨찾기 기능은 자주 찾는 데이터를 표시할 수 있습니다.
 
-![즐겨찾기 이미지](./img/resource/resource_favorites.png)
-
+<img src="./img/resource/resource_favorites.png" width="400">
 
 ## 해시태그 변경 기능
 
@@ -76,9 +75,7 @@ sidebar_position: 1
 ## 삭제 기능
 
 저장소의 삭제는 데이터를 삭제하는데 사용됩니다.
-
-![해시태그 이미지](./img/resource/resource_delete.png)
-
+<img src="./img/resource/resource_delete.png" width="400">
 
 
 ## 이동하기 기능
