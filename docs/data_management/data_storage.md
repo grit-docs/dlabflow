@@ -78,6 +78,7 @@ sidebar_position: 1
 ## 삭제 기능
 
 저장소의 삭제는 데이터를 삭제하는데 사용됩니다.
+
 <img src="./img/resource/resource_delete.png" width="400">
 
 
