@@ -45,7 +45,7 @@ sidebar_position: 1
 저장소의 해시태그는 데이터를 분류하고 검색하는 데 유용하게 사용됩니다.
 
 해시태그를 변경하려면 해당 저장소 항목의 [
-<Highlight color="rgb(24, 144, 255)"><span style={{ display: 'inline-flex', marginTop:3, verticalAlign: 'top'}}>![해시태그 아이콘 이미지](./img/resource/icon1.PNG)</span></Highlight> 
+![해시태그 아이콘 이미지](./img/resource/icon1.PNG)</span></Highlight> 
  : 해시태그 변경 ] 버튼을 클릭시 모달이 열리고 각 저장소의 해시태그 수정이 가능합니다.
 
 
