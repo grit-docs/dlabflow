@@ -37,7 +37,7 @@ sidebar_position: 1
 
 저장소의 즐겨찾기 기능은 자주 찾는 데이터를 표시할 수 있습니다.
 
-<img src={require('./img/resource/resource_favorites.png').default} width="400" />
+![즐겨찾기 이미지](./img/resource/resource_favorites.png)
 
 ## 해시태그 변경 기능
 
@@ -45,16 +45,16 @@ sidebar_position: 1
 
 해당 저장소 항목의 [ ![해시태그 아이콘 이미지](./img/resource/icon1.PNG) : 해시태그 변경 ] 버튼을 클릭시 모달이 열리고 각 저장소의 해시태그 수정이 가능합니다.
 
-<img src={require('./img/resource/resource_hashtag.png').default} width="400" />
+![해시태그 이미지](./img/resource/resource_hashtag.png)
 
 데이터셋의 특징 또는 해시태그를 변경합니다.
 
 
-<img src={require('./img/resource/resource_hashtag_modal.png').default} width="400" />
+![해시태그 모달 이미지](./img/resource/resource_hashtag_modal.png)
 
 **저장** 버튼을 클릭하여 수정작업을 완료하고 즉시 반영된 해시태그 확인이 가능합니다.
 
-<img src={require('./img/resource/resource_hashtag_complete.png').default} width="400" />
+![해시태그 완료 이미지](./img/resource/resource_hashtag_complete.png)
 
 ## 이미지 크롭 관리 기능
 
@@ -65,18 +65,18 @@ sidebar_position: 1
 - 중첩 길이: 크롭 간 영역이 겹치는 정도 (중복 영역 설정)
 - 확장 여부: 이미지가 설정된 크기로 나누어지지 않을 경우, 크롭후 남는 영역을 내부로 포함할지 외부로 확장할지 선택
 
-<img src={require('./img/resource/resource_crop_modal.png').default} width="400" />
+![크롭 모달 이미지](./img/resource/resource_crop_modal.png)
 
 **이미지 크롭 설정 추가** 버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
-<img src={require('./img/resource/resource_crop_toggle.png').default} width="400" />
+![크롭 토글 이미지](./img/resource/resource_crop_toggle.png)
 
 
 ## 삭제 기능
 
 저장소의 삭제는 데이터를 삭제하는데 사용됩니다.
 
-<img src={require('./img/resource/resource_delete.png').default} width="400" />
+![삭제 이미지](./img/resource/resource_delete.png)
 
 
 ## 이동하기 기능
