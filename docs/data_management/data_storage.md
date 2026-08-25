@@ -2,8 +2,6 @@
 sidebar_position: 1
 ---
 
-import Highlight from '@site/src/components/Highlight';
-
 # 데이터 저장소
 
 데이터 저장소는 이 플랫폼에서 모든 작업이 시작되는 출발점입니다.
@@ -24,7 +22,7 @@ import Highlight from '@site/src/components/Highlight';
 
 저장소 타입은 사용자 업로드용과 장비 업로드용 으로 구분되며, 이 페이지에서는 사용자 업로드용 저장소를 생성합니다. 장비 업로드용 저장소를 생성하려면 [ 데이터 수집 장치 관리 > 수집 장치 ]에서 등록 가능하며 데이터 저장소에서도 확인이 가능합니다.
 
-<Highlight color="rgb(24, 144, 255)">저장소 생성</Highlight> 버튼 클릭시 모달이 열리고 저장소 이름, 해시태그, 파일 타입을 입력 후 <Highlight color="rgb(24, 144, 255)">생성</Highlight> 버튼을 클릭하여 저장소를 생성합니다.
+**저장소 생성** 버튼 클릭시 모달이 열리고 저장소 이름, 해시태그, 파일 타입을 입력 후 **생성** 버튼을 클릭하여 저장소를 생성합니다.
 
 ![저장소 이미지](./img/resource/resource_create.png)
 
@@ -52,11 +50,11 @@ import Highlight from '@site/src/components/Highlight';
 데이터셋의 특징 또는 해시태그를 변경합니다.
 
 
-<img src="./img/resource/resource_hashtag_modal.png" width="400"/>
+<img src="./img/resource/resource_hashtag_modal.png" width="400" />
 
-<Highlight color="rgb(24, 144, 255)">저장</Highlight>버튼을 클릭하여 수정작업을 완료하고 즉시 반영된 해시태그 확인이 가능합니다.
+**저장** 버튼을 클릭하여 수정작업을 완료하고 즉시 반영된 해시태그 확인이 가능합니다.
 
-<img src="./img/resource/resource_hashtag_complete.png" width="400"/>
+<img src="./img/resource/resource_hashtag_complete.png" width="400" />
 
 ## 이미지 크롭 관리 기능
 
@@ -69,7 +67,7 @@ import Highlight from '@site/src/components/Highlight';
 
 <img src="./img/resource/resource_crop_modal.png" width="400" />
 
-<Highlight color="rgb(24, 144, 255)">이미지 크롭 설정 추가</Highlight>버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
+**이미지 크롭 설정 추가** 버튼을 클릭하면 분할된 이미지를 생성하고 활성화 버튼을 눌러 사용합니다.
 
 <img src="./img/resource/resource_crop_toggle.png" width="400" />
 
