@@ -4,10 +4,64 @@
         <title>D-Lab Flow 도움말 센터 Blog</title>
         <link>https://grit-docs.github.io/dlabflow/blog</link>
         <description>D-Lab Flow 도움말 센터 Blog</description>
-        <lastBuildDate>Fri, 21 Aug 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
+        <item>
+            <title><![CDATA[Kubeflow 살펴보기]]></title>
+            <link>https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow</link>
+            <guid>https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow</guid>
+            <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[본 포스트에서는 D-Lab Flow에서 AI 프로젝트를 실행하기 위한 백엔드 시스템인 Kubeflow에 대해 소개합니다.]]></description>
+            <content:encoded><![CDATA[<p>본 포스트에서는 D-Lab Flow에서 AI 프로젝트를 실행하기 위한 백엔드 시스템인 Kubeflow에 대해 소개합니다.</p>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_162316-e8f31a32e1518652a53ffe3d82ed1134.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>D-Lab Flow에서는 연구원용 <code>kubeflow-grit-admin@service.com</code> 계정과 기업용 <code>kubeflow-grit-test@service.com</code> 계정을 각각 운영하고 있습니다.</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>로그인 관련 주의사항</div><div class="admonitionContent_BuS1"><ul>
+<li class="">Kubeflow 접속 주소는 D-Lab Flow 서비스가 실행 중인 서버의 IP 주소와 포트(기본 8080)로 구성됩니다.</li>
+<li class="">계정의 권한에 따라 Kubeflow에서 이용할 수 있는 기능이나 리소스가 다를 수 있습니다.</li>
+<li class="">로그인에 문제가 있거나 계정 권한이 필요한 경우 관리자(<a href="mailto:dgkim1108@kangwon.ac.kr" target="_blank" rel="noopener noreferrer" class="">dgkim1108@kangwon.ac.kr</a>)에게 문의해 주시기 바랍니다.</li>
+</ul></div></div>
+<h1>2. Kubeflow Dashboard</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-첫-화면">2.1 첫 화면<a href="https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow#21-%EC%B2%AB-%ED%99%94%EB%A9%B4" class="hash-link" aria-label="2.1 첫 화면에 대한 직접 링크" title="2.1 첫 화면에 대한 직접 링크" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_162657-25b7ab30226b70aa2bc54fa24e845183.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>Kubeflow에 로그인하면 Home 화면에서 현재 실행 중인 Pod의 상태, 이름, 실행 시간 등의 기본 정보를 확인할 수 있습니다. Pod의 상세 정보 및 AI 프로젝트의 실행 상태는 Kubeflow Dashboard의 <strong>Runs</strong> 메뉴 또는 Home 화면의 <strong>Recent Pipeline Runs</strong> 영역에서 확인할 수 있으며, 해당 실행 항목을 선택하면 세부 실행 정보를 확인할 수 있습니다.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Kubeflow 주요 메뉴</div><div class="admonitionContent_BuS1"><ul>
+<li class="">Home: 현재 실행 중인 Pod의 상태, 이름, 실행 시간 등 기본 정보를 확인할 수 있습니다.</li>
+<li class="">Runs: 실행된 AI 프로젝트 및 Pipeline Run의 상세 정보를 확인할 수 있습니다. 각 실행 항목을 선택하면 실행 상태와 세부 정보를 확인할 수 있습니다.</li>
+<li class="">Recent Pipeline Runs: Home 화면에서 최근 실행된 Pipeline Run을 최대 5개까지 확인할 수 있습니다.</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-pod-상태-조회">2.2 Pod 상태 조회<a href="https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow#22-pod-%EC%83%81%ED%83%9C-%EC%A1%B0%ED%9A%8C" class="hash-link" aria-label="2.2 Pod 상태 조회에 대한 직접 링크" title="2.2 Pod 상태 조회에 대한 직접 링크" translate="no">​</a></h2>
+<p>Pod의 실행 상태에 따라 <strong>Active</strong>와 <strong>Archived</strong> 상태로 구분하여 확인할 수 있습니다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="221-pod-active">2.2.1 Pod Active<a href="https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow#221-pod-active" class="hash-link" aria-label="2.2.1 Pod Active에 대한 직접 링크" title="2.2.1 Pod Active에 대한 직접 링크" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_164419-6329569d8d6163a6e98731aa423c0a94.png" width="1920" height="1032" class="img_ev3q"></p>
+<p><strong>Active 상태</strong>에서는 현재 실행 중인 Pod의 정보를 확인할 수 있습니다.</p>
+<p>생성된 Pod의 이름, 상태, 실행 시간 등의 정보를 확인할 수 있으며, 해당 Pod를 선택하면 상세 정보를 확인할 수 있습니다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="222-pod-archived">2.2.2 Pod Archived<a href="https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow#222-pod-archived" class="hash-link" aria-label="2.2.2 Pod Archived에 대한 직접 링크" title="2.2.2 Pod Archived에 대한 직접 링크" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_164737-75c74d4b89fbc7dadaa0c7a6242eb61c.png" width="1920" height="1032" class="img_ev3q"></p>
+<p><strong>Archived 상태</strong>에서는 실행이 완료되었거나 종료된 Pod의 정보를 확인할 수 있습니다.</p>
+<p>이전에 실행된 Pod의 기록과 상태를 확인할 수 있으며, 필요한 경우 해당 Pod를 선택하여 실행 결과 및 상세 정보를 확인할 수 있습니다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="23-pod-로그-확인">2.3 Pod 로그 확인<a href="https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow#23-pod-%EB%A1%9C%EA%B7%B8-%ED%99%95%EC%9D%B8" class="hash-link" aria-label="2.3 Pod 로그 확인에 대한 직접 링크" title="2.3 Pod 로그 확인에 대한 직접 링크" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_171214-e2ffa645a07b89c591ff9c4190fc2dab.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>Kubeflow에서 실행되는 Pod은 <a href="https://dlabflow.grit.re.kr/" target="_blank" rel="noopener noreferrer" class="">D-Lab Flow 웹 서비스 버전 생성 예제</a>와 같이 서비스를 실행하는 과정에서 자동으로 생성됩니다.</p>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_165038-e8938ecc422157f2876476158fa58ccf.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>생성된 Pod의 실행 과정과 상태를 상세하게 확인하려면 <strong>Logs</strong> 메뉴에서 해당 Pod의 로그를 조회할 수 있습니다.</p>
+<p>Logs 화면에서는 Pod에서 실행 중인 작업의 진행 상황과 학습 과정에서 출력되는 메시지를 확인할 수 있습니다. 실행 중에는 로그가 실시간으로 출력되며, 작업이 완료된 후에도 실행 결과와 주요 메시지를 다시 확인할 수 있습니다.</p>
+<p>Pod 로그를 통해 다음과 같은 내용을 확인할 수 있습니다.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Pod 로그에서 확인할 내용</div><div class="admonitionContent_BuS1"><ul>
+<li class="">작업이 정상적으로 시작되었는지 확인</li>
+<li class="">학습 및 서비스 실행 과정의 진행 상황 확인</li>
+<li class="">작업 수행 중 발생한 경고 및 오류 메시지 확인</li>
+<li class="">오류가 발생한 시점과 원인 파악</li>
+</ul></div></div>
+<p>특히 Pipeline 실행 중 오류가 발생한 경우 Logs에서 오류 메시지와 관련된 로그를 확인하면 문제의 발생 위치와 원인을 파악하는 데 도움이 됩니다. 따라서 Pod의 실행 상태를 점검하거나 작업이 정상적으로 수행되지 않을 때 원인을 분석하기 위한 주요 확인 항목으로 활용할 수 있습니다.</p>
+<h1>3. Kubeflow Pod 삭제 스케줄</h1>
+<p>Kubeflow Pipeline 실행이 반복되면서 작업이 완료된 Pod가 지속적으로 누적될 경우, Kubernetes 클러스터에서 불필요한 리소스와 관리 대상이 증가할 수 있습니다. 이를 방지하기 위해 <strong>매일 저녁 6시에 Pod 상태를 점검하고, 실행이 완료된 Pod 중 더 이상 사용되지 않는 Pod를 정리</strong>하도록 삭제 스케줄을 운영하고 있습니다.</p>
+<p>Pod의 실행 상태는 <strong>RUNNING</strong>, <strong>FINISH</strong>, <strong>ERROR</strong> 등으로 구분하여 확인할 수 있으며, 이 중 현재 실행 중인 Pod는 삭제 대상에서 제외합니다. 작업이 완료되었거나 오류로 인해 더 이상 실행되지 않는 Pod는 주기적으로 삭제하여 불필요한 Pod의 누적을 방지하고 클러스터 리소스를 효율적으로 관리합니다.</p>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260825_170029-21c22bc464ea11a080a65bdc6c8048d1.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>현재 삭제되는 Pod은 kubeflow-grit-admin 및 kubeflow-grit-test Namespace를 대상으로 하며, 삭제 작업의 실행 결과는 별도의 로그 파일(<code>/mnt/dlabflow/backend/kubeflow/scheduling/pod_delete.log</code>)에 기록되며, 해당 로그를 통해 Pod 삭제 작업의 정상 수행 여부와 오류 발생 여부를 확인할 수 있습니다.</p>]]></content:encoded>
+            <category>kubeflow</category>
+        </item>
         <item>
             <title><![CDATA[쿠브플로우 연구에서 D-Lab Flow까지, 강원ICT융합연구원의 MLOps 기술 여정]]></title>
             <link>https://grit-docs.github.io/dlabflow/blog/kubeflow-research-to-dlabflow</link>
