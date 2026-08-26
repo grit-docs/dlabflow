@@ -63,7 +63,7 @@
             <name>김동길 선임연구원</name>
             <uri>https://grit.gwnu.ac.kr/</uri>
         </author>
-        <category label="kubeflow" term="kubeflow"/>
+        <category label="Kubeflow" term="Kubeflow"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[쿠브플로우 연구에서 D-Lab Flow까지, 강원ICT융합연구원의 MLOps 기술 여정]]></title>
