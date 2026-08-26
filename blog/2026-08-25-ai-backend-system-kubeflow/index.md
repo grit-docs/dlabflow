@@ -2,7 +2,7 @@
 slug: ai-backend-system-kubeflow
 title: "Kubeflow 살펴보기"
 authors: [dgkim1108]
-tags: [kubeflow]
+tags: [Kubeflow]
 ---
 
 본 포스트에서는 D-Lab Flow에서 AI 프로젝트를 실행하기 위한 백엔드 시스템인 Kubeflow에 대해 소개합니다.
