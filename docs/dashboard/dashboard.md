@@ -3,9 +3,8 @@ sidebar_position: 1
 ---
 
 import DashboardImg from './img/Dashboard.png';
-import KPIImg from './img/KPI.png';
-import TrafficImg from './img/Traffic.png';
-import ModelStatusImg from './img/Model_Status.png';
+
+
 
 # 대시보드
 ## 개요
