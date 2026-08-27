@@ -1,10 +1,7 @@
 {
   "label": "대시보드",
   "position": 1,
-  "items": [
-    {
-      "type": "doc",
-      "id": "dashboard"
-    }
-  ]
+  "link": {
+    "type": "generated-index"
+  }
 }
