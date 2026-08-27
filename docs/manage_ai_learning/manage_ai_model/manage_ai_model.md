@@ -65,7 +65,7 @@ import SharedModelWeightImg from './img/Shared_Model_Weight.png';
 
   <br />
 
-* **모델 가중치 다운로드**창에서 다운로드할 모델을 선택하고 **다운로드** 버튼을 누르면 다운로드가 시작됩니다.
+* **모델 다운로드**창에서 다운로드할 모델을 선택하고 **다운로드** 버튼을 누르면 다운로드가 시작됩니다.
 
   <div style={{ textAlign: 'center' }}>
     <img src={ModalDownloadModelWeightImg} alt="모델가중치 다운로드창" style={{ width: '45%' }} />
@@ -73,29 +73,7 @@ import SharedModelWeightImg from './img/Shared_Model_Weight.png';
 
   <br />
 
-* AI 모델 가중치의 다운로드가 완료되면 **완료**가 출력됩니다.
 
-  <div style={{ textAlign: 'center' }}>
-    <img src={ModalCompleteDownloadModelWeightImg} alt="모델가중치 다운로드 완료" style={{ width: '40%' }} />
-  </div>
-
-* 웹브라우저에서도 AI 모델 가중치 파일의 **다운로드 완료**를 확인할 수 있습니다.
-
-  <div style={{ textAlign: 'center' }}>
-    <img src={BrowserCompleteDownloadModelWeightImg} alt="브라우저 모델가중치 다운로드 완료" style={{ width: '35%' }} />
-  </div>
-
-
-  <br />
-
-* **모델 가중치**는 **7-Zip** 형식의 압축 파일로 다운로드되며, 압축 파일을 해제하면 **모델 가중치 파일**을 확인할 수 있습니다. 
-
-  <div style={{ textAlign: 'center' }}>
-    <img src={ListModelWeightFileImg} alt="모델가중치 파일 리스트" style={{ width: '35%' }} />
-  </div>
-
-
-  <br />
 
 ### 공유된 AI 모델 가중치
 * **공유** 버튼을 누르면 **공유**된 **AI 모델 가중치** 파일 리스트를 확인할 수 있으며, 소유한 AI 모델 가중치 관리와 동일한 방식으로 설정 및 다운로드할 수 있습니다.
