@@ -1,1 +1,7 @@
-
+{
+  "label": "대시보드",
+  "position": 1,
+  "link": {
+    "type": "generated-index"
+  }
+}
