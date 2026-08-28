@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 999
 ---
 
 import DashboardImg from './img/Dashboard.png';
