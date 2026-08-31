@@ -150,6 +150,54 @@
             <category>인스턴스분할</category>
         </item>
         <item>
+            <title><![CDATA[Kubernetes & NVIDIA GPU 사용 현황 확인하기]]></title>
+            <link>https://grit-docs.github.io/dlabflow/blog/resource-usage</link>
+            <guid>https://grit-docs.github.io/dlabflow/blog/resource-usage</guid>
+            <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[본 포스트에서는 D-Lab Flow가 실행되고 있는 환경에서 CPU와 RAM 사용량, NVIDIA GPU 사용 현황을 확인하는 방법을 소개합니다.]]></description>
+            <content:encoded><![CDATA[<p>본 포스트에서는 D-Lab Flow가 실행되고 있는 환경에서 <strong>CPU와 RAM 사용량, NVIDIA GPU 사용 현황</strong>을 확인하는 방법을 소개합니다.</p>
+<p>현재 D-Lab Flow의 Kubernetes 클러스터는 <strong>1개의 노드</strong>로 구성되어 있으며, 여기서 확인하는 노드의 사용량은 D-Lab Flow가 실행되는 서버의 현재 자원 사용량을 확인하는데 활용할 수 있습니다.</p>
+<p>CPU와 메모리 사용량은 Kubernetes 명령어를 통해 확인하고, GPU가 장착된 경우에는 NVIDIA에서 제공하는 명령어를 통해 GPU 상태를 확인할 수 있습니다.</p>
+<p>D-Lab Flow가 실행되고 있는 서버의 CPU와 메모리 사용량은 다음 명령어로 확인할 수 있습니다.</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">kubectl top nodes</span><br></span></code></pre></div></div>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260831_090441-871c80990e6637189a5de24b52b956f1.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>현재 D-Lab Flow 환경은 하나의 노드로 구성되어 있기 때문에, 명령어를 실행하면 D-Lab Flow가 실행되는 서버의 사용량을 확인할 수 있습니다.</p>
+<p>사용량을 계속 확인하고 싶다면 watch 명령어를 사용하여 명령어를 반복해서 입력하지 않아도 결과가 자동으로 갱신되도록 할 수 있습니다.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Kubernetes 노드 주요 항목</div><div class="admonitionContent_BuS1"><ul>
+<li class="">NAME: D-Lab Flow가 실행되고 있는 서버의 이름입니다.</li>
+<li class="">CPU(cores): 현재 사용하고 있는 CPU의 양입니다.</li>
+<li class="">CPU(%): 서버의 CPU가 전체 용량 중 얼마나 사용되고 있는지 보여줍니다.</li>
+<li class="">MEMORY(bytes): 현재 사용하고 있는 메모리의 양입니다.</li>
+<li class="">MMORY(%): 서버의 메모리가 전체 용량 중 얼마나 사용되고 있는지 보여줍니다.</li>
+</ul></div></div>
+<h1>2. NVIDIA GPU 사용 현황 확인</h1>
+<p>D-Lab Flow에서 GPU를 사용하는 작업이 실행되고 있다면 NVIDIA GPU의 현재 상태도 확인할 수 있습니다.</p>
+<p>GPU 상태는 다음 명령어로 확인합니다.</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">nvidia</span><span class="token operator" style="color:#393A34">-</span><span class="token plain">smi</span><br></span></code></pre></div></div>
+<p><img decoding="async" loading="lazy" alt="스크린샷" src="https://grit-docs.github.io/dlabflow/assets/images/20260831_090451-a9f40277abcf9772919ec0b8a85e7e62.png" width="1920" height="1032" class="img_ev3q"></p>
+<p>GPU가 장착된 노드에서는 nvidia-smi를 사용하여 GPU 상태를 확인할 수 있으며, watch 명령어를 사용하면 명령어 결과를 주기적으로 갱신할 수 있습니다.</p>
+<p>사용량을 계속 확인하고 싶다면 watch 명령어를 사용하여 명령어를 반복해서 입력하지 않아도 결과가 자동으로 갱신되도록 할 수 있습니다.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>NVIDIA GPU 주요 항목</div><div class="admonitionContent_BuS1"><ul>
+<li class="">GPU: 해당 프로그램이 사용하고 있는 GPU 번호입니다.</li>
+<li class="">PID: 실행 중인 프로그램을 구분하기 위한 번호입니다.</li>
+<li class="">Process name: GPU를 사용하고 있는 프로그램의 이름입니다.</li>
+<li class="">GPU Memory: 해당 프로그램이 사용하고 있는 GPU 메모리의 양입니다.</li>
+</ul></div></div>
+<h1>3. 문제가 발생했을 때 확인 방법</h1>
+<p>D-Lab Flow에서 작업이 느리거나 정상적으로 실행되지 않는 경우에는 먼저 서버와 GPU의 사용량을 확인해 볼 수 있습니다.</p>
+<table><thead><tr><th>확인 항목</th><th>명령어</th><th>확인할 내용</th></tr></thead><tbody><tr><td>CPU 사용량</td><td><code>kubectl top nodes</code></td><td>CPU 사용률이 계속 높은지 확인</td></tr><tr><td>메모리 사용량</td><td><code>kubectl top nodes</code></td><td>메모리 사용률이 계속 높은지 확인</td></tr><tr><td>GPU 사용률</td><td><code>nvidia-smi</code></td><td>GPU가 실제 작업에 사용되고 있는지 확인</td></tr><tr><td>GPU 메모리</td><td><code>nvidia-smi</code></td><td>GPU 메모리가 부족하지 않은지 확인</td></tr><tr><td>GPU 사용 프로그램</td><td><code>nvidia-smi</code></td><td>어떤 프로그램이 GPU를 사용하고 있는지 확인</td></tr></tbody></table>
+<p>예를 들어 GPU 작업이 정상적으로 실행되지 않는다면 다음 순서로 확인할 수 있습니다.</p>
+<ol>
+<li class=""><code>nvidia-smi</code>를 실행합니다.</li>
+<li class="">GPU가 정상적으로 표시되는지 확인합니다.</li>
+<li class=""><code>Memory-Usage</code>를 확인하여 GPU 메모리가 부족하지 않은지 확인합니다.</li>
+<li class=""><code>GPU-Util</code>을 확인하여 GPU가 실제로 사용되고 있는지 확인합니다.</li>
+<li class=""><code>Processes</code> 영역에서 GPU를 사용하고 있는 프로그램을 확인합니다.</li>
+</ol>
+<p>CPU나 메모리 문제로 의심되는 경우에는 <code>kubectl top nodes</code>에서 사용률을 확인합니다.</p>]]></content:encoded>
+            <category>사용현황</category>
+        </item>
+        <item>
             <title><![CDATA[Kubeflow 살펴보기]]></title>
             <link>https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow</link>
             <guid>https://grit-docs.github.io/dlabflow/blog/ai-backend-system-kubeflow</guid>

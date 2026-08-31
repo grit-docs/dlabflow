@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdlabflow=self.webpackChunkdlabflow||[]).push([[332],{49631:l=>{l.exports=JSON.parse('{"metadata":{"permalink":"/dlabflow/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":11,"previousPage":"/dlabflow/blog","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
