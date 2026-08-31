@@ -19,7 +19,9 @@ sidebar_position: 2
 
 ## 업로드 기능
 
-### 이미지 업로드
+데이터 업로드 기능은 **이미지와 정형 데이터, 두 가지 유형을 지원**합니다.
+
+### 이미지 업로드 파일/폴더 선택하기
 
 저장소 목록에서 특정 저장소를 선택하면, 파일목록 상단에 <Highlight color="rgb(24, 144, 255)">새로고침</Highlight>과 <Highlight color="rgb(24, 144, 255)">업로드</Highlight> 버튼이 표시됩니다.
 
@@ -59,7 +61,7 @@ sidebar_position: 2
 
 ![업로드 오류 이미지](./img/browser/error_name.PNG)
 
-### 정형 데이터 업로드
+### 정형 데이터 업로드 파일/폴더 선택하기
 
 저장소 목록에서 특정 저장소를 선택하면, 파일목록 상단에 <Highlight color="rgb(24, 144, 255)">새로고침</Highlight>과 <Highlight color="rgb(24, 144, 255)">업로드</Highlight> 버튼이 표시됩니다.
 
@@ -79,6 +81,10 @@ sidebar_position: 2
 
 ![DOCS](./img/resource/upload/tabular/20260831_134356.png)
 
+### 업로드 시작 및 진행 상황 확인하기
+
+**업로드 시작 및 진행 상황 확인**은 이미지와 정형 데이터 모두 동일한 방식으로 사용할 수 있습니다.
+
 업로드할 파일 또는 폴더를 선택한 후, <Highlight color="rgb(24, 144, 255)">업로드 시작</Highlight> 버튼을 클릭하면 선택한 파일 또는 폴더의 업로드가 시작됩니다.
 
 ![DOCS](./img/resource/upload/tabular/20260831_134403.png)
@@ -91,9 +97,7 @@ sidebar_position: 2
 
 ![DOCS](./img/resource/upload/tabular/20260831_134453.png)
 
-알림은 이미지의 알림에 대한 설명과 동일합니다.
-
-## 삭제 기능은
+## 삭제 기능
 
 **삭제 기능**은 이미지와 정형 데이터 모두 동일한 방식으로 사용할 수 있습니다.
 
