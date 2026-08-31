@@ -77,3 +77,8 @@ AI 모델 운영:
   label: 인스턴스분할
   permalink: /인스턴스분할
   description: 인스턴스분할
+
+사용현황:
+  label: 사용현황
+  permalink: /사용현황
+  description: 사용현황
