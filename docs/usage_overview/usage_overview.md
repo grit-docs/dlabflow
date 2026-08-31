@@ -1,5 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+title: 사용 현황
+description: D-Lab Flow v2.5.4에서 보유 자산, 파일 현황, GPU 사용량 및 이번 달 학습 이력을 확인하는 방법을 안내합니다.
 ---
 
 # 사용 현황
